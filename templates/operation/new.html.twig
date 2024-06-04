@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Operation - Creation{% endblock %}
+{% block title %}Employés - Creation{% endblock %}
 
 {% block body %}
-    <h1>Create new Operation</h1>
+    <h1>Nouveau employé</h1>
 
-    {{ include('operation/_form.html.twig') }}
+    {{ include('user/_form.html.twig') }}
 
-    <a href="{{ path('app_operation') }}">back to list</a>
+    <a href="{{ path('app_user_index') }}">Retourner à la liste</a>
 {% endblock %}

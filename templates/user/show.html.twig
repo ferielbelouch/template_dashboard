@@ -1,0 +1,653 @@
+{# {% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ user.firstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ user.lastName }}</td>
+            </tr>
+            <tr>
+                <th>DateBirth</th>
+                <td>{{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Photo de profil</th>
+                <td>{{ asset('images/UserUpload/' ~ user.imageFile) }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ user.CreatedAt ? user.CreatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ user.UpdatedAt ? user.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ user.Phone }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ user.Address }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user_index') }}">back to list</a>
+
+    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %} #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+    <div class="col-sm-12">
+        <div class="row">
+                <div class="col-lg-5 col-xxl-3">
+                    <div class="card overflow-hidden">
+                        <div class="card-body position-relative">
+                            <div class="text-center mt-3">
+                                <div class="chat-avtar d-inline-flex mx-auto">
+                                    
+                                        <img class="rounded-circle img-fluid wid-90 img-thumbnail" src="{{ asset('images/user/avatar-1.jpg')}}" alt="User image" />
+                                 
+                                     
+                                    <i class="chat-badge bg-success me-2 mb-2"></i>
+                                </div>
+                                <h5 class="mb-5">{{user.email}}</h5>
+                                <div class="row g-3">
+                                    <div class="col-4">
+                                        <h5 class="mb-0">86</h5>
+                                        <small class="text-muted">Opéraions</small>
+                                    </div>
+                                    <div class="col-4 border border-top-0 border-bottom-0">
+                                        <h5 class="mb-0">5</h5>
+                                        <small class="text-muted">Opérations</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="mb-0">4</h5>
+                                        <small class="text-muted">Activation</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav flex-column nav-pills list-group list-group-flush account-pills mb-0"
+                            id="user-set-tab"
+                            role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link list-group-item list-group-item-action active" id="user-set-profile-tab" data-bs-toggle="pill" href="#user-set-profile" role="tab" aria-controls="user-set-profile" aria-selected="true">
+                            <span class="f-w-500"><i class="ph-duotone ph-user-circle m-r-10"></i>Informations générales</span>
+                            </a>
+                            <a class="nav-link list-group-item list-group-item-action" id="user-set-information-tab" data-bs-toggle="pill" href="#user-set-information" role="tab" aria-controls="user-set-information" aria-selected="false">
+                            <span class="f-w-500"><i class="ph-duotone ph-clipboard-text m-r-10"></i>Documents personnelles</span>
+                            </a>
+                            <a class="nav-link list-group-item list-group-item-action" id="user-set-account-tab" data-bs-toggle="pill" href="#user-set-account" role="tab" aria-controls="user-set-account" aria-selected="false">
+                            <span class="f-w-500"><i class="ph-duotone ph-notebook m-r-10"></i>Documents contractuels</span>
+                            </a>
+                            <a class="nav-link list-group-item list-group-item-action" id="user-set-passwort-tab" data-bs-toggle="pill" href="#user-set-passwort" role="tab" aria-controls="user-set-passwort" aria-selected="false">
+                            <span class="f-w-500"><i class="ph-duotone ph-key m-r-10"></i>Modifier les informations</span>
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                <div class="col-lg-7 col-xxl-9">
+                    <div class="tab-content" id="user-set-tabContent">
+                        <div class="tab-pane fade show active" id="user-set-profile" role="tabpanel" aria-labelledby="user-set-profile-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Informations personnelles</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0 pt-0">
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Nom </p>
+                                            <p class="mb-0">
+                                            {% if user.lastName %}
+                                                {{user.lastName}}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                             </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Prénom</p>
+                                            <p class="mb-0">
+                                            {% if user.firstName %}
+                                                {{ user.firstName }}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Date de naissance</p>
+                                            <p class="mb-0">
+                                            {% if user.dateBirth %}
+                                                {{ user.dateBirth }}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                            
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Phone</p>
+                                            <p class="mb-0">
+                                            {% if user.Phone %}
+                                                {{user.Phone}}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Email</p>
+                                            <p class="mb-0">{{ user.email }}</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                             <p class="mb-1 text-muted">Address</p>
+                                        <p class="mb-0">
+                                        {% if user.Address %}
+                                                 {{user.Address}}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                        </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Coordonnées personnelles</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0 pt-0">
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Email personnelle </p>
+                                            <p class="mb-0">
+                                            {% if user.email %}
+                                                {{user.email}}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                             </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Adresse personnelle</p>
+                                            <p class="mb-0">
+                                            {% if user.Phone %}
+                                                {{ user.Phone }}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-1 text-muted">Phone</p>
+                                            <p class="mb-0">
+                                            {% if user.Phone %}
+                                                {{user.Phone}}
+                                            {% else %}
+                                                Non renseigné
+                                            {% endif %}
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Coordonnées professionnelles</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item px-0 pt-0">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="mb-1 text-muted">Email professionnelle </p>
+                                                    <p class="mb-0">
+                                                    {% if user.email %}
+                                                        {{user.email}}
+                                                    {% else %}
+                                                        Non renseigné
+                                                    {% endif %}
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                <p class="mb-1 text-muted">Phone</p>
+                                                    <p class="mb-0">
+                                                    {% if user.Phone %}
+                                                        {{user.Phone}}
+                                                    {% else %}
+                                                        Non renseigné
+                                                    {% endif %}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="user-set-information" role="tabpanel" aria-labelledby="user-set-information-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Documents personnelles</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-twitter">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0">Pièce d'identité</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-primary">télécharger</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-facebook">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0">Passeport </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-danger">Télécharger</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-linkedin">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0">Sécurité sociale</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-primary">Télécharger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="user-set-account" role="tabpanel" aria-labelledby="user-set-account-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5> Promesse d'embauche </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-twitter">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0"> Lettre d'embauche</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-primary">télécharger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Contrats de travail</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-twitter">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0">Contrat stage</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-primary">télécharger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Fiches de paie</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="flex-grow-1 me-3">
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avtar avtar-xs btn-light-twitter">
+                                                        <i class="fas fa-file-alt f-16"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h6 class="mb-0">Fiche de paie 2024-2025</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <button class="btn btn-link-primary">télécharger</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="user-set-passwort" role="tabpanel" aria-labelledby="user-set-passwort-tab">
+                            
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Modifier les informations</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                    {{ form_start(form) }}
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Email <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.email) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Mot de passe <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.password) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Prénom 
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.firstName) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Nom
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.lastName) }}
+                                            </div>
+                                            </div>
+                                        </li>
+
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Date de naissance 
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.dateBirth) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Numéro de téléphone  
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.Phone) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Adresse 
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.Address) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <div class="container">
+                                            <div class="p-3">
+                                                <div class="text-center">
+                                                    <button class="btn btn-primary" target="_blank">{{ button_label|default('Enregistrer') }}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         {# <button class="btn">{{ button_label|default('Enregistrer') }}</button> #}
+                                    {{ form_end(form) }}
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="user-set-email" role="tabpanel" aria-labelledby="user-set-email-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Email Settings</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="mb-3">Setup Email Notification</h6>
+                                    <div class="d-flex align-items-center justify-content-between mb-1">
+                                        <div>
+                                            <p class="text-muted mb-0">Email Notification</p>
+                                        </div>
+                                        <div class="form-check form-switch p-0">
+                                            <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-0">
+                                        <div>
+                                            <p class="text-muted mb-0">Send Copy To Personal Email</p>
+                                        </div>
+                                        <div class="form-check form-switch p-0">
+                                            <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                            <div class="card-header">
+                                <h5>Activity Related Emails</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-3">When to email?</h6>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">Have new notifications</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">You're sent a direct message</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">Someone adds you as a connection</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                                <hr class="my-2 border border-secondary-subtle" />
+                                <h6 class="mb-3">When to escalate emails?</h6>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">Upon new order</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">New membership approval</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-0">
+                                <div>
+                                    <p class="text-muted mb-0">Member registration</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card">
+                            <div class="card-header">
+                                <h5>Updates from System Notification</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-3">Email you with?</h6>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">News about PCT-themes products and feature updates</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">Tips on getting more out of PCT-themes</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">Things you missed since you last logged into PCT-themes</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                <div>
+                                    <p class="text-muted mb-0">News about products and other services</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-0">
+                                <div>
+                                    <p class="text-muted mb-0">Tips and Document business products</p>
+                                </div>
+                                <div class="form-check form-switch p-0">
+                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card">
+                            <div class="card-body text-end btn-page">
+                                <div class="btn btn-outline-secondary">Cancel</div>
+                                <div class="btn btn-primary">Update Profile</div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}
+

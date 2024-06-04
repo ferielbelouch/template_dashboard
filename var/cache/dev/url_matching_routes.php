@@ -22,6 +22,8 @@ return [
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/user' => [[['_route' => 'app_user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/user/new' => [[['_route' => 'app_user_new', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -48,6 +50,12 @@ return [
                     .'|/edit(*:237)'
                     .'|(*:245)'
                 .')'
+                .'|/user/(?'
+                    .'|([^/]++)(?'
+                        .'|(*:274)'
+                    .')'
+                    .'|generate(*:291)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -61,8 +69,13 @@ return [
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         224 => [[['_route' => 'app_operation_show', '_controller' => 'App\\Controller\\OperationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         237 => [[['_route' => 'app_operation_edit', '_controller' => 'App\\Controller\\OperationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        245 => [
-            [['_route' => 'app_operation_delete', '_controller' => 'App\\Controller\\OperationController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        245 => [[['_route' => 'app_operation_delete', '_controller' => 'App\\Controller\\OperationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        274 => [
+            [['_route' => 'app_user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+            [['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        ],
+        291 => [
+            [['_route' => 'app_user_generate', '_controller' => 'App\\Controller\\UserController::gen'], [], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
