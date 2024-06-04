@@ -6,7 +6,8 @@
     <h1>Liste des employés</h1>
 
 
-    <a href="{{ path('app_user_generate') }}" class="btn btn-primary">Générer pdf</a>
+    {# <a href="{{ path('app_user_generate') }}" class="btn btn-primary">Générer pdf</a> #}
+    <a href="{{ path('user_pdf') }}" class="btn btn-primary">Télécharger la liste en PDF</a>
     <a href="{{ path('app_user_new') }}" class="btn btn-primary">Nouveau  employé</a>
 
     <table class="table">

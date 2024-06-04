@@ -95,58 +95,55 @@ class UserController extends AbstractController
         return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
     }
 
-    #[Route('/generate', name: 'app_user_generate')]
-    public function gen(User $user): Response
+    public function generatePdf(UserRepository $userRepository): Response
     {
-        
-        if($user) {
-            $this->generatePdf($user);
-        }
-        
-        return $this->render('user/index.html.twig', [
-            'user' => $user,
-        ]);
-    }
-    
-    private function generatePdf(User $user)
-    {
+        // Récupérer toutes les lignes de la table user
+        $users = $userRepository->findAll();
+
+        // Créer un nouvel objet TCPDF
         $pdf = new TCPDF();
+
+        // Configurer le document PDF
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Your Name');
-        $pdf->SetTitle('User PDF');
-        $pdf->SetSubject('User Details');
-        $pdf->SetKeywords('TCPDF, PDF, User');
+        $pdf->SetAuthor('Votre Nom');
+        $pdf->SetTitle('Liste des utilisateurs');
+        $pdf->SetSubject('Liste des utilisateurs');
+        $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
-
+        // Ajouter une page
         $pdf->AddPage();
 
-        $html = '<h1>User Details</h1>';
-        $html .= '<p><strong>user ID:</strong> ' . $user->getId() . '</p>';
-        $html .= '<p><strong>Date:</strong> ' . $user->getCreatedAt()->format('Y-m-d H:i:s') . '</p>';
-        $html .= '<p><strong>Email:</strong> ' . $user->getEmail() . '</p>';
-        $html .= '<h2>Details</h2>';
-        $html .= '<table border="1" cellpadding="5">
-                    <thead>
-                        <tr>
-                            <th>Ticket</th>
-                            <th>Quantité</th>
-                            <th>Prix</th>
-                        </tr>
-                    </thead>
-                    <tbody>';
+        // Définir la police
+        $pdf->SetFont('helvetica', '', 12);
 
-        $html .= '  </tbody>
-                </table>';
+        // Contenu du PDF
+        $html = '<h1>Liste des utilisateurs</h1>';
+        $html .= '<table border="1" cellspacing="3" cellpadding="4">';
+        $html .= '<tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                  </tr>';
 
+        foreach ($users as $user) {
+            $html .= '<tr>
+                        <td>' . $user->getId() . '</td>
+                        <td>' . $user->getUsername() . '</td>
+                        <td>' . $user->getEmail() . '</td>
+                      </tr>';
+        }
+
+        $html .= '</table>';
+
+        // Imprimer le contenu HTML
         $pdf->writeHTML($html, true, false, true, false, '');
 
-        $publicDirectory = $this->kernel->getProjectDir() . '/public/genPDF/';
+        // Renvoyer la réponse en tant que PDF
+        $response = new Response($pdf->Output('liste_utilisateurs.pdf', 'I'));
 
-        // Générez le chemin complet pour le fichier PDF
-        $filePath = $publicDirectory . 'user_' . $user->getId() . '.pdf';
+        // Définir les en-têtes appropriés pour le fichier PDF
+        $response->headers->set('Content-Type', 'application/pdf');
 
-        $pdf->Output($filePath, 'F');
+        return $response;
     }
 }

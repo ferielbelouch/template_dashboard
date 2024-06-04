@@ -90,12 +90,13 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         yield "    <h1>Liste des employés</h1>
 
 
-    <a href=\"";
-        // line 9
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_generate");
-        yield "\" class=\"btn btn-primary\">Générer pdf</a>
-    <a href=\"";
+    ";
         // line 10
+        yield "    <a href=\"";
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_pdf");
+        yield "\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
+    <a href=\"";
+        // line 11
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_new");
         yield "\" class=\"btn btn-primary\">Nouveau  employé</a>
 
@@ -115,49 +116,49 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         </thead>
         <tbody>
         ";
-        // line 27
+        // line 28
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 28, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 28
+            // line 29
             yield "            <tr>
                 <td>";
-            // line 29
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 29), "html", null, true);
-            yield "</td>
-                <td>";
             // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 30), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 30), "html", null, true);
             yield "</td>
                 <td>";
             // line 31
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 31)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 31)), "html", null, true)) : (yield ""));
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 31), "html", null, true);
             yield "</td>
                 <td>";
             // line 32
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 32), "html", null, true);
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 32)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 32)), "html", null, true)) : (yield ""));
             yield "</td>
                 <td>";
             // line 33
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 33), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 33), "html", null, true);
             yield "</td>
                 <td>";
             // line 34
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 34)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 34), "Y-m-d"), "html", null, true)) : (yield ""));
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 34), "html", null, true);
             yield "</td>
                 <td>";
             // line 35
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 35), "html", null, true);
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 35)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 35), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "</td>
                 <td>";
             // line 36
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 36), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 36), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 37
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 37), "html", null, true);
             yield "</td>
                 <td>
                     <a href=\"";
-            // line 38
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 39
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 39)]), "html", null, true);
             yield "\">show</a>
                 </td>
             </tr>
@@ -165,7 +166,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 42
+            // line 43
             yield "            <tr>
                 <td colspan=\"13\">no records found</td>
             </tr>
@@ -174,7 +175,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 47
         yield "        </tbody>
     </table>
 ";
@@ -208,7 +209,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
      */
     public function getDebugInfo()
     {
-        return array (  178 => 46,  169 => 42,  160 => 38,  155 => 36,  151 => 35,  147 => 34,  143 => 33,  139 => 32,  135 => 31,  131 => 30,  127 => 29,  124 => 28,  119 => 27,  99 => 10,  95 => 9,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  179 => 47,  170 => 43,  161 => 39,  156 => 37,  152 => 36,  148 => 35,  144 => 34,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  125 => 29,  120 => 28,  100 => 11,  95 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -221,7 +222,8 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
     <h1>Liste des employés</h1>
 
 
-    <a href=\"{{ path('app_user_generate') }}\" class=\"btn btn-primary\">Générer pdf</a>
+    {# <a href=\"{{ path('app_user_generate') }}\" class=\"btn btn-primary\">Générer pdf</a> #}
+    <a href=\"{{ path('user_pdf') }}\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
     <a href=\"{{ path('app_user_new') }}\" class=\"btn btn-primary\">Nouveau  employé</a>
 
     <table class=\"table\">

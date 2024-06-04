@@ -54,7 +54,7 @@ return [
                     .'|([^/]++)(?'
                         .'|(*:274)'
                     .')'
-                    .'|generate(*:291)'
+                    .'|pdf(*:286)'
                 .')'
             .')/?$}sDu',
     ],
@@ -74,8 +74,8 @@ return [
             [['_route' => 'app_user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
         ],
-        291 => [
-            [['_route' => 'app_user_generate', '_controller' => 'App\\Controller\\UserController::gen'], [], null, null, false, false, null],
+        286 => [
+            [['_route' => 'user_pdf', '_controller' => 'App\\Controller\\UserController::generatePdf'], [], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -32,7 +32,7 @@ return [
     'app_user_new' => [[], ['_controller' => 'App\\Controller\\UserController::new'], [], [['text', '/user/new']], [], [], []],
     'app_user_show' => [['id'], ['_controller' => 'App\\Controller\\UserController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
     'app_user_delete' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
-    'app_user_generate' => [[], ['_controller' => 'App\\Controller\\UserController::gen'], [], [['text', '/user/generate']], [], [], []],
+    'user_pdf' => [[], ['_controller' => 'App\\Controller\\UserController::generatePdf'], [], [['text', '/user/pdf']], [], [], []],
     'App\Controller\GoodiesController::index' => [[], ['_controller' => 'App\\Controller\\GoodiesController::index'], [], [['text', '/goodies']], [], [], []],
     'App\Controller\HomeController::index' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
     'App\Controller\OperationController::index' => [[], ['_controller' => 'App\\Controller\\OperationController::index'], [], [['text', '/operation/']], [], [], []],
@@ -48,5 +48,4 @@ return [
     'App\Controller\UserController::new' => [[], ['_controller' => 'App\\Controller\\UserController::new'], [], [['text', '/user/new']], [], [], []],
     'App\Controller\UserController::show' => [['id'], ['_controller' => 'App\\Controller\\UserController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
     'App\Controller\UserController::delete' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
-    'App\Controller\UserController::gen' => [[], ['_controller' => 'App\\Controller\\UserController::gen'], [], [['text', '/user/generate']], [], [], []],
 ];
