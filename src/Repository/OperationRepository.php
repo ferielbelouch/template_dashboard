@@ -16,6 +16,22 @@ class OperationRepository extends ServiceEntityRepository
         parent::__construct($registry, Operation::class);
     }
 
+
+      /**
+     * Retrieve events by category.
+     *
+     * @param string $category
+     * @return Operation[]
+     */
+    public function countByStatus(string $status): int
+    {
+        return $this->createQueryBuilder('o')
+            ->select('COUNT(o.id)')
+            ->andWhere('o.statut = :status')
+            ->setParameter('status', $status)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
     //    /**
     //     * @return Operation[] Returns an array of Operation objects
     //     */

@@ -191,7 +191,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
         // line 151
         yield "                                            </p>
                                         </div>
-                                        </div>
+                                        </div> 
                                     </li>
                                     <li class=\"list-group-item px-0\">
                                         <div class=\"row\">
@@ -203,7 +203,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
         if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 160, $this->source); })()), "dateBirth", [], "any", false, false, false, 160)) {
             // line 161
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 161, $this->source); })()), "dateBirth", [], "any", false, false, false, 161), "html", null, true);
+            ((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 161, $this->source); })()), "dateBirth", [], "any", false, false, false, 161)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 161, $this->source); })()), "dateBirth", [], "any", false, false, false, 161), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "
                                             ";
         } else {
@@ -983,7 +983,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             {% endif %}
                                             </p>
                                         </div>
-                                        </div>
+                                        </div> 
                                     </li>
                                     <li class=\"list-group-item px-0\">
                                         <div class=\"row\">
@@ -991,7 +991,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Date de naissance</p>
                                             <p class=\"mb-0\">
                                             {% if user.dateBirth %}
-                                                {{ user.dateBirth }}
+                                                {{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}
                                             {% else %}
                                                 Non renseigné
                                             {% endif %}

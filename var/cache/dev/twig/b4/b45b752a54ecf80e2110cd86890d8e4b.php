@@ -100,10 +100,6 @@ class __TwigTemplate_1d93ae240eff94449a3678febe8cecdb extends Template
         yield "\">Retourner à la liste des employés</a>
 
     ";
-        // line 12
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "user/_delete_form.html.twig");
-        yield "
-";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -134,7 +130,7 @@ class __TwigTemplate_1d93ae240eff94449a3678febe8cecdb extends Template
      */
     public function getDebugInfo()
     {
-        return array (  104 => 12,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -150,7 +146,7 @@ class __TwigTemplate_1d93ae240eff94449a3678febe8cecdb extends Template
 
     <a href=\"{{ path('app_user_index') }}\">Retourner à la liste des employés</a>
 
-    {{ include('user/_delete_form.html.twig') }}
+    {# {{ include('user/_delete_form.html.twig') }} #}
 {% endblock %}
 ", "operation/edit.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/operation/edit.html.twig");
     }

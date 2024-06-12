@@ -33,7 +33,7 @@ class OperationController extends AbstractController
             $entityManager->persist($operation);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_operation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_operation', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('operation/new.html.twig', [
@@ -59,7 +59,7 @@ class OperationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_operation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_operation', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('operation/edit.html.twig', [

@@ -6,5 +6,5 @@ controllers:
 
 
 user_pdf:
-    path: /user/pdf
+    path: /genpdf
     controller: App\Controller\UserController::generatePdf
