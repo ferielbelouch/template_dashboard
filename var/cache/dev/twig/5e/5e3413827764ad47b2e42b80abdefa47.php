@@ -92,7 +92,7 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
     <a href=\"";
         // line 8
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_new");
-        yield "\" class=\"btn btn-primary\">Nouveau  employé</a>
+        yield "\" class=\"btn btn-primary\">Nouvelle opération</a>
     <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
@@ -194,7 +194,7 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
 {% block body %}
     <h1>Liste des opérations </h1>
 
-    <a href=\"{{ path('app_operation_new') }}\" class=\"btn btn-primary\">Nouveau  employé</a>
+    <a href=\"{{ path('app_operation_new') }}\" class=\"btn btn-primary\">Nouvelle opération</a>
     <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
