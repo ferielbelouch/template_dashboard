@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
       <div class="pc-content">
@@ -13,7 +13,7 @@
                 <img src="https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4">Opérations réalisées</h5>
                 <div class="d-flex align-items-center mt-3">
-                  <h3 class="f-w-300 d-flex align-items-center m-b-0">x opérations</h3>
+                  <h3 class="f-w-300 d-flex align-items-center m-b-0">{{ numOperationRealise }} opérations</h3>
                   <span class="badge bg-light-success ms-2"></span>
                 </div>
               </div>
@@ -25,7 +25,7 @@
                 <img src="https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-5.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4 text-white">Opérations en cours</h5>
                 <div class="d-flex align-items-center mt-3">
-                  <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">38 opérations</h3>
+                  <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">{{ numOperationEnCours }}  opérations</h3>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
                 <img src="https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg" alt="img" class="img-fluid img-bg" >
                 <h5 class="mb-4 text-white">Nombre d'employés</h5>
                 <div class="d-flex align-items-center mt-3">
-                  <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">x employés</h3>
+                  <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">{{numTotalUsers}} employés</h3>
                 </div>
               </div>
             </div>

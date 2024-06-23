@@ -66,7 +66,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello HomeController!";
+        yield "Dashboard";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -98,7 +98,10 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4\">Opérations réalisées</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"f-w-300 d-flex align-items-center m-b-0\">x opérations</h3>
+                  <h3 class=\"f-w-300 d-flex align-items-center m-b-0\">";
+        // line 16
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationRealise"]) || array_key_exists("numOperationRealise", $context) ? $context["numOperationRealise"] : (function () { throw new RuntimeError('Variable "numOperationRealise" does not exist.', 16, $this->source); })()), "html", null, true);
+        yield " opérations</h3>
                   <span class=\"badge bg-light-success ms-2\"></span>
                 </div>
               </div>
@@ -110,7 +113,10 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-5.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4 text-white\">Opérations en cours</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">38 opérations</h3>
+                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">";
+        // line 28
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationEnCours"]) || array_key_exists("numOperationEnCours", $context) ? $context["numOperationEnCours"] : (function () { throw new RuntimeError('Variable "numOperationEnCours" does not exist.', 28, $this->source); })()), "html", null, true);
+        yield "  opérations</h3>
                 </div>
               </div>
             </div>
@@ -147,7 +153,10 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4 text-white\">Nombre d'employés</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">x employés</h3>
+                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">";
+        // line 64
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numTotalUsers"]) || array_key_exists("numTotalUsers", $context) ? $context["numTotalUsers"] : (function () { throw new RuntimeError('Variable "numTotalUsers" does not exist.', 64, $this->source); })()), "html", null, true);
+        yield " employés</h3>
                 </div>
               </div>
             </div>
@@ -251,14 +260,14 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  219 => 191,  217 => 164,  207 => 102,  194 => 95,  186 => 90,  181 => 88,  176 => 85,  172 => 84,  142 => 56,  95 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  228 => 191,  226 => 164,  216 => 102,  203 => 95,  195 => 90,  190 => 88,  185 => 85,  181 => 84,  158 => 64,  148 => 56,  118 => 28,  103 => 16,  95 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
       <div class=\"pc-content\">
@@ -271,7 +280,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4\">Opérations réalisées</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"f-w-300 d-flex align-items-center m-b-0\">x opérations</h3>
+                  <h3 class=\"f-w-300 d-flex align-items-center m-b-0\">{{ numOperationRealise }} opérations</h3>
                   <span class=\"badge bg-light-success ms-2\"></span>
                 </div>
               </div>
@@ -283,7 +292,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-5.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4 text-white\">Opérations en cours</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">38 opérations</h3>
+                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">{{ numOperationEnCours }}  opérations</h3>
                 </div>
               </div>
             </div>
@@ -319,7 +328,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
                 <h5 class=\"mb-4 text-white\">Nombre d'employés</h5>
                 <div class=\"d-flex align-items-center mt-3\">
-                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">x employés</h3>
+                  <h3 class=\"text-white f-w-300 d-flex align-items-center m-b-0\">{{numTotalUsers}} employés</h3>
                 </div>
               </div>
             </div>

@@ -87,46 +87,50 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Operation index</h1>
+        yield "    <h1>Liste des opérations </h1>
 
-    <table class=\"table\">
+    <a href=\"";
+        // line 8
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_new");
+        yield "\" class=\"btn btn-primary\">Nouvelle opération</a>
+    <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
-                <th>Description</th>
+                <th>Statut</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["operations"]) || array_key_exists("operations", $context) ? $context["operations"] : (function () { throw new RuntimeError('Variable "operations" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["operation"]) {
-            // line 19
+            // line 20
             yield "            <tr>
                 <td>";
-            // line 20
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 20), "html", null, true);
-            yield "</td>
-                <td>";
             // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "nom", [], "any", false, false, false, 21), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 21), "html", null, true);
             yield "</td>
                 <td>";
             // line 22
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "description", [], "any", false, false, false, 22), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "statut", [], "any", false, false, false, 23), "html", null, true);
             yield "</td>
                 <td>
                     <a href=\"";
-            // line 24
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+            // line 25
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             yield "\">show</a>
                     <a href=\"";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 25)]), "html", null, true);
+            // line 26
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["operation"], "id", [], "any", false, false, false, 26)]), "html", null, true);
             yield "\">edit</a>
                 </td>
             </tr>
@@ -134,7 +138,7 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
+            // line 30
             yield "            <tr>
                 <td colspan=\"4\">no records found</td>
             </tr>
@@ -143,14 +147,10 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['operation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 34
         yield "        </tbody>
     </table>
 
-    <a href=\"";
-        // line 36
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation_new");
-        yield "\">Create new</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -182,7 +182,7 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
      */
     public function getDebugInfo()
     {
-        return array (  152 => 36,  147 => 33,  138 => 29,  129 => 25,  125 => 24,  120 => 22,  116 => 21,  112 => 20,  109 => 19,  104 => 18,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  151 => 34,  142 => 30,  133 => 26,  129 => 25,  124 => 23,  120 => 22,  116 => 21,  113 => 20,  108 => 19,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -192,14 +192,15 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
 {% block title %}Operation{% endblock %}
 
 {% block body %}
-    <h1>Operation index</h1>
+    <h1>Liste des opérations </h1>
 
-    <table class=\"table\">
+    <a href=\"{{ path('app_operation_new') }}\" class=\"btn btn-primary\">Nouvelle opération</a>
+    <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
-                <th>Description</th>
+                <th>Statut</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -208,7 +209,7 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
             <tr>
                 <td>{{ operation.id }}</td>
                 <td>{{ operation.nom }}</td>
-                <td>{{ operation.description }}</td>
+                <td>{{ operation.statut }}</td>
                 <td>
                     <a href=\"{{ path('app_operation_show', {'id': operation.id}) }}\">show</a>
                     <a href=\"{{ path('app_operation_edit', {'id': operation.id}) }}\">edit</a>
@@ -222,7 +223,6 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_operation_new') }}\">Create new</a>
 {% endblock %}
 ", "operation/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/operation/index.html.twig");
     }

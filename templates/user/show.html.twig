@@ -150,7 +150,7 @@
                                             {% endif %}
                                             </p>
                                         </div>
-                                        </div>
+                                        </div> 
                                     </li>
                                     <li class="list-group-item px-0">
                                         <div class="row">
@@ -158,7 +158,7 @@
                                             <p class="mb-1 text-muted">Date de naissance</p>
                                             <p class="mb-0">
                                             {% if user.dateBirth %}
-                                                {{ user.dateBirth }}
+                                                {{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}
                                             {% else %}
                                                 Non renseigné
                                             {% endif %}

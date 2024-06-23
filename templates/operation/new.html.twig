@@ -5,7 +5,85 @@
 {% block body %}
     <h1>Nouveau employé</h1>
 
-    {{ include('user/_form.html.twig') }}
+                            <div class="card">
+                                
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                    {{ form_start(form) }}
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Opération <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.nom) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Chef de projet 
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.chefProjet) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Url
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.urlAcces) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Region
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.region) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Employé
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.user) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class="list-group-item pt-0 px-0">
+                                            <div class="row mb-0">
+                                            <label class="col-form-label col-md-4 col-sm-12 text-md-end"
+                                                >Statut
+                                            </label>
+                                            <div class="col-md-8 col-sm-12">
+                                                 {{ form_row(form.statut) }}
+                                            </div>
+                                            </div>
+                                        </li>
+
+                                        <div class="container">
+                                            <div class="p-3">
+                                                <div class="text-center">
+                                                    <button class="btn btn-primary" target="_blank">{{ button_label|default('Enregistrer') }}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         {# <button class="btn">{{ button_label|default('Enregistrer') }}</button> #}
+                                    {{ form_end(form) }}
+                                       
+                                    </ul>
+                                </div>
+                            </div>
 
     <a href="{{ path('app_user_index') }}">Retourner à la liste</a>
 {% endblock %}

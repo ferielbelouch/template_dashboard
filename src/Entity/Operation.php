@@ -36,6 +36,9 @@ class Operation
     #[ORM\OneToMany(targetEntity: Activation::class, mappedBy: 'operation')]
     private Collection $activations;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $statut = null;
+
     public function __construct()
     {
         $this->activations = new ArrayCollection();
@@ -132,6 +135,18 @@ class Operation
                 $activation->setOperation(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStatut(): ?string
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(?string $statut): static
+    {
+        $this->statut = $statut;
 
         return $this;
     }
