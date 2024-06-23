@@ -273,12 +273,19 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="user-set-account" role="tabpanel" aria-labelledby="user-set-account-tab">
+                            {{ form_start(form) }}
+                                {{ form_widget(form) }}
+                                <button class="btn">Upload</button>
+                            {{ form_end(form) }}
                             <div class="card">
                                 <div class="card-header">
                                     <h5> Promesse d'embauche </h5>
                                 </div>
                                 <div class="card-body">
+                                {% if embauchedocs %}
+                                    {% for document in embauchedocs %}
                                     <div class="d-flex align-items-center mb-2">
+                                    
                                         <div class="flex-grow-1 me-3">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0">
@@ -287,14 +294,19 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0"> Lettre d'embauche</h6>
+                                                    <h6 class="mb-0">
+                                                        <a href="{{ asset('uploads/documents/' ~ document.fileName) }}">{{ document.name }} ({{ document.category }})</a>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="flex-shrink-0">
-                                            <button class="btn btn-link-primary">télécharger</button>
+                                            <button class="btn btn-link-primary avtar avtar-xs"> <a href="{{ asset('uploads/documents/' ~ document.fileName) }}"><i class="ti ti-cloud-upload"></i></a></button>
                                         </div>
+                                    
                                     </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="card">
@@ -302,23 +314,27 @@
                                     <h5>Contrats de travail</h5>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="flex-grow-1 me-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex-shrink-0">
-                                                    <div class="avtar avtar-xs btn-light-twitter">
-                                                        <i class="fas fa-file-alt f-16"></i>
+                                    {% if contratdocs %}
+                                    {% for document in contratdocs %}
+                                        <div class="d-flex align-items-center mb-2">
+                                            <div class="flex-grow-1 me-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="avtar avtar-xs btn-light-twitter">
+                                                            <i class="fas fa-file-alt f-16"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-3">
+                                                        <a href="{{ asset('uploads/documents/' ~ document.fileName) }}">{{ document.name }} ({{ document.category }})</a>
                                                     </div>
                                                 </div>
-                                                <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0">Contrat stage</h6>
-                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <button class="btn btn-link-primary"> <a href="{{ asset('uploads/documents/' ~ document.fileName) }}"><i class="ti ti-cloud-upload"></i></a></button>
                                             </div>
                                         </div>
-                                        <div class="flex-shrink-0">
-                                            <button class="btn btn-link-primary">télécharger</button>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="card">
@@ -326,6 +342,8 @@
                                     <h5>Fiches de paie</h5>
                                 </div>
                                 <div class="card-body">
+                                {% if paiedocs %}
+                                {% for document in paiedocs %}
                                     <div class="d-flex align-items-center mb-2">
                                         <div class="flex-grow-1 me-3">
                                             <div class="d-flex align-items-center">
@@ -335,14 +353,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1 ms-3">
-                                                    <h6 class="mb-0">Fiche de paie 2024-2025</h6>
+                                                    <a href="{{ asset('uploads/documents/' ~ document.fileName) }}">{{ document.name }} ({{ document.category }})</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="flex-shrink-0">
-                                            <button class="btn btn-link-primary">télécharger</button>
+                                           <button class="btn btn-link-primary"> <a href="{{ asset('uploads/documents/' ~ document.fileName) }}"><i class="ti ti-cloud-upload"></i></a></button>
                                         </div>
                                     </div>
+                                {% endfor %}
+                                {% endif %}
                                 </div>
                             </div>
                         </div>

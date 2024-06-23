@@ -12,6 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Dompdf\Dompdf;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use App\Entity\Document;
+use App\Repository\DocumentRepository;
+use App\Form\DocumentType;
 
 #[Route('/user')]
 class UserController extends AbstractController
@@ -84,7 +87,7 @@ class UserController extends AbstractController
 
     
     #[Route('/{id}', name: 'app_user_show', methods: ['GET', 'POST'])]
-    public function show(User $user, Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $userPasswordHasher): Response
+    public function show(User $user, Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $userPasswordHasher,  DocumentRepository $documentRepository): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -97,17 +100,43 @@ class UserController extends AbstractController
                 )
             );
             $entityManager->flush();
-            
-            // Afficher un message de confirmation ou rediriger vers une autre page
-            $this->addFlash('success', 'Les modifications ont été enregistrées avec succès.');
+             // Afficher un message de confirmation ou rediriger vers une autre page
+             $this->addFlash('success', 'Les modifications ont été enregistrées avec succès.');
 
-            // Rediriger vers la page de détails de l'utilisateur
-            return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
-        }
+             // Rediriger vers la page de détails de l'utilisateur
+             return $this->redirectToRoute('app_profile');
+            }
+
+            $document = new Document();
+            $forms = $this->createForm(DocumentType::class, $document);
+            $forms->handleRequest($request);
+           
+    
+            if ($forms->isSubmitted() && $forms->isValid()) {
+                $document->setUser($user);
+                $entityManager->persist($document);
+                $entityManager->flush();
+    
+                $this->addFlash('success', 'Document uploaded successfully.');
+                return $this->redirectToRoute('app_profile');
+            }
+
+            $embauchedocs = $documentRepository->findBy(['user' => $user, 'category' => 'embauche']);
+            $paiedocs = $documentRepository->findBy(['user' => $user, 'category' => 'paie']);
+            $contratdocs = $documentRepository->findBy(['user' => $user, 'category' => 'contrat']);
+    
+            $documents = $documentRepository->findBy(['user' => $user]);
+
+           
         
         return $this->render('user/show.html.twig', [
             'user' => $user,
             'form' => $form,
+            'forms' => $forms,
+            'documents' => $documents,
+            'contratdocs' => $contratdocs,
+            'paiedocs' => $paiedocs,
+            'embauchedocs' => $embauchedocs,
         ]);
     }
     

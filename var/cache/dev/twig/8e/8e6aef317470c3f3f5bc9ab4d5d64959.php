@@ -158,10 +158,10 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 38), "html", null, true);
             yield "</td>
                         <td>
-                            <a href=\"";
+                            <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
             // line 40
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 40)]), "html", null, true);
-            yield "\">show</a>
+            yield "\"><i class=\"ti ti-eye\"></i></a></button>
                         </td>
                     </tr>
                 ";
@@ -289,7 +289,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
                         <td>{{ user.Phone }}</td>
                         <td>{{ user.Address }}</td>
                         <td>
-                            <a href=\"{{ path('app_user_show', {'id': user.id}) }}\">show</a>
+                            <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_show', {'id': user.id}) }}\"><i class=\"ti ti-eye\"></i></a></button>
                         </td>
                     </tr>
                 {% else %}

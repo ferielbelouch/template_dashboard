@@ -456,12 +456,35 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                             </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-account\" role=\"tabpanel\" aria-labelledby=\"user-set-account-tab\">
+                            ";
+        // line 276
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 276, $this->source); })()), 'form_start');
+        yield "
+                                ";
+        // line 277
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 277, $this->source); })()), 'widget');
+        yield "
+                                <button class=\"btn\">Upload</button>
+                            ";
+        // line 279
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 279, $this->source); })()), 'form_end');
+        yield "
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5> Promesse d'embauche </h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
+                                ";
+        // line 285
+        if ((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 285, $this->source); })())) {
+            // line 286
+            yield "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 286, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 287
+                yield "                                    <div class=\"d-flex align-items-center mb-2\">
+                                    
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -470,46 +493,105 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\"> Lettre d'embauche</h6>
+                                                    <h6 class=\"mb-0\">
+                                                        <a href=\"";
+                // line 298
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 298))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 298), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 298), "html", null, true);
+                yield ")</a>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                            <button class=\"btn btn-link-primary avtar avtar-xs\"> <a href=\"";
+                // line 304
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 304))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
+                                    
                                     </div>
-                                </div>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 309
+            yield "                                    ";
+        }
+        // line 310
+        yield "                                </div>
                             </div>
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5>Contrats de travail</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
-                                        <div class=\"flex-grow-1 me-3\">
-                                            <div class=\"d-flex align-items-center\">
-                                                <div class=\"flex-shrink-0\">
-                                                    <div class=\"avtar avtar-xs btn-light-twitter\">
-                                                        <i class=\"fas fa-file-alt f-16\"></i>
+                                    ";
+        // line 317
+        if ((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 317, $this->source); })())) {
+            // line 318
+            yield "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 318, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 319
+                yield "                                        <div class=\"d-flex align-items-center mb-2\">
+                                            <div class=\"flex-grow-1 me-3\">
+                                                <div class=\"d-flex align-items-center\">
+                                                    <div class=\"flex-shrink-0\">
+                                                        <div class=\"avtar avtar-xs btn-light-twitter\">
+                                                            <i class=\"fas fa-file-alt f-16\"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class=\"flex-grow-1 ms-3\">
+                                                        <a href=\"";
+                // line 328
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 328))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 328), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 328), "html", null, true);
+                yield ")</a>
                                                     </div>
                                                 </div>
-                                                <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Contrat stage</h6>
-                                                </div>
+                                            </div>
+                                            <div class=\"flex-shrink-0\">
+                                                <button class=\"btn btn-link-primary\"> <a href=\"";
+                // line 333
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 333))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                             </div>
                                         </div>
-                                        <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 337
+            yield "                                    ";
+        }
+        // line 338
+        yield "                                </div>
                             </div>
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5>Fiches de paie</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
+                                ";
+        // line 345
+        if ((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 345, $this->source); })())) {
+            // line 346
+            yield "                                ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 346, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 347
+                yield "                                    <div class=\"d-flex align-items-center mb-2\">
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -518,15 +600,34 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Fiche de paie 2024-2025</h6>
+                                                    <a href=\"";
+                // line 356
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 356))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 356), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 356), "html", null, true);
+                yield ")</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                           <button class=\"btn btn-link-primary\"> <a href=\"";
+                // line 361
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 361))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     </div>
-                                </div>
+                                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 365
+            yield "                                ";
+        }
+        // line 366
+        yield "                                </div>
                             </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
@@ -750,7 +851,7 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  390 => 207,  386 => 205,  380 => 203,  378 => 202,  371 => 197,  367 => 195,  361 => 193,  359 => 192,  338 => 173,  334 => 171,  328 => 169,  326 => 168,  315 => 159,  311 => 157,  305 => 155,  303 => 154,  296 => 149,  292 => 147,  286 => 145,  284 => 144,  265 => 127,  261 => 125,  255 => 123,  253 => 122,  245 => 117,  235 => 109,  231 => 107,  225 => 105,  223 => 104,  215 => 98,  211 => 96,  205 => 94,  203 => 93,  192 => 84,  188 => 82,  182 => 80,  180 => 79,  173 => 74,  169 => 72,  163 => 70,  161 => 69,  108 => 19,  100 => 14,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  630 => 366,  627 => 365,  617 => 361,  605 => 356,  594 => 347,  589 => 346,  587 => 345,  578 => 338,  575 => 337,  565 => 333,  553 => 328,  542 => 319,  537 => 318,  535 => 317,  526 => 310,  523 => 309,  512 => 304,  499 => 298,  486 => 287,  481 => 286,  479 => 285,  470 => 279,  465 => 277,  461 => 276,  390 => 207,  386 => 205,  380 => 203,  378 => 202,  371 => 197,  367 => 195,  361 => 193,  359 => 192,  338 => 173,  334 => 171,  328 => 169,  326 => 168,  315 => 159,  311 => 157,  305 => 155,  303 => 154,  296 => 149,  292 => 147,  286 => 145,  284 => 144,  265 => 127,  261 => 125,  255 => 123,  253 => 122,  245 => 117,  235 => 109,  231 => 107,  225 => 105,  223 => 104,  215 => 98,  211 => 96,  205 => 94,  203 => 93,  192 => 84,  188 => 82,  182 => 80,  180 => 79,  173 => 74,  169 => 72,  163 => 70,  161 => 69,  108 => 19,  100 => 14,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1030,12 +1131,19 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                             </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-account\" role=\"tabpanel\" aria-labelledby=\"user-set-account-tab\">
+                            {{ form_start(form) }}
+                                {{ form_widget(form) }}
+                                <button class=\"btn\">Upload</button>
+                            {{ form_end(form) }}
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5> Promesse d'embauche </h5>
                                 </div>
                                 <div class=\"card-body\">
+                                {% if embauchedocs %}
+                                    {% for document in embauchedocs %}
                                     <div class=\"d-flex align-items-center mb-2\">
+                                    
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -1044,14 +1152,19 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\"> Lettre d'embauche</h6>
+                                                    <h6 class=\"mb-0\">
+                                                        <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                            <button class=\"btn btn-link-primary avtar avtar-xs\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
+                                    
                                     </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class=\"card\">
@@ -1059,23 +1172,27 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                     <h5>Contrats de travail</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
-                                        <div class=\"flex-grow-1 me-3\">
-                                            <div class=\"d-flex align-items-center\">
-                                                <div class=\"flex-shrink-0\">
-                                                    <div class=\"avtar avtar-xs btn-light-twitter\">
-                                                        <i class=\"fas fa-file-alt f-16\"></i>
+                                    {% if contratdocs %}
+                                    {% for document in contratdocs %}
+                                        <div class=\"d-flex align-items-center mb-2\">
+                                            <div class=\"flex-grow-1 me-3\">
+                                                <div class=\"d-flex align-items-center\">
+                                                    <div class=\"flex-shrink-0\">
+                                                        <div class=\"avtar avtar-xs btn-light-twitter\">
+                                                            <i class=\"fas fa-file-alt f-16\"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class=\"flex-grow-1 ms-3\">
+                                                        <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
                                                     </div>
                                                 </div>
-                                                <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Contrat stage</h6>
-                                                </div>
+                                            </div>
+                                            <div class=\"flex-shrink-0\">
+                                                <button class=\"btn btn-link-primary\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                             </div>
                                         </div>
-                                        <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class=\"card\">
@@ -1083,6 +1200,8 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                     <h5>Fiches de paie</h5>
                                 </div>
                                 <div class=\"card-body\">
+                                {% if paiedocs %}
+                                {% for document in paiedocs %}
                                     <div class=\"d-flex align-items-center mb-2\">
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
@@ -1092,14 +1211,16 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Fiche de paie 2024-2025</h6>
+                                                    <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                           <button class=\"btn btn-link-primary\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     </div>
+                                {% endfor %}
+                                {% endif %}
                                 </div>
                             </div>
                         </div>

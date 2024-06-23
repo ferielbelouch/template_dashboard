@@ -140,8 +140,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Modifier les informations</span>
                             </a>
                         </div>
-                        </div>
                     </div>
+                </div>
                 <div class=\"col-lg-7 col-xxl-9\">
                     <div class=\"tab-content\" id=\"user-set-tabContent\">
                         <div class=\"tab-pane fade show active\" id=\"user-set-profile\" role=\"tabpanel\" aria-labelledby=\"user-set-profile-tab\">
@@ -456,12 +456,35 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-account\" role=\"tabpanel\" aria-labelledby=\"user-set-account-tab\">
-                            <div class=\"card\">
+                          ";
+        // line 343
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 343, $this->source); })()), 'form_start');
+        yield "
+                                ";
+        // line 344
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 344, $this->source); })()), 'widget');
+        yield "
+                                <button class=\"btn\">Upload</button>
+                            ";
+        // line 346
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 346, $this->source); })()), 'form_end');
+        yield "
+                              <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5> Promesse d'embauche </h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
+                                ";
+        // line 352
+        if ((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 352, $this->source); })())) {
+            // line 353
+            yield "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 353, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 354
+                yield "                                    <div class=\"d-flex align-items-center mb-2\">
+                                    
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -470,46 +493,105 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\"> Lettre d'embauche</h6>
+                                                    <h6 class=\"mb-0\">
+                                                        <a href=\"";
+                // line 365
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 365))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 365), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 365), "html", null, true);
+                yield ")</a>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                            <button class=\"btn btn-link-primary avtar avtar-xs\"> <a href=\"";
+                // line 371
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 371))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
+                                    
                                     </div>
-                                </div>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 376
+            yield "                                    ";
+        }
+        // line 377
+        yield "                                </div>
                             </div>
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5>Contrats de travail</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
-                                        <div class=\"flex-grow-1 me-3\">
-                                            <div class=\"d-flex align-items-center\">
-                                                <div class=\"flex-shrink-0\">
-                                                    <div class=\"avtar avtar-xs btn-light-twitter\">
-                                                        <i class=\"fas fa-file-alt f-16\"></i>
+                                    ";
+        // line 384
+        if ((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 384, $this->source); })())) {
+            // line 385
+            yield "                                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 385, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 386
+                yield "                                        <div class=\"d-flex align-items-center mb-2\">
+                                            <div class=\"flex-grow-1 me-3\">
+                                                <div class=\"d-flex align-items-center\">
+                                                    <div class=\"flex-shrink-0\">
+                                                        <div class=\"avtar avtar-xs btn-light-twitter\">
+                                                            <i class=\"fas fa-file-alt f-16\"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class=\"flex-grow-1 ms-3\">
+                                                        <a href=\"";
+                // line 395
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 395))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 395), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 395), "html", null, true);
+                yield ")</a>
                                                     </div>
                                                 </div>
-                                                <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Contrat stage</h6>
-                                                </div>
+                                            </div>
+                                            <div class=\"flex-shrink-0\">
+                                                <button class=\"btn btn-link-primary\"> <a href=\"";
+                // line 400
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 400))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                             </div>
                                         </div>
-                                        <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 404
+            yield "                                    ";
+        }
+        // line 405
+        yield "                                </div>
                             </div>
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5>Fiches de paie</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
+                                ";
+        // line 412
+        if ((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 412, $this->source); })())) {
+            // line 413
+            yield "                                ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 413, $this->source); })()));
+            foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
+                // line 414
+                yield "                                    <div class=\"d-flex align-items-center mb-2\">
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -518,16 +600,37 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Fiche de paie 2024-2025</h6>
+                                                    <a href=\"";
+                // line 423
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 423))), "html", null, true);
+                yield "\">";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 423), "html", null, true);
+                yield " (";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 423), "html", null, true);
+                yield ")</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                           <button class=\"btn btn-link-primary\"> <a href=\"";
+                // line 428
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 428))), "html", null, true);
+                yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     </div>
-                                </div>
+                                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 432
+            yield "                                ";
+        }
+        // line 433
+        yield "                                </div>
                             </div>
+
+
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
                             
@@ -538,8 +641,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                 <div class=\"card-body\">
                                     <ul class=\"list-group list-group-flush\">
                                     ";
-        // line 424
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 424, $this->source); })()), 'form_start');
+        // line 446
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 446, $this->source); })()), 'form_start');
         yield "
                                         <li class=\"list-group-item pt-0 px-0\">
                                             <div class=\"row mb-0\">
@@ -548,8 +651,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 431
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 431, $this->source); })()), "email", [], "any", false, false, false, 431), 'row');
+        // line 453
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 453, $this->source); })()), "email", [], "any", false, false, false, 453), 'row');
         yield "
                                             </div>
                                             </div>
@@ -561,8 +664,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 441
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 441, $this->source); })()), "password", [], "any", false, false, false, 441), 'row');
+        // line 463
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 463, $this->source); })()), "password", [], "any", false, false, false, 463), 'row');
         yield "
                                             </div>
                                             </div>
@@ -574,8 +677,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 451
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 451, $this->source); })()), "firstName", [], "any", false, false, false, 451), 'row');
+        // line 473
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 473, $this->source); })()), "firstName", [], "any", false, false, false, 473), 'row');
         yield "
                                             </div>
                                             </div>
@@ -587,8 +690,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 461
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 461, $this->source); })()), "lastName", [], "any", false, false, false, 461), 'row');
+        // line 483
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 483, $this->source); })()), "lastName", [], "any", false, false, false, 483), 'row');
         yield "
                                             </div>
                                             </div>
@@ -601,8 +704,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 472
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 472, $this->source); })()), "dateBirth", [], "any", false, false, false, 472), 'row');
+        // line 494
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 494, $this->source); })()), "dateBirth", [], "any", false, false, false, 494), 'row');
         yield "
                                             </div>
                                             </div>
@@ -614,8 +717,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 482
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 482, $this->source); })()), "Phone", [], "any", false, false, false, 482), 'row');
+        // line 504
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 504, $this->source); })()), "Phone", [], "any", false, false, false, 504), 'row');
         yield "
                                             </div>
                                             </div>
@@ -627,8 +730,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 492
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 492, $this->source); })()), "Address", [], "any", false, false, false, 492), 'row');
+        // line 514
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 514, $this->source); })()), "Address", [], "any", false, false, false, 514), 'row');
         yield "
                                             </div>
                                             </div>
@@ -637,16 +740,16 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <div class=\"p-3\">
                                                 <div class=\"text-center\">
                                                     <button class=\"btn btn-primary\" target=\"_blank\">";
-        // line 499
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 499, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+        // line 521
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 521, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
         yield "</button>
                                                 </div>
                                             </div>
                                         </div>
                                          ";
-        // line 504
+        // line 526
         yield "                                    ";
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 504, $this->source); })()), 'form_end');
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 526, $this->source); })()), 'form_end');
         yield "
                                        
                                     </ul>
@@ -826,7 +929,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  648 => 504,  641 => 499,  631 => 492,  618 => 482,  605 => 472,  591 => 461,  578 => 451,  565 => 441,  552 => 431,  542 => 424,  390 => 274,  386 => 272,  380 => 270,  378 => 269,  371 => 264,  367 => 262,  361 => 260,  359 => 259,  338 => 240,  334 => 238,  328 => 236,  326 => 235,  315 => 226,  311 => 224,  305 => 222,  303 => 221,  296 => 216,  292 => 214,  286 => 212,  284 => 211,  265 => 194,  261 => 192,  255 => 190,  253 => 189,  245 => 184,  235 => 176,  231 => 174,  225 => 172,  223 => 171,  215 => 165,  211 => 163,  205 => 161,  203 => 160,  192 => 151,  188 => 149,  182 => 147,  180 => 146,  173 => 141,  169 => 139,  163 => 137,  161 => 136,  108 => 86,  100 => 81,  90 => 73,  80 => 72,  60 => 70,  37 => 68,);
+        return array (  751 => 526,  744 => 521,  734 => 514,  721 => 504,  708 => 494,  694 => 483,  681 => 473,  668 => 463,  655 => 453,  645 => 446,  630 => 433,  627 => 432,  617 => 428,  605 => 423,  594 => 414,  589 => 413,  587 => 412,  578 => 405,  575 => 404,  565 => 400,  553 => 395,  542 => 386,  537 => 385,  535 => 384,  526 => 377,  523 => 376,  512 => 371,  499 => 365,  486 => 354,  481 => 353,  479 => 352,  470 => 346,  465 => 344,  461 => 343,  390 => 274,  386 => 272,  380 => 270,  378 => 269,  371 => 264,  367 => 262,  361 => 260,  359 => 259,  338 => 240,  334 => 238,  328 => 236,  326 => 235,  315 => 226,  311 => 224,  305 => 222,  303 => 221,  296 => 216,  292 => 214,  286 => 212,  284 => 211,  265 => 194,  261 => 192,  255 => 190,  253 => 189,  245 => 184,  235 => 176,  231 => 174,  225 => 172,  223 => 171,  215 => 165,  211 => 163,  205 => 161,  203 => 160,  192 => 151,  188 => 149,  182 => 147,  180 => 146,  173 => 141,  169 => 139,  163 => 137,  161 => 136,  108 => 86,  100 => 81,  90 => 73,  80 => 72,  60 => 70,  37 => 68,);
     }
 
     public function getSourceContext()
@@ -950,8 +1053,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Modifier les informations</span>
                             </a>
                         </div>
-                        </div>
                     </div>
+                </div>
                 <div class=\"col-lg-7 col-xxl-9\">
                     <div class=\"tab-content\" id=\"user-set-tabContent\">
                         <div class=\"tab-pane fade show active\" id=\"user-set-profile\" role=\"tabpanel\" aria-labelledby=\"user-set-profile-tab\">
@@ -1173,12 +1276,19 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-account\" role=\"tabpanel\" aria-labelledby=\"user-set-account-tab\">
-                            <div class=\"card\">
+                          {{ form_start(forms) }}
+                                {{ form_widget(forms) }}
+                                <button class=\"btn\">Upload</button>
+                            {{ form_end(forms) }}
+                              <div class=\"card\">
                                 <div class=\"card-header\">
                                     <h5> Promesse d'embauche </h5>
                                 </div>
                                 <div class=\"card-body\">
+                                {% if embauchedocs %}
+                                    {% for document in embauchedocs %}
                                     <div class=\"d-flex align-items-center mb-2\">
+                                    
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
                                                 <div class=\"flex-shrink-0\">
@@ -1187,14 +1297,19 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\"> Lettre d'embauche</h6>
+                                                    <h6 class=\"mb-0\">
+                                                        <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                            <button class=\"btn btn-link-primary avtar avtar-xs\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
+                                    
                                     </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class=\"card\">
@@ -1202,23 +1317,27 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                     <h5>Contrats de travail</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <div class=\"d-flex align-items-center mb-2\">
-                                        <div class=\"flex-grow-1 me-3\">
-                                            <div class=\"d-flex align-items-center\">
-                                                <div class=\"flex-shrink-0\">
-                                                    <div class=\"avtar avtar-xs btn-light-twitter\">
-                                                        <i class=\"fas fa-file-alt f-16\"></i>
+                                    {% if contratdocs %}
+                                    {% for document in contratdocs %}
+                                        <div class=\"d-flex align-items-center mb-2\">
+                                            <div class=\"flex-grow-1 me-3\">
+                                                <div class=\"d-flex align-items-center\">
+                                                    <div class=\"flex-shrink-0\">
+                                                        <div class=\"avtar avtar-xs btn-light-twitter\">
+                                                            <i class=\"fas fa-file-alt f-16\"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class=\"flex-grow-1 ms-3\">
+                                                        <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
                                                     </div>
                                                 </div>
-                                                <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Contrat stage</h6>
-                                                </div>
+                                            </div>
+                                            <div class=\"flex-shrink-0\">
+                                                <button class=\"btn btn-link-primary\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                             </div>
                                         </div>
-                                        <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
-                                        </div>
-                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class=\"card\">
@@ -1226,6 +1345,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                     <h5>Fiches de paie</h5>
                                 </div>
                                 <div class=\"card-body\">
+                                {% if paiedocs %}
+                                {% for document in paiedocs %}
                                     <div class=\"d-flex align-items-center mb-2\">
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
@@ -1235,16 +1356,20 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     </div>
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
-                                                    <h6 class=\"mb-0\">Fiche de paie 2024-2025</h6>
+                                                    <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\">{{ document.name }} ({{ document.category }})</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
-                                            <button class=\"btn btn-link-primary\">télécharger</button>
+                                           <button class=\"btn btn-link-primary\"> <a href=\"{{ asset('uploads/documents/' ~ document.fileName) }}\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     </div>
+                                {% endfor %}
+                                {% endif %}
                                 </div>
                             </div>
+
+
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
                             

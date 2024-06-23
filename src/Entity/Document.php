@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\DocumentRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: DocumentRepository::class)]
+#[Vich\Uploadable]
 class Document
 {
     #[ORM\Id]
@@ -22,9 +25,16 @@ class Document
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $fileName = null;
 
+    #[Vich\UploadableField(mapping: 'documents', fileNameProperty: 'fileName')]
+    private ?File $file = null;
+
     #[ORM\ManyToOne(inversedBy: 'documents')]
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
+
+
+    #[ORM\Column(type: 'datetime_immutable')]
+    private ?\DateTimeImmutable $updatedAt = null;
 
     public function getId(): ?int
     {
@@ -75,6 +85,33 @@ class Document
     public function setUser(?User $user): static
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getFile(): ?File
+    {
+        return $this->file;
+    }
+
+    public function setFile(?File $file = null): static
+    {
+        $this->file = $file;
+        if ($file) {
+            $this->updatedAt = new \DateTimeImmutable('now');
+        }
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): static
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
