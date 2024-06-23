@@ -91,7 +91,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
 
     <a href=\"";
         // line 8
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_pdf");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("generate_pdf");
         yield "\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
     <a href=\"";
         // line 9
@@ -223,7 +223,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
 {% block body %}
     <h1>Liste des employés</h1>
 
-    <a href=\"{{ path('user_pdf') }}\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
+    <a href=\"{{ path('generate_pdf') }}\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
     <a href=\"{{ path('app_user_new') }}\" class=\"btn btn-primary\">Nouveau  employé</a>
 
     <div class=\"card-body\">
