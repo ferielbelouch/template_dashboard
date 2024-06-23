@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Activation{% endblock %}
+
+{% block body %}
+    <h1>Edit Activation</h1>
+
+    {{ include('activation/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_activation_index') }}">back to list</a>
+
+    {{ include('activation/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activation{% endblock %}
+
+{% block body %}
+    <h1>Activation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ activation.id }}</td>
+            </tr>
+            <tr>
+                <th>Objectif</th>
+                <td>{{ activation.objectif }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ activation.date ? activation.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_activation_index') }}">back to list</a>
+
+    <a href="{{ path('app_activation_edit', {'id': activation.id}) }}">edit</a>
+
+    {{ include('activation/_delete_form.html.twig') }}
+{% endblock %}

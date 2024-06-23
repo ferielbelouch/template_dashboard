@@ -76,9 +76,17 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
             ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Operations</span>
           </a>
         </li>
-        <li class=\"pc-item\">
+        <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
         // line 25
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation");
+        yield "\" class=\"pc-link\"
+            ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Activations</span>
+          </a>
+        </li>
+        <li class=\"pc-item\">
+          <a href=\"";
+        // line 30
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
         yield "\" class=\"pc-link\">
             <span class=\"pc-micon\">
@@ -121,7 +129,7 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  82 => 25,  74 => 20,  63 => 12,  54 => 6,  49 => 4,  44 => 1,);
+        return array (  90 => 30,  82 => 25,  74 => 20,  63 => 12,  54 => 6,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +155,11 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"{{ path('app_operation')}}\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Operations</span>
+          </a>
+        </li>
+        <li class=\"pc-item pc-hasmenu\">
+          <a href=\"{{ path('app_activation')}}\" class=\"pc-link\"
+            ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Activations</span>
           </a>
         </li>
         <li class=\"pc-item\">

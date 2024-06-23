@@ -110,12 +110,8 @@ class __TwigTemplate_bf85f2a4e5dd5431fead22888e286ae0 extends Template
           <i class=\"ph-duotone ph-user\"></i>
           <span>Mon profile</span>
         </a>
-        <a href=\"#\" class=\"dropdown-item\">
-          <i class=\"ph-duotone ph-gear\"></i>
-          <span>Paramètres</span>
-        </a>
         <a href=\"";
-        // line 71
+        // line 67
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         yield "\" class=\"dropdown-item\">
           <i class=\"ph-duotone ph-power\"></i>
@@ -156,7 +152,7 @@ class __TwigTemplate_bf85f2a4e5dd5431fead22888e286ae0 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  119 => 71,  108 => 63,  44 => 1,);
+        return array (  115 => 67,  108 => 63,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -226,10 +222,6 @@ class __TwigTemplate_bf85f2a4e5dd5431fead22888e286ae0 extends Template
         <a href=\"{{path('app_profile')}}\" class=\"dropdown-item\">
           <i class=\"ph-duotone ph-user\"></i>
           <span>Mon profile</span>
-        </a>
-        <a href=\"#\" class=\"dropdown-item\">
-          <i class=\"ph-duotone ph-gear\"></i>
-          <span>Paramètres</span>
         </a>
         <a href=\"{{path('app_logout')}}\" class=\"dropdown-item\">
           <i class=\"ph-duotone ph-power\"></i>

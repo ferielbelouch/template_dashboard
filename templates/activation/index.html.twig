@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activation index{% endblock %}
+
+{% block body %}
+    <h1>Activation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Objectif</th>
+                <th>Date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activation in activations %}
+            <tr>
+                <td>{{ activation.id }}</td>
+                <td>{{ activation.objectif }}</td>
+                <td>{{ activation.date ? activation.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_activation_show', {'id': activation.id}) }}">show</a>
+                    <a href="{{ path('app_activation_edit', {'id': activation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_activation_new') }}">Create new</a>
+{% endblock %}
