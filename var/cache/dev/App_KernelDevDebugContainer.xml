@@ -287,6 +287,22 @@
         <parameter key="inject_on_load">false</parameter>
         <parameter key="db_driver">orm</parameter>
       </parameter>
+      <parameter key="documents" type="collection">
+        <parameter key="uri_prefix">/uploads/documents</parameter>
+        <parameter key="upload_destination">/Users/hantour/Documents/FERIEL/template_dashboard/public/uploads/documents</parameter>
+        <parameter key="namer" type="collection">
+          <parameter key="service">Vich\UploaderBundle\Naming\SmartUniqueNamer.documents</parameter>
+          <parameter key="options" type="collection"/>
+        </parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="delete_on_remove">true</parameter>
+        <parameter key="directory_namer" type="collection">
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
+        </parameter>
+        <parameter key="db_driver">orm</parameter>
+      </parameter>
     </parameter>
     <parameter key="vich_uploader.file_injector.class">Vich\UploaderBundle\Injector\FileInjector</parameter>
     <parameter key="knp_snappy.pdf.binary">wkhtmltopdf</parameter>
@@ -474,6 +490,9 @@
     <service id="App\Form\ActivationType" class="App\Form\ActivationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\DocumentType" class="App\Form\DocumentType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\OperationType" class="App\Form\OperationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -526,7 +545,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.UpxHBXe"/>
+      <argument type="service" id=".service_locator.f46v4c7"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -1432,6 +1451,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\ActivationType</argument>
+        <argument>App\Form\DocumentType</argument>
         <argument>App\Form\OperationType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\UserType</argument>
@@ -3450,7 +3470,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.UpxHBXe"/>
+      <argument type="service" id=".service_locator.f46v4c7"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3935,7 +3955,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.ZBa66w_"/>
+      <argument type="service" id=".service_locator.aJ.w6_T"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -5033,13 +5053,19 @@
       </call>
     </service>
     <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager">
-      <argument type="service" id=".service_locator.m80ZLzV"/>
+      <argument type="service" id=".service_locator.lIce_lX"/>
       <argument type="collection">
         <argument type="collection">
           <argument type="collection">
             <argument>preUpdate</argument>
           </argument>
           <argument>vich_uploader.listener.clean.users_images</argument>
+        </argument>
+        <argument type="collection">
+          <argument type="collection">
+            <argument>preUpdate</argument>
+          </argument>
+          <argument>vich_uploader.listener.clean.documents</argument>
         </argument>
         <argument type="collection">
           <argument type="collection">
@@ -5118,6 +5144,30 @@
             <argument>preUpdate</argument>
           </argument>
           <argument>vich_uploader.listener.upload.users_images</argument>
+        </argument>
+        <argument type="collection">
+          <argument type="collection">
+            <argument>preRemove</argument>
+          </argument>
+          <argument>vich_uploader.listener.remove.documents</argument>
+        </argument>
+        <argument type="collection">
+          <argument type="collection">
+            <argument>postFlush</argument>
+          </argument>
+          <argument>vich_uploader.listener.remove.documents</argument>
+        </argument>
+        <argument type="collection">
+          <argument type="collection">
+            <argument>prePersist</argument>
+          </argument>
+          <argument>vich_uploader.listener.upload.documents</argument>
+        </argument>
+        <argument type="collection">
+          <argument type="collection">
+            <argument>preUpdate</argument>
+          </argument>
+          <argument>vich_uploader.listener.upload.documents</argument>
         </argument>
       </argument>
     </service>
@@ -7333,6 +7383,9 @@
     <service id="Vich\UploaderBundle\Naming\SmartUniqueNamer.users_images" class="Vich\UploaderBundle\Naming\SmartUniqueNamer" public="true">
       <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
     </service>
+    <service id="Vich\UploaderBundle\Naming\SmartUniqueNamer.documents" class="Vich\UploaderBundle\Naming\SmartUniqueNamer" public="true">
+      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
+    </service>
     <service id="vich_uploader.adapter.mongodb" class="Vich\UploaderBundle\Adapter\ODM\MongoDB\MongoDBAdapter"/>
     <service id="vich_uploader.adapter.orm" class="Vich\UploaderBundle\Adapter\ORM\DoctrineORMAdapter"/>
     <service id="vich_uploader.adapter.phpcr" class="Vich\UploaderBundle\Adapter\PHPCR\PHPCRAdapter"/>
@@ -7593,6 +7646,29 @@
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
+    <service id="vich_uploader.listener.clean.documents" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+      <tag name="doctrine.event_listener" event="preUpdate" priority="50"/>
+      <argument>documents</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.remove.documents" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+      <tag name="doctrine.event_listener" event="preRemove" priority="0"/>
+      <tag name="doctrine.event_listener" event="postFlush" priority="0"/>
+      <argument>documents</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
+    <service id="vich_uploader.listener.upload.documents" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+      <tag name="doctrine.event_listener" event="prePersist" priority="0"/>
+      <tag name="doctrine.event_listener" event="preUpdate" priority="0"/>
+      <argument>documents</argument>
+      <argument type="service" id="vich_uploader.adapter.orm"/>
+      <argument type="service" id="vich_uploader.metadata_reader"/>
+      <argument type="service" id="vich_uploader.upload_handler"/>
+    </service>
     <service id="knp_snappy.pdf" class="Knp\Snappy\Pdf" public="true">
       <tag name="monolog.logger" channel="snappy"/>
       <argument>wkhtmltopdf</argument>
@@ -7642,6 +7718,8 @@
     <service id=".abstract.instanceof.App\Controller\UserGenPdfController" class="App\Controller\UserGenPdfController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ActivationType" class="App\Form\ActivationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ActivationType" class="App\Form\ActivationType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DocumentType" class="App\Form\DocumentType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\DocumentType" class="App\Form\DocumentType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\OperationType" class="App\Form\OperationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\OperationType" class="App\Form\OperationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
@@ -8130,10 +8208,11 @@
         <argument key="operation" type="service_closure" id=".errored..service_locator.LfRE9Ab.App\Entity\Operation"/>
       </argument>
     </service>
-    <service id=".service_locator.9kKwU2t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.WOBs9SL" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="documentRepository" type="service_closure" id="App\Repository\DocumentRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
     <service id=".service_locator.V6D1oJY" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -8163,11 +8242,12 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.URv18j3" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.BZxHNH2" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="documentRepository" type="service_closure" id="App\Repository\DocumentRepository"/>
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-        <argument key="user" type="service_closure" id=".errored..service_locator.URv18j3.App\Entity\User"/>
+        <argument key="user" type="service_closure" id=".errored..service_locator.BZxHNH2.App\Entity\User"/>
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
@@ -8178,7 +8258,7 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.R0Sb2kd.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.UpxHBXe" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.f46v4c7" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ActivationController::delete" type="service_closure" id=".service_locator.KahGxHB"/>
@@ -8193,14 +8273,14 @@
         <argument key="App\Controller\OperationController::index" type="service_closure" id=".service_locator.RJb25OM"/>
         <argument key="App\Controller\OperationController::new" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\OperationController::show" type="service_closure" id=".service_locator.vxMQ6pO"/>
-        <argument key="App\Controller\ProfileController::index" type="service_closure" id=".service_locator.9kKwU2t"/>
+        <argument key="App\Controller\ProfileController::index" type="service_closure" id=".service_locator.WOBs9SL"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.V6D1oJY"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController::delete" type="service_closure" id=".service_locator.R0Sb2kd"/>
         <argument key="App\Controller\UserController::generatePdf" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="App\Controller\UserController::index" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="App\Controller\UserController::new" type="service_closure" id=".service_locator.NYbRE5z"/>
-        <argument key="App\Controller\UserController::show" type="service_closure" id=".service_locator.URv18j3"/>
+        <argument key="App\Controller\UserController::show" type="service_closure" id=".service_locator.BZxHNH2"/>
         <argument key="App\Controller\UserGenPdfController::generatePdf" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -8218,14 +8298,14 @@
         <argument key="App\Controller\OperationController:index" type="service_closure" id=".service_locator.RJb25OM"/>
         <argument key="App\Controller\OperationController:new" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\OperationController:show" type="service_closure" id=".service_locator.vxMQ6pO"/>
-        <argument key="App\Controller\ProfileController:index" type="service_closure" id=".service_locator.9kKwU2t"/>
+        <argument key="App\Controller\ProfileController:index" type="service_closure" id=".service_locator.WOBs9SL"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.V6D1oJY"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.rSTd.nA"/>
         <argument key="App\Controller\UserController:delete" type="service_closure" id=".service_locator.R0Sb2kd"/>
         <argument key="App\Controller\UserController:generatePdf" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="App\Controller\UserController:index" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="App\Controller\UserController:new" type="service_closure" id=".service_locator.NYbRE5z"/>
-        <argument key="App\Controller\UserController:show" type="service_closure" id=".service_locator.URv18j3"/>
+        <argument key="App\Controller\UserController:show" type="service_closure" id=".service_locator.BZxHNH2"/>
         <argument key="App\Controller\UserGenPdfController:generatePdf" type="service_closure" id=".service_locator.kPUOGb8"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -8388,10 +8468,11 @@
       <argument type="service" id="argument_resolver.query_parameter_value_resolver"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.ZBa66w_" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.aJ.w6_T" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ActivationType" type="service_closure" id="App\Form\ActivationType"/>
+        <argument key="App\Form\DocumentType" type="service_closure" id="App\Form\DocumentType"/>
         <argument key="App\Form\OperationType" type="service_closure" id="App\Form\OperationType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
@@ -8510,7 +8591,7 @@
       <argument type="service" id="http_client.uri_template"/>
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
     </service>
-    <service id=".service_locator.m80ZLzV" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.lIce_lX" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service_closure" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
@@ -8520,8 +8601,11 @@
         <argument key="doctrine.orm.listeners.pdo_session_handler_schema_listener" type="service_closure" id="doctrine.orm.listeners.pdo_session_handler_schema_listener"/>
         <argument key="doctrine.orm.messenger.doctrine_schema_listener" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_listener"/>
         <argument key="turbo.doctrine.event_listener" type="service_closure" id="turbo.doctrine.event_listener"/>
+        <argument key="vich_uploader.listener.clean.documents" type="service_closure" id="vich_uploader.listener.clean.documents"/>
         <argument key="vich_uploader.listener.clean.users_images" type="service_closure" id="vich_uploader.listener.clean.users_images"/>
+        <argument key="vich_uploader.listener.remove.documents" type="service_closure" id="vich_uploader.listener.remove.documents"/>
         <argument key="vich_uploader.listener.remove.users_images" type="service_closure" id="vich_uploader.listener.remove.users_images"/>
+        <argument key="vich_uploader.listener.upload.documents" type="service_closure" id="vich_uploader.listener.upload.documents"/>
         <argument key="vich_uploader.listener.upload.users_images" type="service_closure" id="vich_uploader.listener.upload.users_images"/>
       </argument>
     </service>
@@ -9319,8 +9403,8 @@
     <service id=".errored..service_locator.LfRE9Ab.App\Entity\Operation" class="App\Entity\Operation">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.LfRE9Ab&quot;: it needs an instance of &quot;App\Entity\Operation&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
-    <service id=".errored..service_locator.URv18j3.App\Entity\User" class="App\Entity\User">
-      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.URv18j3&quot;: it needs an instance of &quot;App\Entity\User&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
+    <service id=".errored..service_locator.BZxHNH2.App\Entity\User" class="App\Entity\User">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.BZxHNH2&quot;: it needs an instance of &quot;App\Entity\User&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
     <service id=".errored..service_locator.R0Sb2kd.App\Entity\User" class="App\Entity\User">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.R0Sb2kd&quot;: it needs an instance of &quot;App\Entity\User&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
@@ -10500,7 +10584,7 @@
     <service id="Knp\Snappy\Image" alias="knp_snappy.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.UpxHBXe"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.f46v4c7"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10552,12 +10636,12 @@
     <service id=".service_locator.41heoYC" alias=".service_locator.RJb25OM"/>
     <service id=".service_locator.IWndvZs" alias=".service_locator.vxMQ6pO"/>
     <service id=".service_locator.W2ZtuLN" alias=".service_locator.LfRE9Ab"/>
-    <service id=".service_locator.gaTSUXr" alias=".service_locator.9kKwU2t"/>
+    <service id=".service_locator.uNQzG.C" alias=".service_locator.WOBs9SL"/>
     <service id=".service_locator.qnm_CJ1" alias=".service_locator.V6D1oJY"/>
     <service id=".service_locator.7NIAq8D" alias=".service_locator.rSTd.nA"/>
     <service id=".service_locator.025Wi8b" alias=".service_locator.kPUOGb8"/>
     <service id=".service_locator.LETTFm1" alias=".service_locator.NYbRE5z"/>
-    <service id=".service_locator.GdPrAYu" alias=".service_locator.URv18j3"/>
+    <service id=".service_locator.8Mle1jM" alias=".service_locator.BZxHNH2"/>
     <service id=".service_locator.wvr_glq" alias=".service_locator.R0Sb2kd"/>
     <service id=".service_locator.Q1z.f9O" alias=".service_locator.jUv.zyj"/>
   </services>
