@@ -128,14 +128,14 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
             ((CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 27)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 27), "Y-m-d H:i:s"), "html", null, true)) : (yield ""));
             yield "</td>
                         <td>
-                            <a href=\"";
+                            <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
             // line 29
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 29)]), "html", null, true);
-            yield "\">show</a>
-                            <a href=\"";
+            yield "\"><i class=\"ti ti-eye\"></i></a></button>
+                            <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
             // line 30
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 30)]), "html", null, true);
-            yield "\"><i class=\"ti ti-pencil\"></i></a>
+            yield "\"><i class=\"ti ti-pencil\"></i></a></button>                   
                         </td>
                     </tr>
                 ";
@@ -223,8 +223,8 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
                         <td>{{ activation.objectif }}</td>
                         <td>{{ activation.date ? activation.date|date('Y-m-d H:i:s') : '' }}</td>
                         <td>
-                            <a href=\"{{ path('app_activation_show', {'id': activation.id}) }}\">show</a>
-                            <a href=\"{{ path('app_activation_edit', {'id': activation.id}) }}\"><i class=\"ti ti-pencil\"></i></a>
+                            <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_activation_show', {'id': activation.id}) }}\"><i class=\"ti ti-eye\"></i></a></button>
+                            <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_activation_edit', {'id': activation.id}) }}\"><i class=\"ti ti-pencil\"></i></a></button>                   
                         </td>
                     </tr>
                 {% else %}

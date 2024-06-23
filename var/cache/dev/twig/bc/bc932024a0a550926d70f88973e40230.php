@@ -128,8 +128,8 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
           <div class=\"col-md-3 col-sm-6\">
             <div class=\"card statistics-card-1 overflow-hidden text-center\">
               <div class=\"card-body\">
-                <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                <h5 class=\"mb-4\">Activations terminées</h5>
+                <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
+                 <h5 class=\"mb-4\">Activations terminées</h5>
                 <div class=\"mt-3 text-center\">
                   <h3 class=\" f-w-300 m-b-0\">x </h3>
                 </div>
@@ -315,7 +315,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                           <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
             // line 203
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 203)]), "html", null, true);
-            yield "\"><i class=\"ti ti-user\"></i></a></button>
+            yield "\"><i class=\"ti ti-eye\"></i></a></button>
                         </td>
                       </tr>
                     ";
@@ -407,8 +407,8 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
           <div class=\"col-md-3 col-sm-6\">
             <div class=\"card statistics-card-1 overflow-hidden text-center\">
               <div class=\"card-body\">
-                <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                <h5 class=\"mb-4\">Activations terminées</h5>
+                <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
+                 <h5 class=\"mb-4\">Activations terminées</h5>
                 <div class=\"mt-3 text-center\">
                   <h3 class=\" f-w-300 m-b-0\">x </h3>
                 </div>
@@ -573,7 +573,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                         <td><p class=\"mb-0\"><i class=\"ph-duotone ph-circle text-warning f-12\"></i> <td>{{ user.createdAt ? user.createdAt|date('Y-m-d') : '' }}</td></p></td>
                         <td class=\"text-end\">
                           <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_delete', {'id': user.id}) }}\"><i class=\"ti ti-x\"></i></a></button>
-                          <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_show', {'id': user.id}) }}\"><i class=\"ti ti-user\"></i></a></button>
+                          <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_show', {'id': user.id}) }}\"><i class=\"ti ti-eye\"></i></a></button>
                         </td>
                       </tr>
                     {% endfor %}
