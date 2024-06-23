@@ -28,6 +28,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -100,6 +101,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
 
     <div class=\"card-body\">
         <div class=\"dt-responsive\">
+            <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
             <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
                 <thead>
                     <tr>
@@ -116,49 +118,49 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
                 </thead>
                 <tbody>
                 ";
-        // line 28
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 29, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 29
+            // line 30
             yield "                    <tr>
                         <td>";
-            // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 30), "html", null, true);
-            yield "</td>
-                        <td>";
             // line 31
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 31), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31), "html", null, true);
             yield "</td>
                         <td>";
             // line 32
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 32)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 32)), "html", null, true)) : (yield ""));
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 32), "html", null, true);
             yield "</td>
                         <td>";
             // line 33
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 33), "html", null, true);
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 33)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 33)), "html", null, true)) : (yield ""));
             yield "</td>
                         <td>";
             // line 34
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 34), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 34), "html", null, true);
             yield "</td>
                         <td>";
             // line 35
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 35)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 35), "Y-m-d"), "html", null, true)) : (yield ""));
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 35), "html", null, true);
             yield "</td>
                         <td>";
             // line 36
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 36), "html", null, true);
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 36)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 36), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "</td>
                         <td>";
             // line 37
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 37), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 37), "html", null, true);
+            yield "</td>
+                        <td>";
+            // line 38
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 38), "html", null, true);
             yield "</td>
                         <td>
                             <a href=\"";
-            // line 39
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+            // line 40
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 40)]), "html", null, true);
             yield "\">show</a>
                         </td>
                     </tr>
@@ -166,7 +168,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 43
+            // line 44
             yield "                    <tr>
                         <td colspan=\"13\">no records found</td>
                     </tr>
@@ -175,11 +177,43 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 48
         yield "                </tbody>
             </table>
         </div>
     </div>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        return; yield '';
+    }
+
+    // line 53
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 54
+        yield "    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#search\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#dom-jqry tbody tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -211,7 +245,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
      */
     public function getDebugInfo()
     {
-        return array (  179 => 47,  170 => 43,  161 => 39,  156 => 37,  152 => 36,  148 => 35,  144 => 34,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  125 => 29,  120 => 28,  98 => 9,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  206 => 54,  196 => 53,  181 => 48,  172 => 44,  163 => 40,  158 => 38,  154 => 37,  150 => 36,  146 => 35,  142 => 34,  138 => 33,  134 => 32,  130 => 31,  127 => 30,  122 => 29,  99 => 9,  95 => 8,  91 => 6,  81 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -228,6 +262,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
 
     <div class=\"card-body\">
         <div class=\"dt-responsive\">
+            <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
             <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
                 <thead>
                     <tr>
@@ -267,6 +302,18 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         </div>
     </div>
 {% endblock %}
-", "user/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/user/index.html.twig");
+{% block javascripts %}
+    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#search\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#dom-jqry tbody tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}", "user/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/user/index.html.twig");
     }
 }

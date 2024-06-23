@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" id="main-style-link" >
     <link rel="stylesheet" href="{{ asset('css/style-preset.css') }}" >
 
+    {% block link %}{% endblock %}
+
   </head>
 
 	<body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">	
@@ -43,7 +45,8 @@
 				</div>
 			</div>
 			
-		    <script src="{{asset('js/plugins/apexcharts.min.js') }}"></script>
+      {% block javascripts %}{% endblock %}
+		  <script src="{{asset('js/plugins/apexcharts.min.js') }}"></script>
 			<script src="{{asset('js/plugins/jsvectormap.min.js') }}"></script>
 			<script src="{{asset('js/plugins/world.js') }}"></script>
 			<script src="{{asset('js/plugins/world-merc.js') }}"></script>

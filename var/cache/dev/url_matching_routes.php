@@ -18,6 +18,7 @@ return [
         '/activation/new' => [[['_route' => 'app_activation_new', '_controller' => 'App\\Controller\\ActivationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/goodies' => [[['_route' => 'app_goodies', '_controller' => 'App\\Controller\\GoodiesController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/generate-pdf-dashboard' => [[['_route' => 'generate_pdf_dashboard', '_controller' => 'App\\Controller\\HomeController::generatePdf'], null, null, null, false, false, null]],
         '/operation' => [[['_route' => 'app_operation', '_controller' => 'App\\Controller\\OperationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/operation/new' => [[['_route' => 'app_operation_new', '_controller' => 'App\\Controller\\OperationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profile' => [[['_route' => 'app_profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],

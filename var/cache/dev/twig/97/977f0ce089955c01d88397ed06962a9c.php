@@ -89,68 +89,76 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
         // line 6
         yield "    <h1>Activation index</h1>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Objectif</th>
-                <th>Date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 18
+    <a href=\"";
+        // line 8
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_new");
+        yield "\" class=\"btn btn-primary\">Nouvelle activation</a>
+
+    <div class=\"card-body\">
+        <div class=\"dt-responsive\">
+            <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
+            <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
+                <thead>
+                    <tr>
+                         <th>Id</th>
+                        <th>Objectif</th>
+                        <th>Date</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                ";
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["activations"]) || array_key_exists("activations", $context) ? $context["activations"] : (function () { throw new RuntimeError('Variable "activations" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["activations"]) || array_key_exists("activations", $context) ? $context["activations"] : (function () { throw new RuntimeError('Variable "activations" does not exist.', 23, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["activation"]) {
-            // line 19
-            yield "            <tr>
-                <td>";
-            // line 20
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 20), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "objectif", [], "any", false, false, false, 21), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 22
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 22)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 22), "Y-m-d H:i:s"), "html", null, true)) : (yield ""));
-            yield "</td>
-                <td>
-                    <a href=\"";
             // line 24
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            yield "\">show</a>
-                    <a href=\"";
+            yield "                    <tr>
+                        <td>";
             // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            yield "\">edit</a>
-                </td>
-            </tr>
-        ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 25), "html", null, true);
+            yield "</td>
+                        <td>";
+            // line 26
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "objectif", [], "any", false, false, false, 26), "html", null, true);
+            yield "</td>
+                        <td>";
+            // line 27
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 27)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "date", [], "any", false, false, false, 27), "Y-m-d H:i:s"), "html", null, true)) : (yield ""));
+            yield "</td>
+                        <td>
+                            <a href=\"";
+            // line 29
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            yield "\">show</a>
+                            <a href=\"";
+            // line 30
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["activation"], "id", [], "any", false, false, false, 30)]), "html", null, true);
+            yield "\"><i class=\"ti ti-pencil\"></i></a>
+                        </td>
+                    </tr>
+                ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
-            yield "            <tr>
-                <td colspan=\"4\">no records found</td>
-            </tr>
-        ";
+            // line 34
+            yield "                    <tr>
+                        <td colspan=\"13\">Pas d'activation trouvée !</td>
+                    </tr>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
-        yield "        </tbody>
-    </table>
+        // line 38
+        yield "                </tbody>
+            </table>
+        </div>
+    </div>
 
-    <a href=\"";
-        // line 36
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_new");
-        yield "\">Create new</a>
+
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -182,7 +190,7 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  152 => 36,  147 => 33,  138 => 29,  129 => 25,  125 => 24,  120 => 22,  116 => 21,  112 => 20,  109 => 19,  104 => 18,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  155 => 38,  146 => 34,  137 => 30,  133 => 29,  128 => 27,  124 => 26,  120 => 25,  117 => 24,  112 => 23,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -194,35 +202,43 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
 {% block body %}
     <h1>Activation index</h1>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Objectif</th>
-                <th>Date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for activation in activations %}
-            <tr>
-                <td>{{ activation.id }}</td>
-                <td>{{ activation.objectif }}</td>
-                <td>{{ activation.date ? activation.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href=\"{{ path('app_activation_show', {'id': activation.id}) }}\">show</a>
-                    <a href=\"{{ path('app_activation_edit', {'id': activation.id}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"4\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <a href=\"{{ path('app_activation_new') }}\" class=\"btn btn-primary\">Nouvelle activation</a>
 
-    <a href=\"{{ path('app_activation_new') }}\">Create new</a>
+    <div class=\"card-body\">
+        <div class=\"dt-responsive\">
+            <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
+            <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
+                <thead>
+                    <tr>
+                         <th>Id</th>
+                        <th>Objectif</th>
+                        <th>Date</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for activation in activations %}
+                    <tr>
+                        <td>{{ activation.id }}</td>
+                        <td>{{ activation.objectif }}</td>
+                        <td>{{ activation.date ? activation.date|date('Y-m-d H:i:s') : '' }}</td>
+                        <td>
+                            <a href=\"{{ path('app_activation_show', {'id': activation.id}) }}\">show</a>
+                            <a href=\"{{ path('app_activation_edit', {'id': activation.id}) }}\"><i class=\"ti ti-pencil\"></i></a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan=\"13\">Pas d'activation trouvée !</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
 {% endblock %}
 ", "activation/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/index.html.twig");
     }

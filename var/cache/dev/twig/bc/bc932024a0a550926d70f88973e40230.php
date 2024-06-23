@@ -88,10 +88,14 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
 
         // line 6
         yield "      <div class=\"pc-content\">
+      <a href=\"";
+        // line 7
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("generate_pdf_dashboard");
+        yield "\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
         <!-- [ Main Content ] start -->
         <div class=\"row\">
         ";
-        // line 10
+        // line 11
         yield "          <div class=\"col-md-3 col-sm-6\">
             <div class=\"card statistics-card-1 overflow-hidden text-center\">
               <div class=\"card-body\">
@@ -99,8 +103,8 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <h5 class=\"mb-4\">Opérations réalisées</h5>
                 <div class=\"mt-3 text-center\">
                   <h3 class=\"f-w-300 m-b-0\">";
-        // line 16
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationRealise"]) || array_key_exists("numOperationRealise", $context) ? $context["numOperationRealise"] : (function () { throw new RuntimeError('Variable "numOperationRealise" does not exist.', 16, $this->source); })()), "html", null, true);
+        // line 17
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationRealise"]) || array_key_exists("numOperationRealise", $context) ? $context["numOperationRealise"] : (function () { throw new RuntimeError('Variable "numOperationRealise" does not exist.', 17, $this->source); })()), "html", null, true);
         yield " </h3>
                   <span class=\"badge bg-light-success ms-2\"></span>
                 </div>
@@ -114,8 +118,8 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                 <h5 class=\"mb-4 text-white\">Opérations en cours</h5>
                 <div class=\"mt-3 text-center\">
                   <h3 class=\"text-white f-w-300 m-b-0\">";
-        // line 28
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationEnCours"]) || array_key_exists("numOperationEnCours", $context) ? $context["numOperationEnCours"] : (function () { throw new RuntimeError('Variable "numOperationEnCours" does not exist.', 28, $this->source); })()), "html", null, true);
+        // line 29
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numOperationEnCours"]) || array_key_exists("numOperationEnCours", $context) ? $context["numOperationEnCours"] : (function () { throw new RuntimeError('Variable "numOperationEnCours" does not exist.', 29, $this->source); })()), "html", null, true);
         yield "  </h3>
                 </div>
               </div>
@@ -144,8 +148,8 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             </div>
           </div>
         ";
-        // line 56
-        yield "
+        // line 57
+        yield " 
 
           <div class=\"col-md-6 col-xl-5\">
             <div class=\"card\">
@@ -278,39 +282,39 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
                   <table class=\"table table-hover table-borderless table-sm mb-0\">
                     <tbody>
                     ";
-        // line 188
+        // line 189
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["FourLastestUser"]) || array_key_exists("FourLastestUser", $context) ? $context["FourLastestUser"] : (function () { throw new RuntimeError('Variable "FourLastestUser" does not exist.', 188, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["FourLastestUser"]) || array_key_exists("FourLastestUser", $context) ? $context["FourLastestUser"] : (function () { throw new RuntimeError('Variable "FourLastestUser" does not exist.', 189, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 189
+            // line 190
             yield "                      <tr>
                         <td>
                           <div class=\"d-inline-block align-middle\">
                             <img src=\"";
-            // line 192
+            // line 193
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/avatar-1.jpg"), "html", null, true);
             yield "\" alt=\"user image\" class=\"img-radius align-top m-r-15\" style=\"width:40px;\">
                             <div class=\"d-inline-block\">
                               <h6 class=\"m-b-0\">";
-            // line 194
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 194), "html", null, true);
+            // line 195
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 195), "html", null, true);
             yield "</h6>
                               <p class=\"m-b-0\">Android developer</p>
                             </div>
                           </div>
                         </td>
                         <td><p class=\"mb-0\"><i class=\"ph-duotone ph-circle text-warning f-12\"></i> <td>";
-            // line 199
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 199)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 199), "Y-m-d"), "html", null, true)) : (yield ""));
+            // line 200
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 200)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "createdAt", [], "any", false, false, false, 200), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "</td></p></td>
                         <td class=\"text-end\">
                           <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
-            // line 201
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 201)]), "html", null, true);
+            // line 202
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 202)]), "html", null, true);
             yield "\"><i class=\"ti ti-x\"></i></a></button>
                           <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
-            // line 202
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 202)]), "html", null, true);
+            // line 203
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 203)]), "html", null, true);
             yield "\"><i class=\"ti ti-user\"></i></a></button>
                         </td>
                       </tr>
@@ -319,7 +323,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 206
+        // line 207
         yield "                      
                     </tbody>
                   </table>
@@ -362,7 +366,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  323 => 206,  313 => 202,  309 => 201,  304 => 199,  296 => 194,  291 => 192,  286 => 189,  282 => 188,  148 => 56,  118 => 28,  103 => 16,  95 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  327 => 207,  317 => 203,  313 => 202,  308 => 200,  300 => 195,  295 => 193,  290 => 190,  286 => 189,  152 => 57,  122 => 29,  107 => 17,  99 => 11,  93 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -373,6 +377,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
 
 {% block body %}
       <div class=\"pc-content\">
+      <a href=\"{{ path('generate_pdf_dashboard') }}\" class=\"btn btn-primary\">Télécharger la liste en PDF</a>
         <!-- [ Main Content ] start -->
         <div class=\"row\">
         {# KPI operation et activation #}
@@ -422,7 +427,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             </div>
           </div>
         {# Fin KPI operation et activation #}
-
+ 
 
           <div class=\"col-md-6 col-xl-5\">
             <div class=\"card\">
