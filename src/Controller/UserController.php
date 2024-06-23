@@ -10,12 +10,38 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use TCPDF;
+use Dompdf\Dompdf;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 #[Route('/user')]
 class UserController extends AbstractController
 {
+    #[Route('/generate-pdf', name: 'generate_pdf')]
+    public function generatePdf(UserRepository $userRepository): Response
+    {
+        // $users = $this->getDoctrine()->getRepository(User::class)->findAll();
+
+        $users = $userRepository->findAll();
+
+        $html = $this->renderView('pdf/index.html.twig', [
+            'users' => $users,
+        ]);
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        return new Response($dompdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="users.pdf"',
+        ]);
+    }
 
     #[Route('/', name: 'app_user_index', methods: ['GET'])]
     public function index(UserRepository $userRepository): Response

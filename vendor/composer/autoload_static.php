@@ -32,6 +32,10 @@ class ComposerStaticInit2e074b178cf99c894ccdda33ec3f7bde
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'h' => 
+        array (
+            'h4cc\\WKHTMLToPDF\\' => 17,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -139,6 +143,11 @@ class ComposerStaticInit2e074b178cf99c894ccdda33ec3f7bde
             'Metadata\\' => 9,
             'Masterminds\\' => 12,
         ),
+        'K' => 
+        array (
+            'Knp\\Snappy\\' => 11,
+            'Knp\\Bundle\\SnappyBundle\\' => 24,
+        ),
         'F' => 
         array (
             'FontLib\\' => 8,
@@ -183,6 +192,10 @@ class ComposerStaticInit2e074b178cf99c894ccdda33ec3f7bde
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'h4cc\\WKHTMLToPDF\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/h4cc/wkhtmltopdf-amd64',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -539,6 +552,14 @@ class ComposerStaticInit2e074b178cf99c894ccdda33ec3f7bde
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'Knp\\Snappy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy/src/Knp/Snappy',
+        ),
+        'Knp\\Bundle\\SnappyBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy-bundle/src',
         ),
         'FontLib\\' => 
         array (
