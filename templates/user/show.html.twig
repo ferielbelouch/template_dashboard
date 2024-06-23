@@ -1,70 +1,3 @@
-{# {% extends 'base.html.twig' %}
-
-{% block title %}User{% endblock %}
-
-{% block body %}
-    <h1>User</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>FirstName</th>
-                <td>{{ user.firstName }}</td>
-            </tr>
-            <tr>
-                <th>LastName</th>
-                <td>{{ user.lastName }}</td>
-            </tr>
-            <tr>
-                <th>DateBirth</th>
-                <td>{{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Photo de profil</th>
-                <td>{{ asset('images/UserUpload/' ~ user.imageFile) }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ user.CreatedAt ? user.CreatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>UpdatedAt</th>
-                <td>{{ user.UpdatedAt ? user.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Phone</th>
-                <td>{{ user.Phone }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ user.Address }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_user_index') }}">back to list</a>
-
-    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
-
-    {{ include('user/_delete_form.html.twig') }}
-{% endblock %} #}
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Profile{% endblock %}
@@ -77,11 +10,7 @@
                         <div class="card-body position-relative">
                             <div class="text-center mt-3">
                                 <div class="chat-avtar d-inline-flex mx-auto">
-                                    
-                                        <img class="rounded-circle img-fluid wid-90 img-thumbnail" src="{{ asset('images/user/avatar-1.jpg')}}" alt="User image" />
-                                 
-                                     
-                                    <i class="chat-badge bg-success me-2 mb-2"></i>
+                                    <img class="rounded-circle img-fluid wid-90 img-thumbnail" src="{{ asset('images/user/avatar-1.jpg')}}" alt="User image" />
                                 </div>
                                 <h5 class="mb-5">{{user.email}}</h5>
                                 <div class="row g-3">
@@ -114,7 +43,7 @@
                             <span class="f-w-500"><i class="ph-duotone ph-notebook m-r-10"></i>Documents contractuels</span>
                             </a>
                             <a class="nav-link list-group-item list-group-item-action" id="user-set-passwort-tab" data-bs-toggle="pill" href="#user-set-passwort" role="tab" aria-controls="user-set-passwort" aria-selected="false">
-                            <span class="f-w-500"><i class="ph-duotone ph-key m-r-10"></i>Modifier les informations</span>
+                            <span class="f-w-500"><i class="ti ti-settings m-r-10"></i>Modifier les informations</span>
                             </a>
                         </div>
                     </div>
@@ -527,144 +456,6 @@
                                        
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="user-set-email" role="tabpanel" aria-labelledby="user-set-email-tab">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Email Settings</h5>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="mb-3">Setup Email Notification</h6>
-                                    <div class="d-flex align-items-center justify-content-between mb-1">
-                                        <div>
-                                            <p class="text-muted mb-0">Email Notification</p>
-                                        </div>
-                                        <div class="form-check form-switch p-0">
-                                            <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mb-0">
-                                        <div>
-                                            <p class="text-muted mb-0">Send Copy To Personal Email</p>
-                                        </div>
-                                        <div class="form-check form-switch p-0">
-                                            <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                            <div class="card-header">
-                                <h5>Activity Related Emails</h5>
-                            </div>
-                            <div class="card-body">
-                                <h6 class="mb-3">When to email?</h6>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">Have new notifications</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">You're sent a direct message</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">Someone adds you as a connection</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                                <hr class="my-2 border border-secondary-subtle" />
-                                <h6 class="mb-3">When to escalate emails?</h6>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">Upon new order</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">New membership approval</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-0">
-                                <div>
-                                    <p class="text-muted mb-0">Member registration</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="card">
-                            <div class="card-header">
-                                <h5>Updates from System Notification</h5>
-                            </div>
-                            <div class="card-body">
-                                <h6 class="mb-3">Email you with?</h6>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">News about PCT-themes products and feature updates</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">Tips on getting more out of PCT-themes</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" checked="" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">Things you missed since you last logged into PCT-themes</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                <div>
-                                    <p class="text-muted mb-0">News about products and other services</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between mb-0">
-                                <div>
-                                    <p class="text-muted mb-0">Tips and Document business products</p>
-                                </div>
-                                <div class="form-check form-switch p-0">
-                                    <input class="m-0 form-check-input h5 position-relative" type="checkbox" role="switch" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="card">
-                            <div class="card-body text-end btn-page">
-                                <div class="btn btn-outline-secondary">Cancel</div>
-                                <div class="btn btn-primary">Update Profile</div>
-                            </div>
                             </div>
                         </div>
                     </div>

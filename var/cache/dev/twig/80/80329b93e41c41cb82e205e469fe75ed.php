@@ -33,7 +33,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
 
     protected function doGetParent(array $context)
     {
-        // line 68
+        // line 1
         return "base.html.twig";
     }
 
@@ -46,7 +46,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/show.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "user/show.html.twig", 68);
+        $this->parent = $this->loadTemplate("base.html.twig", "user/show.html.twig", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -56,7 +56,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
 
     }
 
-    // line 70
+    // line 3
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -76,7 +76,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
         return; yield '';
     }
 
-    // line 72
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,7 +86,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 73
+        // line 6
         yield "    <div class=\"col-sm-12\">
         <div class=\"row\">
                 <div class=\"col-lg-5 col-xxl-3\">
@@ -94,18 +94,14 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                         <div class=\"card-body position-relative\">
                             <div class=\"text-center mt-3\">
                                 <div class=\"chat-avtar d-inline-flex mx-auto\">
-                                    
-                                        <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"";
-        // line 81
+                                    <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"";
+        // line 13
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/avatar-1.jpg"), "html", null, true);
         yield "\" alt=\"User image\" />
-                                 
-                                     
-                                    <i class=\"chat-badge bg-success me-2 mb-2\"></i>
                                 </div>
                                 <h5 class=\"mb-5\">";
-        // line 86
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "email", [], "any", false, false, false, 86), "html", null, true);
+        // line 15
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 15, $this->source); })()), "email", [], "any", false, false, false, 15), "html", null, true);
         yield "</h5>
                                 <div class=\"row g-3\">
                                     <div class=\"col-4\">
@@ -137,7 +133,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-notebook m-r-10\"></i>Documents contractuels</span>
                             </a>
                             <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-passwort-tab\" data-bs-toggle=\"pill\" href=\"#user-set-passwort\" role=\"tab\" aria-controls=\"user-set-passwort\" aria-selected=\"false\">
-                            <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Modifier les informations</span>
+                            <span class=\"f-w-500\"><i class=\"ti ti-settings m-r-10\"></i>Modifier les informations</span>
                             </a>
                         </div>
                     </div>
@@ -157,38 +153,38 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Nom </p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 136
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 136, $this->source); })()), "lastName", [], "any", false, false, false, 136)) {
-            // line 137
+        // line 65
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 65, $this->source); })()), "lastName", [], "any", false, false, false, 65)) {
+            // line 66
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 137, $this->source); })()), "lastName", [], "any", false, false, false, 137), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 66, $this->source); })()), "lastName", [], "any", false, false, false, 66), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 139
+            // line 68
             yield "                                                Non renseigné
                                             ";
         }
-        // line 141
+        // line 70
         yield "                                             </p>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <p class=\"mb-1 text-muted\">Prénom</p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 146
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 146, $this->source); })()), "firstName", [], "any", false, false, false, 146)) {
-            // line 147
+        // line 75
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 75, $this->source); })()), "firstName", [], "any", false, false, false, 75)) {
+            // line 76
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 147, $this->source); })()), "firstName", [], "any", false, false, false, 147), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 76, $this->source); })()), "firstName", [], "any", false, false, false, 76), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 149
+            // line 78
             yield "                                                Non renseigné
                                             ";
         }
-        // line 151
+        // line 80
         yield "                                            </p>
                                         </div>
                                         </div> 
@@ -199,19 +195,19 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Date de naissance</p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 160
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 160, $this->source); })()), "dateBirth", [], "any", false, false, false, 160)) {
-            // line 161
+        // line 89
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 89, $this->source); })()), "dateBirth", [], "any", false, false, false, 89)) {
+            // line 90
             yield "                                                ";
-            ((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 161, $this->source); })()), "dateBirth", [], "any", false, false, false, 161)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 161, $this->source); })()), "dateBirth", [], "any", false, false, false, 161), "Y-m-d"), "html", null, true)) : (yield ""));
+            ((CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 90, $this->source); })()), "dateBirth", [], "any", false, false, false, 90)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 90, $this->source); })()), "dateBirth", [], "any", false, false, false, 90), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "
                                             ";
         } else {
-            // line 163
+            // line 92
             yield "                                                Non renseigné
                                             ";
         }
-        // line 165
+        // line 94
         yield "                                            
                                             </p>
                                         </div>
@@ -219,19 +215,19 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Phone</p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 171
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 171, $this->source); })()), "Phone", [], "any", false, false, false, 171)) {
-            // line 172
+        // line 100
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 100, $this->source); })()), "Phone", [], "any", false, false, false, 100)) {
+            // line 101
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 172, $this->source); })()), "Phone", [], "any", false, false, false, 172), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 101, $this->source); })()), "Phone", [], "any", false, false, false, 101), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 174
+            // line 103
             yield "                                                Non renseigné
                                             ";
         }
-        // line 176
+        // line 105
         yield "                                            </p>
                                         </div>
                                         </div>
@@ -241,27 +237,27 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                         <div class=\"col-md-6\">
                                             <p class=\"mb-1 text-muted\">Email</p>
                                             <p class=\"mb-0\">";
-        // line 184
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 184, $this->source); })()), "email", [], "any", false, false, false, 184), "html", null, true);
+        // line 113
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 113, $this->source); })()), "email", [], "any", false, false, false, 113), "html", null, true);
         yield "</p>
                                         </div>
                                         <div class=\"col-md-6\">
                                              <p class=\"mb-1 text-muted\">Address</p>
                                         <p class=\"mb-0\">
                                         ";
-        // line 189
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 189, $this->source); })()), "Address", [], "any", false, false, false, 189)) {
-            // line 190
+        // line 118
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 118, $this->source); })()), "Address", [], "any", false, false, false, 118)) {
+            // line 119
             yield "                                                 ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 190, $this->source); })()), "Address", [], "any", false, false, false, 190), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 119, $this->source); })()), "Address", [], "any", false, false, false, 119), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 192
+            // line 121
             yield "                                                Non renseigné
                                             ";
         }
-        // line 194
+        // line 123
         yield "                                        </div>
                                         </div>
                                     </li>
@@ -280,38 +276,38 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Email personnelle </p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 211
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 211, $this->source); })()), "email", [], "any", false, false, false, 211)) {
-            // line 212
+        // line 140
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 140, $this->source); })()), "email", [], "any", false, false, false, 140)) {
+            // line 141
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 212, $this->source); })()), "email", [], "any", false, false, false, 212), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 141, $this->source); })()), "email", [], "any", false, false, false, 141), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 214
+            // line 143
             yield "                                                Non renseigné
                                             ";
         }
-        // line 216
+        // line 145
         yield "                                             </p>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <p class=\"mb-1 text-muted\">Adresse personnelle</p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 221
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 221, $this->source); })()), "Phone", [], "any", false, false, false, 221)) {
-            // line 222
+        // line 150
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 150, $this->source); })()), "Phone", [], "any", false, false, false, 150)) {
+            // line 151
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 222, $this->source); })()), "Phone", [], "any", false, false, false, 222), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 151, $this->source); })()), "Phone", [], "any", false, false, false, 151), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 224
+            // line 153
             yield "                                                Non renseigné
                                             ";
         }
-        // line 226
+        // line 155
         yield "                                            </p>
                                         </div>
                                         </div>
@@ -322,19 +318,19 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <p class=\"mb-1 text-muted\">Phone</p>
                                             <p class=\"mb-0\">
                                             ";
-        // line 235
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 235, $this->source); })()), "Phone", [], "any", false, false, false, 235)) {
-            // line 236
+        // line 164
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 164, $this->source); })()), "Phone", [], "any", false, false, false, 164)) {
+            // line 165
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 236, $this->source); })()), "Phone", [], "any", false, false, false, 236), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 165, $this->source); })()), "Phone", [], "any", false, false, false, 165), "html", null, true);
             yield "
                                             ";
         } else {
-            // line 238
+            // line 167
             yield "                                                Non renseigné
                                             ";
         }
-        // line 240
+        // line 169
         yield "                                            </p>
                                         </div>
                                         </div>
@@ -355,38 +351,38 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     <p class=\"mb-1 text-muted\">Email professionnelle </p>
                                                     <p class=\"mb-0\">
                                                     ";
-        // line 259
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 259, $this->source); })()), "email", [], "any", false, false, false, 259)) {
-            // line 260
+        // line 188
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 188, $this->source); })()), "email", [], "any", false, false, false, 188)) {
+            // line 189
             yield "                                                        ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 260, $this->source); })()), "email", [], "any", false, false, false, 260), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 189, $this->source); })()), "email", [], "any", false, false, false, 189), "html", null, true);
             yield "
                                                     ";
         } else {
-            // line 262
+            // line 191
             yield "                                                        Non renseigné
                                                     ";
         }
-        // line 264
+        // line 193
         yield "                                                    </p>
                                                 </div>
                                                 <div class=\"col-md-6\">
                                                 <p class=\"mb-1 text-muted\">Phone</p>
                                                     <p class=\"mb-0\">
                                                     ";
-        // line 269
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 269, $this->source); })()), "Phone", [], "any", false, false, false, 269)) {
-            // line 270
+        // line 198
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 198, $this->source); })()), "Phone", [], "any", false, false, false, 198)) {
+            // line 199
             yield "                                                        ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 270, $this->source); })()), "Phone", [], "any", false, false, false, 270), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 199, $this->source); })()), "Phone", [], "any", false, false, false, 199), "html", null, true);
             yield "
                                                     ";
         } else {
-            // line 272
+            // line 201
             yield "                                                        Non renseigné
                                                     ";
         }
-        // line 274
+        // line 203
         yield "                                                    </p>
                                                 </div>
                                             </div>
@@ -457,17 +453,17 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                         </div>
                         <div class=\"tab-pane fade\" id=\"user-set-account\" role=\"tabpanel\" aria-labelledby=\"user-set-account-tab\">
                           ";
-        // line 343
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 343, $this->source); })()), 'form_start');
+        // line 272
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 272, $this->source); })()), 'form_start');
         yield "
                                 ";
-        // line 344
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 344, $this->source); })()), 'widget');
+        // line 273
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 273, $this->source); })()), 'widget');
         yield "
                                 <button class=\"btn\">Upload</button>
                             ";
-        // line 346
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 346, $this->source); })()), 'form_end');
+        // line 275
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 275, $this->source); })()), 'form_end');
         yield "
                               <div class=\"card\">
                                 <div class=\"card-header\">
@@ -475,14 +471,14 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                 </div>
                                 <div class=\"card-body\">
                                 ";
-        // line 352
-        if ((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 352, $this->source); })())) {
-            // line 353
+        // line 281
+        if ((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 281, $this->source); })())) {
+            // line 282
             yield "                                    ";
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 353, $this->source); })()));
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["embauchedocs"]) || array_key_exists("embauchedocs", $context) ? $context["embauchedocs"] : (function () { throw new RuntimeError('Variable "embauchedocs" does not exist.', 282, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-                // line 354
+                // line 283
                 yield "                                    <div class=\"d-flex align-items-center mb-2\">
                                     
                                         <div class=\"flex-grow-1 me-3\">
@@ -495,12 +491,12 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                 <div class=\"flex-grow-1 ms-3\">
                                                     <h6 class=\"mb-0\">
                                                         <a href=\"";
-                // line 365
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 365))), "html", null, true);
+                // line 294
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 294))), "html", null, true);
                 yield "\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 365), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 294), "html", null, true);
                 yield " (";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 365), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 294), "html", null, true);
                 yield ")</a>
                                                     </h6>
                                                 </div>
@@ -508,8 +504,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                         </div>
                                         <div class=\"flex-shrink-0\">
                                             <button class=\"btn btn-link-primary avtar avtar-xs\"> <a href=\"";
-                // line 371
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 371))), "html", null, true);
+                // line 300
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 300))), "html", null, true);
                 yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     
@@ -519,10 +515,10 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 376
+            // line 305
             yield "                                    ";
         }
-        // line 377
+        // line 306
         yield "                                </div>
                             </div>
                             <div class=\"card\">
@@ -531,14 +527,14 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                 </div>
                                 <div class=\"card-body\">
                                     ";
-        // line 384
-        if ((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 384, $this->source); })())) {
-            // line 385
+        // line 313
+        if ((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 313, $this->source); })())) {
+            // line 314
             yield "                                    ";
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 385, $this->source); })()));
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["contratdocs"]) || array_key_exists("contratdocs", $context) ? $context["contratdocs"] : (function () { throw new RuntimeError('Variable "contratdocs" does not exist.', 314, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-                // line 386
+                // line 315
                 yield "                                        <div class=\"d-flex align-items-center mb-2\">
                                             <div class=\"flex-grow-1 me-3\">
                                                 <div class=\"d-flex align-items-center\">
@@ -549,20 +545,20 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                     </div>
                                                     <div class=\"flex-grow-1 ms-3\">
                                                         <a href=\"";
-                // line 395
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 395))), "html", null, true);
+                // line 324
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 324))), "html", null, true);
                 yield "\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 395), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 324), "html", null, true);
                 yield " (";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 395), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 324), "html", null, true);
                 yield ")</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class=\"flex-shrink-0\">
                                                 <button class=\"btn btn-link-primary\"> <a href=\"";
-                // line 400
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 400))), "html", null, true);
+                // line 329
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 329))), "html", null, true);
                 yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                             </div>
                                         </div>
@@ -571,10 +567,10 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 404
+            // line 333
             yield "                                    ";
         }
-        // line 405
+        // line 334
         yield "                                </div>
                             </div>
                             <div class=\"card\">
@@ -583,14 +579,14 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                 </div>
                                 <div class=\"card-body\">
                                 ";
-        // line 412
-        if ((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 412, $this->source); })())) {
-            // line 413
+        // line 341
+        if ((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 341, $this->source); })())) {
+            // line 342
             yield "                                ";
             $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 413, $this->source); })()));
+            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["paiedocs"]) || array_key_exists("paiedocs", $context) ? $context["paiedocs"] : (function () { throw new RuntimeError('Variable "paiedocs" does not exist.', 342, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["document"]) {
-                // line 414
+                // line 343
                 yield "                                    <div class=\"d-flex align-items-center mb-2\">
                                         <div class=\"flex-grow-1 me-3\">
                                             <div class=\"d-flex align-items-center\">
@@ -601,20 +597,20 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                                 </div>
                                                 <div class=\"flex-grow-1 ms-3\">
                                                     <a href=\"";
-                // line 423
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 423))), "html", null, true);
+                // line 352
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 352))), "html", null, true);
                 yield "\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 423), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "name", [], "any", false, false, false, 352), "html", null, true);
                 yield " (";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 423), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["document"], "category", [], "any", false, false, false, 352), "html", null, true);
                 yield ")</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=\"flex-shrink-0\">
                                            <button class=\"btn btn-link-primary\"> <a href=\"";
-                // line 428
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 428))), "html", null, true);
+                // line 357
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/documents/" . CoreExtension::getAttribute($this->env, $this->source, $context["document"], "fileName", [], "any", false, false, false, 357))), "html", null, true);
                 yield "\"><i class=\"ti ti-cloud-upload\"></i></a></button>
                                         </div>
                                     </div>
@@ -623,10 +619,10 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['document'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 432
+            // line 361
             yield "                                ";
         }
-        // line 433
+        // line 362
         yield "                                </div>
                             </div>
 
@@ -641,8 +637,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                 <div class=\"card-body\">
                                     <ul class=\"list-group list-group-flush\">
                                     ";
-        // line 446
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 446, $this->source); })()), 'form_start');
+        // line 375
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 375, $this->source); })()), 'form_start');
         yield "
                                         <li class=\"list-group-item pt-0 px-0\">
                                             <div class=\"row mb-0\">
@@ -651,8 +647,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 453
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 453, $this->source); })()), "email", [], "any", false, false, false, 453), 'row');
+        // line 382
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 382, $this->source); })()), "email", [], "any", false, false, false, 382), 'row');
         yield "
                                             </div>
                                             </div>
@@ -664,8 +660,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 463
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 463, $this->source); })()), "password", [], "any", false, false, false, 463), 'row');
+        // line 392
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 392, $this->source); })()), "password", [], "any", false, false, false, 392), 'row');
         yield "
                                             </div>
                                             </div>
@@ -677,8 +673,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 473
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 473, $this->source); })()), "firstName", [], "any", false, false, false, 473), 'row');
+        // line 402
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 402, $this->source); })()), "firstName", [], "any", false, false, false, 402), 'row');
         yield "
                                             </div>
                                             </div>
@@ -690,8 +686,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 483
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 483, $this->source); })()), "lastName", [], "any", false, false, false, 483), 'row');
+        // line 412
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 412, $this->source); })()), "lastName", [], "any", false, false, false, 412), 'row');
         yield "
                                             </div>
                                             </div>
@@ -704,8 +700,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 494
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 494, $this->source); })()), "dateBirth", [], "any", false, false, false, 494), 'row');
+        // line 423
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 423, $this->source); })()), "dateBirth", [], "any", false, false, false, 423), 'row');
         yield "
                                             </div>
                                             </div>
@@ -717,8 +713,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 504
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 504, $this->source); })()), "Phone", [], "any", false, false, false, 504), 'row');
+        // line 433
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 433, $this->source); })()), "Phone", [], "any", false, false, false, 433), 'row');
         yield "
                                             </div>
                                             </div>
@@ -730,8 +726,8 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 514
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 514, $this->source); })()), "Address", [], "any", false, false, false, 514), 'row');
+        // line 443
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 443, $this->source); })()), "Address", [], "any", false, false, false, 443), 'row');
         yield "
                                             </div>
                                             </div>
@@ -740,158 +736,20 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                             <div class=\"p-3\">
                                                 <div class=\"text-center\">
                                                     <button class=\"btn btn-primary\" target=\"_blank\">";
-        // line 521
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 521, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+        // line 450
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 450, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
         yield "</button>
                                                 </div>
                                             </div>
                                         </div>
                                          ";
-        // line 526
+        // line 455
         yield "                                    ";
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 526, $this->source); })()), 'form_end');
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 455, $this->source); })()), 'form_end');
         yield "
                                        
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-email\" role=\"tabpanel\" aria-labelledby=\"user-set-email-tab\">
-                            <div class=\"card\">
-                                <div class=\"card-header\">
-                                    <h5>Email Settings</h5>
-                                </div>
-                                <div class=\"card-body\">
-                                    <h6 class=\"mb-3\">Setup Email Notification</h6>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Email Notification</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                        </div>
-                                    </div>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Send Copy To Personal Email</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Activity Related Emails</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">When to email?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Have new notifications</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">You're sent a direct message</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Someone adds you as a connection</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <hr class=\"my-2 border border-secondary-subtle\" />
-                                <h6 class=\"mb-3\">When to escalate emails?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Upon new order</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">New membership approval</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Member registration</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Updates from System Notification</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">Email you with?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about PCT-themes products and feature updates</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips on getting more out of PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Things you missed since you last logged into PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about products and other services</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips and Document business products</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-body text-end btn-page\">
-                                <div class=\"btn btn-outline-secondary\">Cancel</div>
-                                <div class=\"btn btn-primary\">Update Profile</div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -929,79 +787,12 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  751 => 526,  744 => 521,  734 => 514,  721 => 504,  708 => 494,  694 => 483,  681 => 473,  668 => 463,  655 => 453,  645 => 446,  630 => 433,  627 => 432,  617 => 428,  605 => 423,  594 => 414,  589 => 413,  587 => 412,  578 => 405,  575 => 404,  565 => 400,  553 => 395,  542 => 386,  537 => 385,  535 => 384,  526 => 377,  523 => 376,  512 => 371,  499 => 365,  486 => 354,  481 => 353,  479 => 352,  470 => 346,  465 => 344,  461 => 343,  390 => 274,  386 => 272,  380 => 270,  378 => 269,  371 => 264,  367 => 262,  361 => 260,  359 => 259,  338 => 240,  334 => 238,  328 => 236,  326 => 235,  315 => 226,  311 => 224,  305 => 222,  303 => 221,  296 => 216,  292 => 214,  286 => 212,  284 => 211,  265 => 194,  261 => 192,  255 => 190,  253 => 189,  245 => 184,  235 => 176,  231 => 174,  225 => 172,  223 => 171,  215 => 165,  211 => 163,  205 => 161,  203 => 160,  192 => 151,  188 => 149,  182 => 147,  180 => 146,  173 => 141,  169 => 139,  163 => 137,  161 => 136,  108 => 86,  100 => 81,  90 => 73,  80 => 72,  60 => 70,  37 => 68,);
+        return array (  747 => 455,  740 => 450,  730 => 443,  717 => 433,  704 => 423,  690 => 412,  677 => 402,  664 => 392,  651 => 382,  641 => 375,  626 => 362,  623 => 361,  613 => 357,  601 => 352,  590 => 343,  585 => 342,  583 => 341,  574 => 334,  571 => 333,  561 => 329,  549 => 324,  538 => 315,  533 => 314,  531 => 313,  522 => 306,  519 => 305,  508 => 300,  495 => 294,  482 => 283,  477 => 282,  475 => 281,  466 => 275,  461 => 273,  457 => 272,  386 => 203,  382 => 201,  376 => 199,  374 => 198,  367 => 193,  363 => 191,  357 => 189,  355 => 188,  334 => 169,  330 => 167,  324 => 165,  322 => 164,  311 => 155,  307 => 153,  301 => 151,  299 => 150,  292 => 145,  288 => 143,  282 => 141,  280 => 140,  261 => 123,  257 => 121,  251 => 119,  249 => 118,  241 => 113,  231 => 105,  227 => 103,  221 => 101,  219 => 100,  211 => 94,  207 => 92,  201 => 90,  199 => 89,  188 => 80,  184 => 78,  178 => 76,  176 => 75,  169 => 70,  165 => 68,  159 => 66,  157 => 65,  104 => 15,  99 => 13,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{# {% extends 'base.html.twig' %}
-
-{% block title %}User{% endblock %}
-
-{% block body %}
-    <h1>User</h1>
-
-    <table class=\"table\">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr>
-            <tr>
-                <th>FirstName</th>
-                <td>{{ user.firstName }}</td>
-            </tr>
-            <tr>
-                <th>LastName</th>
-                <td>{{ user.lastName }}</td>
-            </tr>
-            <tr>
-                <th>DateBirth</th>
-                <td>{{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Photo de profil</th>
-                <td>{{ asset('images/UserUpload/' ~ user.imageFile) }}</td>
-            </tr>
-            <tr>
-                <th>CreatedAt</th>
-                <td>{{ user.CreatedAt ? user.CreatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>UpdatedAt</th>
-                <td>{{ user.UpdatedAt ? user.UpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Phone</th>
-                <td>{{ user.Phone }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ user.Address }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href=\"{{ path('app_user_index') }}\">back to list</a>
-
-    <a href=\"{{ path('app_user_edit', {'id': user.id}) }}\">edit</a>
-
-    {{ include('user/_delete_form.html.twig') }}
-{% endblock %} #}
-
-{% extends 'base.html.twig' %}
+        return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Profile{% endblock %}
 
@@ -1013,11 +804,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                         <div class=\"card-body position-relative\">
                             <div class=\"text-center mt-3\">
                                 <div class=\"chat-avtar d-inline-flex mx-auto\">
-                                    
-                                        <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"{{ asset('images/user/avatar-1.jpg')}}\" alt=\"User image\" />
-                                 
-                                     
-                                    <i class=\"chat-badge bg-success me-2 mb-2\"></i>
+                                    <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"{{ asset('images/user/avatar-1.jpg')}}\" alt=\"User image\" />
                                 </div>
                                 <h5 class=\"mb-5\">{{user.email}}</h5>
                                 <div class=\"row g-3\">
@@ -1050,7 +837,7 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-notebook m-r-10\"></i>Documents contractuels</span>
                             </a>
                             <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-passwort-tab\" data-bs-toggle=\"pill\" href=\"#user-set-passwort\" role=\"tab\" aria-controls=\"user-set-passwort\" aria-selected=\"false\">
-                            <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Modifier les informations</span>
+                            <span class=\"f-w-500\"><i class=\"ti ti-settings m-r-10\"></i>Modifier les informations</span>
                             </a>
                         </div>
                     </div>
@@ -1463,144 +1250,6 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                        
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-email\" role=\"tabpanel\" aria-labelledby=\"user-set-email-tab\">
-                            <div class=\"card\">
-                                <div class=\"card-header\">
-                                    <h5>Email Settings</h5>
-                                </div>
-                                <div class=\"card-body\">
-                                    <h6 class=\"mb-3\">Setup Email Notification</h6>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Email Notification</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                        </div>
-                                    </div>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Send Copy To Personal Email</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Activity Related Emails</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">When to email?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Have new notifications</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">You're sent a direct message</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Someone adds you as a connection</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <hr class=\"my-2 border border-secondary-subtle\" />
-                                <h6 class=\"mb-3\">When to escalate emails?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Upon new order</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">New membership approval</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Member registration</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Updates from System Notification</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">Email you with?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about PCT-themes products and feature updates</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips on getting more out of PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Things you missed since you last logged into PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about products and other services</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips and Document business products</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-body text-end btn-page\">
-                                <div class=\"btn btn-outline-secondary\">Cancel</div>
-                                <div class=\"btn btn-primary\">Update Profile</div>
-                            </div>
                             </div>
                         </div>
                     </div>

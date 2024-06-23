@@ -94,18 +94,15 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                         <div class=\"card-body position-relative\">
                             <div class=\"text-center mt-3\">
                                 <div class=\"chat-avtar d-inline-flex mx-auto\">
-                                   
-                                        <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"";
-        // line 14
+                                    <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"";
+        // line 13
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/avatar-1.jpg"), "html", null, true);
         yield "\" alt=\"User image\" />
-                                  
-                                     
-                                    <i class=\"chat-badge bg-success me-2 mb-2\"></i>
+                                   
                                 </div>
                                 <h5 class=\"mb-5\">";
-        // line 19
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "email", [], "any", false, false, false, 19), "html", null, true);
+        // line 16
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "email", [], "any", false, false, false, 16), "html", null, true);
         yield "</h5>
                                 <div class=\"row g-3\">
                                     <div class=\"col-4\">
@@ -136,10 +133,12 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                             <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-account-tab\" data-bs-toggle=\"pill\" href=\"#user-set-account\" role=\"tab\" aria-controls=\"user-set-account\" aria-selected=\"false\">
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-notebook m-r-10\"></i>Documents contractuels</span>
                             </a>
-                            <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-passwort-tab\" data-bs-toggle=\"pill\" href=\"#user-set-passwort\" role=\"tab\" aria-controls=\"user-set-passwort\" aria-selected=\"false\">
-                            <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Paramètres</span>
+                            <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-edit-info-tab\" data-bs-toggle=\"pill\" href=\"#user-set-edit-info\" role=\"tab\" aria-controls=\"user-set-edit-info\" aria-selected=\"false\">
+                            <span class=\"f-w-500\"><i class=\"ti ti-settings m-r-10\"></i>Modification information</span>
                             </a>
-                        </div>
+                            ";
+        // line 52
+        yield "                        </div>
                         </div>
                     </div>
                 <div class=\"col-lg-7 col-xxl-9\">
@@ -630,193 +629,132 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
         yield "                                </div>
                             </div>
                         </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Change Password</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <ul class=\"list-group list-group-flush\">
-                                <li class=\"list-group-item pt-0 px-0\">
-                                    <div class=\"row mb-0\">
-                                    <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
-                                        >Current Password <span class=\"text-danger\">*</span>
-                                    </label>
-                                    <div class=\"col-md-8 col-sm-12\">
-                                        <input type=\"password\" class=\"form-control\" />
-                                        <div class=\"form-text\"> Forgot password? <a href=\"#\" class=\"link-primary\">Click here</a> </div>
-                                    </div>
-                                    </div>
-                                </li>
-                                <li class=\"list-group-item px-0\">
-                                    <div class=\"row mb-0\">
-                                    <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
-                                        >New Password <span class=\"text-danger\">*</span></label
-                                    >
-                                    <div class=\"col-md-8 col-sm-12\">
-                                        <input type=\"password\" class=\"form-control\" />
-                                    </div>
-                                    </div>
-                                </li>
-                                <li class=\"list-group-item pb-0 px-0\">
-                                    <div class=\"row mb-0\">
-                                    <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
-                                        >Confirm Password <span class=\"text-danger\">*</span></label
-                                    >
-                                    <div class=\"col-md-8 col-sm-12\">
-                                        <input type=\"password\" class=\"form-control\" />
-                                    </div>
-                                    </div>
-                                </li>
-                                </ul>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-body text-end\">
-                                <div class=\"btn btn-outline-secondary me-2\">Cancel</div>
-                                <div class=\"btn btn-primary\">Change Password</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-email\" role=\"tabpanel\" aria-labelledby=\"user-set-email-tab\">
+                        <div class=\"tab-pane fade\" id=\"user-set-edit-info\" role=\"tabpanel\" aria-labelledby=\"user-set-edit-info-tab\">
                             <div class=\"card\">
                                 <div class=\"card-header\">
-                                    <h5>Email Settings</h5>
+                                    <h5>Modifier les informations</h5>
                                 </div>
                                 <div class=\"card-body\">
-                                    <h6 class=\"mb-3\">Setup Email Notification</h6>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Email Notification</p>
+                                    <ul class=\"list-group list-group-flush\">
+                                    ";
+        // line 376
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 376, $this->source); })()), 'form_start');
+        yield "
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Email <span class=\"text-danger\">*</span>
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 383
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 383, $this->source); })()), "email", [], "any", false, false, false, 383), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Mot de passe <span class=\"text-danger\">*</span>
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 393
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 393, $this->source); })()), "password", [], "any", false, false, false, 393), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Prénom 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 403
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 403, $this->source); })()), "firstName", [], "any", false, false, false, 403), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Nom
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 413
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 413, $this->source); })()), "lastName", [], "any", false, false, false, 413), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Date de naissance 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 424
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 424, $this->source); })()), "dateBirth", [], "any", false, false, false, 424), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Numéro de téléphone  
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 434
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 434, $this->source); })()), "Phone", [], "any", false, false, false, 434), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Adresse 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 444
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 444, $this->source); })()), "Address", [], "any", false, false, false, 444), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <div class=\"container\">
+                                            <div class=\"p-3\">
+                                                <div class=\"text-center\">
+                                                    <button class=\"btn btn-primary\" target=\"_blank\">";
+        // line 451
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 451, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+        yield "</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                        </div>
-                                    </div>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Send Copy To Personal Email</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                        </div>
-                                    </div>
+                                         ";
+        // line 456
+        yield "                                    ";
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["forms"]) || array_key_exists("forms", $context) ? $context["forms"] : (function () { throw new RuntimeError('Variable "forms" does not exist.', 456, $this->source); })()), 'form_end');
+        yield "
+                                       
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Activity Related Emails</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">When to email?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Have new notifications</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">You're sent a direct message</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Someone adds you as a connection</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <hr class=\"my-2 border border-secondary-subtle\" />
-                                <h6 class=\"mb-3\">When to escalate emails?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Upon new order</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">New membership approval</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Member registration</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Updates from System Notification</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">Email you with?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about PCT-themes products and feature updates</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips on getting more out of PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Things you missed since you last logged into PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about products and other services</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips and Document business products</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-body text-end btn-page\">
-                                <div class=\"btn btn-outline-secondary\">Cancel</div>
-                                <div class=\"btn btn-primary\">Update Profile</div>
-                            </div>
                             </div>
                         </div>
-                    </div>
+                        ";
+        // line 510
+        yield "                    </div>
                 </div>
         </div>
     </div>
@@ -851,7 +789,7 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  630 => 366,  627 => 365,  617 => 361,  605 => 356,  594 => 347,  589 => 346,  587 => 345,  578 => 338,  575 => 337,  565 => 333,  553 => 328,  542 => 319,  537 => 318,  535 => 317,  526 => 310,  523 => 309,  512 => 304,  499 => 298,  486 => 287,  481 => 286,  479 => 285,  470 => 279,  465 => 277,  461 => 276,  390 => 207,  386 => 205,  380 => 203,  378 => 202,  371 => 197,  367 => 195,  361 => 193,  359 => 192,  338 => 173,  334 => 171,  328 => 169,  326 => 168,  315 => 159,  311 => 157,  305 => 155,  303 => 154,  296 => 149,  292 => 147,  286 => 145,  284 => 144,  265 => 127,  261 => 125,  255 => 123,  253 => 122,  245 => 117,  235 => 109,  231 => 107,  225 => 105,  223 => 104,  215 => 98,  211 => 96,  205 => 94,  203 => 93,  192 => 84,  188 => 82,  182 => 80,  180 => 79,  173 => 74,  169 => 72,  163 => 70,  161 => 69,  108 => 19,  100 => 14,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  757 => 510,  747 => 456,  740 => 451,  730 => 444,  717 => 434,  704 => 424,  690 => 413,  677 => 403,  664 => 393,  651 => 383,  641 => 376,  629 => 366,  626 => 365,  616 => 361,  604 => 356,  593 => 347,  588 => 346,  586 => 345,  577 => 338,  574 => 337,  564 => 333,  552 => 328,  541 => 319,  536 => 318,  534 => 317,  525 => 310,  522 => 309,  511 => 304,  498 => 298,  485 => 287,  480 => 286,  478 => 285,  469 => 279,  464 => 277,  460 => 276,  389 => 207,  385 => 205,  379 => 203,  377 => 202,  370 => 197,  366 => 195,  360 => 193,  358 => 192,  337 => 173,  333 => 171,  327 => 169,  325 => 168,  314 => 159,  310 => 157,  304 => 155,  302 => 154,  295 => 149,  291 => 147,  285 => 145,  283 => 144,  264 => 127,  260 => 125,  254 => 123,  252 => 122,  244 => 117,  234 => 109,  230 => 107,  224 => 105,  222 => 104,  214 => 98,  210 => 96,  204 => 94,  202 => 93,  191 => 84,  187 => 82,  181 => 80,  179 => 79,  172 => 74,  168 => 72,  162 => 70,  160 => 69,  141 => 52,  105 => 16,  99 => 13,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -868,11 +806,8 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                         <div class=\"card-body position-relative\">
                             <div class=\"text-center mt-3\">
                                 <div class=\"chat-avtar d-inline-flex mx-auto\">
+                                    <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"{{ asset('images/user/avatar-1.jpg')}}\" alt=\"User image\" />
                                    
-                                        <img class=\"rounded-circle img-fluid wid-90 img-thumbnail\" src=\"{{ asset('images/user/avatar-1.jpg')}}\" alt=\"User image\" />
-                                  
-                                     
-                                    <i class=\"chat-badge bg-success me-2 mb-2\"></i>
                                 </div>
                                 <h5 class=\"mb-5\">{{app.user.email}}</h5>
                                 <div class=\"row g-3\">
@@ -904,9 +839,12 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                             <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-account-tab\" data-bs-toggle=\"pill\" href=\"#user-set-account\" role=\"tab\" aria-controls=\"user-set-account\" aria-selected=\"false\">
                             <span class=\"f-w-500\"><i class=\"ph-duotone ph-notebook m-r-10\"></i>Documents contractuels</span>
                             </a>
-                            <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-passwort-tab\" data-bs-toggle=\"pill\" href=\"#user-set-passwort\" role=\"tab\" aria-controls=\"user-set-passwort\" aria-selected=\"false\">
-                            <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Paramètres</span>
+                            <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-edit-info-tab\" data-bs-toggle=\"pill\" href=\"#user-set-edit-info\" role=\"tab\" aria-controls=\"user-set-edit-info\" aria-selected=\"false\">
+                            <span class=\"f-w-500\"><i class=\"ti ti-settings m-r-10\"></i>Modification information</span>
                             </a>
+                            {# <a class=\"nav-link list-group-item list-group-item-action\" id=\"user-set-passwort-tab\" data-bs-toggle=\"pill\" href=\"#user-set-passwort\" role=\"tab\" aria-controls=\"user-set-passwort\" aria-selected=\"false\">
+                            <span class=\"f-w-500\"><i class=\"ph-duotone ph-key m-r-10\"></i>Modification mot de passe</span>
+                            </a> #}
                         </div>
                         </div>
                     </div>
@@ -1224,7 +1162,100 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                 </div>
                             </div>
                         </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
+                        <div class=\"tab-pane fade\" id=\"user-set-edit-info\" role=\"tabpanel\" aria-labelledby=\"user-set-edit-info-tab\">
+                            <div class=\"card\">
+                                <div class=\"card-header\">
+                                    <h5>Modifier les informations</h5>
+                                </div>
+                                <div class=\"card-body\">
+                                    <ul class=\"list-group list-group-flush\">
+                                    {{ form_start(forms) }}
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Email <span class=\"text-danger\">*</span>
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.email) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Mot de passe <span class=\"text-danger\">*</span>
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.password) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Prénom 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.firstName) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Nom
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.lastName) }}
+                                            </div>
+                                            </div>
+                                        </li>
+
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Date de naissance 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.dateBirth) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Numéro de téléphone  
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.Phone) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Adresse 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(forms.Address) }}
+                                            </div>
+                                            </div>
+                                        </li>
+                                        <div class=\"container\">
+                                            <div class=\"p-3\">
+                                                <div class=\"text-center\">
+                                                    <button class=\"btn btn-primary\" target=\"_blank\">{{ button_label|default('Enregistrer') }}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         {# <button class=\"btn\">{{ button_label|default('Enregistrer') }}</button> #}
+                                    {{ form_end(forms) }}
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {# <div class=\"tab-pane fade\" id=\"user-set-passwort\" role=\"tabpanel\" aria-labelledby=\"user-set-passwort-tab\">
                             <div class=\"card\">
                             <div class=\"card-header\">
                                 <h5>Change Password</h5>
@@ -1271,145 +1302,7 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                 <div class=\"btn btn-primary\">Change Password</div>
                             </div>
                             </div>
-                        </div>
-                        <div class=\"tab-pane fade\" id=\"user-set-email\" role=\"tabpanel\" aria-labelledby=\"user-set-email-tab\">
-                            <div class=\"card\">
-                                <div class=\"card-header\">
-                                    <h5>Email Settings</h5>
-                                </div>
-                                <div class=\"card-body\">
-                                    <h6 class=\"mb-3\">Setup Email Notification</h6>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Email Notification</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                        </div>
-                                    </div>
-                                    <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                        <div>
-                                            <p class=\"text-muted mb-0\">Send Copy To Personal Email</p>
-                                        </div>
-                                        <div class=\"form-check form-switch p-0\">
-                                            <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Activity Related Emails</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">When to email?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Have new notifications</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">You're sent a direct message</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Someone adds you as a connection</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <hr class=\"my-2 border border-secondary-subtle\" />
-                                <h6 class=\"mb-3\">When to escalate emails?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Upon new order</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">New membership approval</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Member registration</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-header\">
-                                <h5>Updates from System Notification</h5>
-                            </div>
-                            <div class=\"card-body\">
-                                <h6 class=\"mb-3\">Email you with?</h6>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about PCT-themes products and feature updates</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips on getting more out of PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" checked=\"\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Things you missed since you last logged into PCT-themes</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-1\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">News about products and other services</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                                <div class=\"d-flex align-items-center justify-content-between mb-0\">
-                                <div>
-                                    <p class=\"text-muted mb-0\">Tips and Document business products</p>
-                                </div>
-                                <div class=\"form-check form-switch p-0\">
-                                    <input class=\"m-0 form-check-input h5 position-relative\" type=\"checkbox\" role=\"switch\" />
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class=\"card\">
-                            <div class=\"card-body text-end btn-page\">
-                                <div class=\"btn btn-outline-secondary\">Cancel</div>
-                                <div class=\"btn btn-primary\">Update Profile</div>
-                            </div>
-                            </div>
-                        </div>
+                        </div> #}
                     </div>
                 </div>
         </div>

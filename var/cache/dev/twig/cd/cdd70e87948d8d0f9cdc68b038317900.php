@@ -43,14 +43,13 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         // line 1
         yield "<nav class=\"pc-sidebar\">
   <div class=\"navbar-wrapper\">
-    <div class=\"m-header  mb-5\">
+    <div class=\"m-header  mb-5 p-5\">
       <a href=\"";
         // line 4
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         yield "\" class=\"b-brand text-primary\">
-        <!-- ========   Change your logo from here   ============ -->
         <img src=\"";
-        // line 6
+        // line 5
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
         yield "\" alt=\"logo image\" class=\"w-100\" />
       </a>
@@ -59,18 +58,18 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
       <ul class=\"pc-navbar\">
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 12
+        // line 11
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         yield "\" class=\"pc-link\">
             <span class=\"pc-micon\">
-              <i class=\"ph-duotone ph-gauge\"></i>
+              <i class=\"ti ti-dashboard\"></i>
             </span>
             <span class=\"pc-mtext\">Dashboard</span>
           </a>
         </li>
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 20
+        // line 19
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation");
         yield "\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Operations</span>
@@ -78,19 +77,19 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         </li>
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 25
+        // line 24
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation");
         yield "\" class=\"pc-link\"
-            ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Activations</span>
+            ><span class=\"pc-micon\"> <i class=\"ti ti-layout-columns\"></i></span><span class=\"pc-mtext\">Activations</span>
           </a>
         </li>
         <li class=\"pc-item\">
           <a href=\"";
-        // line 30
+        // line 29
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
         yield "\" class=\"pc-link\">
             <span class=\"pc-micon\">
-              <i class=\"ph-duotone ph-identification-card\"></i>
+              <i class=\"ti ti-user\"></i>
             </span>
             <span class=\"pc-mtext\">User</span>
           </a>
@@ -129,16 +128,15 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  90 => 30,  82 => 25,  74 => 20,  63 => 12,  54 => 6,  49 => 4,  44 => 1,);
+        return array (  89 => 29,  81 => 24,  73 => 19,  62 => 11,  53 => 5,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<nav class=\"pc-sidebar\">
   <div class=\"navbar-wrapper\">
-    <div class=\"m-header  mb-5\">
+    <div class=\"m-header  mb-5 p-5\">
       <a href=\"{{ path('app_home')}}\" class=\"b-brand text-primary\">
-        <!-- ========   Change your logo from here   ============ -->
         <img src=\"{{ asset('images/logo.png')}}\" alt=\"logo image\" class=\"w-100\" />
       </a>
     </div>
@@ -147,7 +145,7 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"{{ path('app_home')}}\" class=\"pc-link\">
             <span class=\"pc-micon\">
-              <i class=\"ph-duotone ph-gauge\"></i>
+              <i class=\"ti ti-dashboard\"></i>
             </span>
             <span class=\"pc-mtext\">Dashboard</span>
           </a>
@@ -159,13 +157,13 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         </li>
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"{{ path('app_activation')}}\" class=\"pc-link\"
-            ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Activations</span>
+            ><span class=\"pc-micon\"> <i class=\"ti ti-layout-columns\"></i></span><span class=\"pc-mtext\">Activations</span>
           </a>
         </li>
         <li class=\"pc-item\">
           <a href=\"{{path('app_user_index')}}\" class=\"pc-link\">
             <span class=\"pc-micon\">
-              <i class=\"ph-duotone ph-identification-card\"></i>
+              <i class=\"ti ti-user\"></i>
             </span>
             <span class=\"pc-mtext\">User</span>
           </a>
