@@ -1177,3 +1177,15 @@ a884b1,127.0.0.1,GET,http://127.0.0.1:8000/assets/images/logo-dark.svg,171754072
 e99bf5,127.0.0.1,GET,http://127.0.0.1:8000/assets/images/logo-dark.svg,1717540727,,404,request
 9d6487,127.0.0.1,GET,http://127.0.0.1:8000/user/pdf,1717540728,7bd87c,404,request
 7bd87c,127.0.0.1,GET,http://127.0.0.1:8000/user/pdf,1717540728,,404,request
+355699,127.0.0.1,GET,https://127.0.0.1:8000/,1718795717,7dd22e,500,request
+7dd22e,127.0.0.1,GET,https://127.0.0.1:8000/,1718795717,,500,request
+b5c21b,127.0.0.1,GET,https://127.0.0.1:8000/,1719224345,,200,request
+0bcf1f,127.0.0.1,GET,https://127.0.0.1:8000/assets/images/logo-dark.svg,1719224347,f78173,404,request
+f78173,127.0.0.1,GET,https://127.0.0.1:8000/assets/images/logo-dark.svg,1719224347,,404,request
+b8ce09,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/popper.min.js.map,1719224353,85bc5b,404,request
+85bc5b,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/popper.min.js.map,1719224353,,404,request
+5759bc,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/bootstrap.min.js.map,1719224354,1058a2,404,request
+1058a2,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/bootstrap.min.js.map,1719224354,,404,request
+2737fa,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/feather.min.js.map,1719224354,f5098e,404,request
+f5098e,127.0.0.1,GET,https://127.0.0.1:8000/js/plugins/feather.min.js.map,1719224355,,404,request
+2f9780,127.0.0.1,GET,https://127.0.0.1:8000/login,1719224405,,200,request
