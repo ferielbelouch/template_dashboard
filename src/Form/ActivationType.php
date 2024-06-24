@@ -20,7 +20,7 @@ class ActivationType extends AbstractType
             ])
             ->add('operation', EntityType::class, [
                 'class' => Operation::class,
-                'choice_label' => 'id',
+                'choice_label' => 'nom',
             ])
         ;
     }

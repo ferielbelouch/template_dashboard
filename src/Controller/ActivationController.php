@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/activation')]
 class ActivationController extends AbstractController
 {
-    #[Route('/', name: 'app_activation', methods: ['GET'])]
+    #[Route('/', name: 'app_activation_index', methods: ['GET'])]
     public function index(ActivationRepository $activationRepository): Response
     {
         return $this->render('activation/index.html.twig', [
