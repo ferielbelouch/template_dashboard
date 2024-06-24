@@ -89,8 +89,8 @@
                                         <div class="col-md-6">
                                             <p class="mb-1 text-muted">Date de naissance</p>
                                             <p class="mb-0">
-                                            {% if app.user.dateBirth %}
-                                                {{ app.user.dateBirth }}
+                                            {% if app.user.dateBirth|date("y-m-d") %}
+                                                {{ app.user.dateBirth|date("y-m-d")}}
                                             {% else %}
                                                 Non renseigné
                                             {% endif %}

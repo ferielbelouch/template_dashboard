@@ -30,7 +30,22 @@
                     <tr>
                         <td>{{ user.id }}</td>
                         <td>{{ user.email }}</td>
-                        <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                        <td>
+                            {# On boucle sur les rôles #}
+                        {% for role in user.roles %}
+                            {% if role == "ROLE_USER" %}
+                                Utilisateur
+                            {% elseif role == "ROLE_ANIMATEUR" %}
+                                Animateur
+                            {% elseif role == "ROLE_SUPERVISEUR" %}
+                                Superviseur
+                            {% elseif role == "ROLE_CHEF_PROJET" %}
+                                Chef de projet
+                            {% elseif role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                        </td>
                         <td>{{ user.firstName }}</td>
                         <td>{{ user.lastName }}</td>
                         <td>{{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}</td>

@@ -7,6 +7,7 @@
     </div>
     <div class="navbar-content">
       <ul class="pc-navbar">
+      {% if "ROLE_ADMIN" in app.user.roles %}
         <li class="pc-item pc-hasmenu">
           <a href="{{ path('app_home')}}" class="pc-link">
             <span class="pc-micon">
@@ -15,13 +16,15 @@
             <span class="pc-mtext">Dashboard</span>
           </a>
         </li>
+      {% endif %}
+      
         <li class="pc-item pc-hasmenu">
           <a href="{{ path('app_operation')}}" class="pc-link"
             ><span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span class="pc-mtext">Operations</span>
           </a>
         </li>
         <li class="pc-item pc-hasmenu">
-          <a href="{{ path('app_activation')}}" class="pc-link"
+          <a href="{{ path('app_activation_index')}}" class="pc-link"
             ><span class="pc-micon"> <i class="ti ti-layout-columns"></i></span><span class="pc-mtext">Activations</span>
           </a>
         </li>
@@ -31,6 +34,14 @@
               <i class="ti ti-user"></i>
             </span>
             <span class="pc-mtext">User</span>
+          </a>
+        </li>
+        <li class="pc-item">
+          <a href="{{path('app_goodies_index')}}" class="pc-link">
+            <span class="pc-micon">
+              <i class="ti ti-file"></i>
+            </span>
+            <span class="pc-mtext">Goodies</span>
           </a>
         </li>
       </ul>
