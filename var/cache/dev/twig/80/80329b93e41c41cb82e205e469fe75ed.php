@@ -110,11 +110,11 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                     </div>
                                     <div class=\"col-4 border border-top-0 border-bottom-0\">
                                         <h5 class=\"mb-0\">5</h5>
-                                        <small class=\"text-muted\">Opérations</small>
+                                        <small class=\"text-muted\">Objectifs</small>
                                     </div>
                                     <div class=\"col-4\">
                                         <h5 class=\"mb-0\">4</h5>
-                                        <small class=\"text-muted\">Activation</small>
+                                        <small class=\"text-muted\">Activations</small>
                                     </div>
                                 </div>
                             </div>
@@ -814,11 +814,11 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
                                     </div>
                                     <div class=\"col-4 border border-top-0 border-bottom-0\">
                                         <h5 class=\"mb-0\">5</h5>
-                                        <small class=\"text-muted\">Opérations</small>
+                                        <small class=\"text-muted\">Objectifs</small>
                                     </div>
                                     <div class=\"col-4\">
                                         <h5 class=\"mb-0\">4</h5>
-                                        <small class=\"text-muted\">Activation</small>
+                                        <small class=\"text-muted\">Activations</small>
                                     </div>
                                 </div>
                             </div>

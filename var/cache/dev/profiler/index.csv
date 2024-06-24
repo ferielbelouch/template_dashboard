@@ -227,3 +227,16 @@ d269bd,127.0.0.1,GET,http://127.0.0.1:8000/profile,1719167802,,200,request
 59e76d,127.0.0.1,GET,http://127.0.0.1:8000/profile,1719168179,,200,request
 0a82fb,127.0.0.1,GET,http://127.0.0.1:8000/user/,1719168192,,200,request
 0023a4,127.0.0.1,GET,http://127.0.0.1:8000/user/1,1719168194,,200,request
+4c6a0e,127.0.0.1,GET,http://127.0.0.1:8000/user/1,1719168492,,200,request
+03ec5a,127.0.0.1,GET,http://127.0.0.1:8000/user/1,1719168511,,200,request
+e1d949,127.0.0.1,GET,http://127.0.0.1:8000/,1719170989,,200,request
+240590,127.0.0.1,GET,http://127.0.0.1:8000/profile,1719171035,,200,request
+fd6b3e,127.0.0.1,GET,http://127.0.0.1:8000/user/,1719171075,,200,request
+08bb5a,127.0.0.1,GET,http://127.0.0.1:8000/user/generate-pdf,1719171086,,200,request
+764e82,127.0.0.1,GET,http://127.0.0.1:8000/operation/,1719171104,,200,request
+4bc46e,127.0.0.1,GET,http://127.0.0.1:8000/css/plugins/dataTables.bootstrap5.min.css,1719171104,9c014e,404,request
+9c014e,127.0.0.1,GET,http://127.0.0.1:8000/css/plugins/dataTables.bootstrap5.min.css,1719171104,,404,request
+d383c5,127.0.0.1,GET,http://127.0.0.1:8000/operation/new,1719171106,,200,request
+868a16,127.0.0.1,GET,http://127.0.0.1:8000/css/plugins/dataTables.bootstrap5.min.css,1719171108,758667,404,request
+758667,127.0.0.1,GET,http://127.0.0.1:8000/css/plugins/dataTables.bootstrap5.min.css,1719171108,,404,request
+b43528,127.0.0.1,GET,http://127.0.0.1:8000/,1719220495,,200,request
