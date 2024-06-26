@@ -290,6 +290,6 @@ class __TwigTemplate_d6737c845f2aac2fa6084b2d6330ba77 extends Template
 \t\t\t<script>preset_change(\"preset-1\");</script>
     </body>
 </html>
-", "base1.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/base1.html.twig");
+", "base1.html.twig", "/Users/hantour/template_dashboard/templates/base1.html.twig");
     }
 }

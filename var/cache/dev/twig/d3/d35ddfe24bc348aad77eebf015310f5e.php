@@ -881,6 +881,6 @@ class __TwigTemplate_d0242113424e21288cf6923e9e6f33e7 extends Template
     </table>
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/messenger.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
+", "@WebProfiler/Collector/messenger.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/messenger.html.twig");
     }
 }

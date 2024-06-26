@@ -727,6 +727,6 @@ class __TwigTemplate_a6591fed2c434566d07711e564f8ee66 extends Template
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
     }
 }

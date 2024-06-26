@@ -330,6 +330,6 @@ class __TwigTemplate_d3235f9d416b1968aa8552b9aadc959e extends Template
         </tbody>
     </table>
 {% endblock %}
-", "@VichUploader/Collector/mapping_collector.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/vich/uploader-bundle/templates/Collector/mapping_collector.html.twig");
+", "@VichUploader/Collector/mapping_collector.html.twig", "/Users/hantour/template_dashboard/vendor/vich/uploader-bundle/templates/Collector/mapping_collector.html.twig");
     }
 }

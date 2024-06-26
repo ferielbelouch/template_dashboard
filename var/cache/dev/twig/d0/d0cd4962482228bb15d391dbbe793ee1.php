@@ -256,6 +256,6 @@ class __TwigTemplate_34f7526024bbc15cbb52d593e55c49e9 extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

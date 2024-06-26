@@ -693,6 +693,6 @@ class __TwigTemplate_add651f9ab922789cd0e2ffb4ae5abdb extends Template
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/web-profiler-bundle/Resources/views/Collector/http_client.html.twig");
     }
 }

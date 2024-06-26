@@ -95,6 +95,6 @@ class __TwigTemplate_c9a5efd0e1b7be1689c9004db1ef3914 extends Template
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "activation/_form.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/_form.html.twig");
+", "activation/_form.html.twig", "/Users/hantour/template_dashboard/templates/activation/_form.html.twig");
     }
 }

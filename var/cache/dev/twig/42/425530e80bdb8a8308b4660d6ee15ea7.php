@@ -182,6 +182,6 @@ class __TwigTemplate_2373cc40a7e0d19adfc0cca16c4979bb extends Template
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/Users/hantour/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/explain.html.twig");
     }
 }

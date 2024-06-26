@@ -231,6 +231,6 @@ class __TwigTemplate_bf85f2a4e5dd5431fead22888e286ae0 extends Template
     </li>
   </ul>
 </div> </div>
-</header>", "includes/navbar.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/includes/navbar.html.twig");
+</header>", "includes/navbar.html.twig", "/Users/hantour/template_dashboard/templates/includes/navbar.html.twig");
     }
 }

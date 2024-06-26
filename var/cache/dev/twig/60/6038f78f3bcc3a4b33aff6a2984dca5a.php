@@ -458,6 +458,6 @@ class __TwigTemplate_135b55ea8733b1f16cb28eba947832ab extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

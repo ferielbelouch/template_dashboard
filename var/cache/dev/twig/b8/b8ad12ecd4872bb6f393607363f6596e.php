@@ -145,6 +145,6 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
 
     <a href=\"{{ path('app_activation_index') }}\">back to list</a>
 {% endblock %}
-", "activation/new.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/new.html.twig");
+", "activation/new.html.twig", "/Users/hantour/template_dashboard/templates/activation/new.html.twig");
     }
 }

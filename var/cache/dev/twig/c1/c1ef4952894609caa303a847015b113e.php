@@ -80,6 +80,6 @@ class __TwigTemplate_8b83e0a6a89cda737ab3715f075e36d6 extends Template
     <path d=\"M4 6v6a8 3 0 0 0 16 0v-6\"></path>
     <path d=\"M4 12v6a8 3 0 0 0 16 0v-6\"></path>
 </svg>
-", "@Doctrine/Collector/database.svg", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/database.svg");
+", "@Doctrine/Collector/database.svg", "/Users/hantour/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/database.svg");
     }
 }

@@ -66,7 +66,7 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello GoodiesController!";
+        yield "Goodies index";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -87,23 +87,77 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        yield "    <h1>Goodies index</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        yield "! ✅</h1>
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Quantity</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        ";
+        // line 19
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["goodies"]) || array_key_exists("goodies", $context) ? $context["goodies"] : (function () { throw new RuntimeError('Variable "goodies" does not exist.', 19, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["goody"]) {
+            // line 20
+            yield "            <tr>
+                <td>";
+            // line 21
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 21), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 22
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Nom", [], "any", false, false, false, 22), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Quantity", [], "any", false, false, false, 23), "html", null, true);
+            yield "</td>
+                <td>
+                    <img width=\"100\" src=\"";
+            // line 25
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/imgesGoodies/" . CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Image", [], "any", false, false, false, 25))), "html", null, true);
+            yield "\">
+                </td>
+                <td>
+                    <a href=\"";
+            // line 28
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            yield "\">show</a>
+                    <a href=\"";
+            // line 29
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            yield "\">edit</a>
+                </td>
+            </tr>
+        ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 33
+            yield "            <tr>
+                <td colspan=\"5\">no records found</td>
+            </tr>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['goody'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 37
+        yield "        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/hantour/Documents/FERIEL/my_project_directory/src/Controller/GoodiesController.php</code></li>
-        <li>Your template at <code>/Users/hantour/Documents/FERIEL/my_project_directory/templates/goodies/index.html.twig</code></li>
-    </ul>
-</div>
+    <a href=\"";
+        // line 40
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_new");
+        yield "\">Create new</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -135,31 +189,52 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  159 => 40,  154 => 37,  145 => 33,  136 => 29,  132 => 28,  126 => 25,  121 => 23,  117 => 22,  113 => 21,  110 => 20,  105 => 19,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello GoodiesController!{% endblock %}
+{% block title %}Goodies index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Goodies index</h1>
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Quantity</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for goody in goodies %}
+            <tr>
+                <td>{{ goody.id }}</td>
+                <td>{{ goody.Nom }}</td>
+                <td>{{ goody.Quantity }}</td>
+                <td>
+                    <img width=\"100\" src=\"{{asset('uploads/imgesGoodies/'~goody.Image)}}\">
+                </td>
+                <td>
+                    <a href=\"{{ path('app_goodies_show', {'id': goody.id}) }}\">show</a>
+                    <a href=\"{{ path('app_goodies_edit', {'id': goody.id}) }}\">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan=\"5\">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/hantour/Documents/FERIEL/my_project_directory/src/Controller/GoodiesController.php</code></li>
-        <li>Your template at <code>/Users/hantour/Documents/FERIEL/my_project_directory/templates/goodies/index.html.twig</code></li>
-    </ul>
-</div>
+    <a href=\"{{ path('app_goodies_new') }}\">Create new</a>
 {% endblock %}
-", "goodies/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/goodies/index.html.twig");
+", "goodies/index.html.twig", "/Users/hantour/template_dashboard/templates/goodies/index.html.twig");
     }
 }

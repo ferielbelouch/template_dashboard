@@ -240,6 +240,6 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
 
 
 {% endblock %}
-", "activation/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/index.html.twig");
+", "activation/index.html.twig", "/Users/hantour/template_dashboard/templates/activation/index.html.twig");
     }
 }

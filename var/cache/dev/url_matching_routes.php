@@ -14,16 +14,17 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/activation' => [[['_route' => 'app_activation', '_controller' => 'App\\Controller\\ActivationController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/activation' => [[['_route' => 'app_activation_index', '_controller' => 'App\\Controller\\ActivationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/activation/new' => [[['_route' => 'app_activation_new', '_controller' => 'App\\Controller\\ActivationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/goodies' => [[['_route' => 'app_goodies', '_controller' => 'App\\Controller\\GoodiesController::index'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/goodies' => [[['_route' => 'app_goodies_index', '_controller' => 'App\\Controller\\GoodiesController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/goodies/new' => [[['_route' => 'app_goodies_new', '_controller' => 'App\\Controller\\GoodiesController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/dashboard' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/generate-pdf-dashboard' => [[['_route' => 'generate_pdf_dashboard', '_controller' => 'App\\Controller\\HomeController::generatePdf'], null, null, null, false, false, null]],
         '/operation' => [[['_route' => 'app_operation', '_controller' => 'App\\Controller\\OperationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/operation/new' => [[['_route' => 'app_operation_new', '_controller' => 'App\\Controller\\OperationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profile' => [[['_route' => 'app_profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
-        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/user/generate-pdf' => [[['_route' => 'generate_pdf', '_controller' => 'App\\Controller\\UserController::generatePdf'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'app_user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
@@ -55,13 +56,18 @@ return [
                     .'|/edit(*:238)'
                     .'|(*:246)'
                 .')'
+                .'|/goodies/([^/]++)(?'
+                    .'|(*:275)'
+                    .'|/edit(*:288)'
+                    .'|(*:296)'
+                .')'
                 .'|/operation/([^/]++)(?'
-                    .'|(*:277)'
-                    .'|/edit(*:290)'
-                    .'|(*:298)'
+                    .'|(*:327)'
+                    .'|/edit(*:340)'
+                    .'|(*:348)'
                 .')'
                 .'|/user/([^/]++)(?'
-                    .'|(*:324)'
+                    .'|(*:374)'
                 .')'
             .')/?$}sDu',
     ],
@@ -77,10 +83,13 @@ return [
         225 => [[['_route' => 'app_activation_show', '_controller' => 'App\\Controller\\ActivationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         238 => [[['_route' => 'app_activation_edit', '_controller' => 'App\\Controller\\ActivationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         246 => [[['_route' => 'app_activation_delete', '_controller' => 'App\\Controller\\ActivationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        277 => [[['_route' => 'app_operation_show', '_controller' => 'App\\Controller\\OperationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        290 => [[['_route' => 'app_operation_edit', '_controller' => 'App\\Controller\\OperationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        298 => [[['_route' => 'app_operation_delete', '_controller' => 'App\\Controller\\OperationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        324 => [
+        275 => [[['_route' => 'app_goodies_show', '_controller' => 'App\\Controller\\GoodiesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        288 => [[['_route' => 'app_goodies_edit', '_controller' => 'App\\Controller\\GoodiesController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        296 => [[['_route' => 'app_goodies_delete', '_controller' => 'App\\Controller\\GoodiesController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        327 => [[['_route' => 'app_operation_show', '_controller' => 'App\\Controller\\OperationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        340 => [[['_route' => 'app_operation_edit', '_controller' => 'App\\Controller\\OperationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        348 => [[['_route' => 'app_operation_delete', '_controller' => 'App\\Controller\\OperationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        374 => [
             [['_route' => 'app_user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],

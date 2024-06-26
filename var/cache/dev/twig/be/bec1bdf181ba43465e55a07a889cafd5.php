@@ -975,6 +975,6 @@ class __TwigTemplate_782f8dcfb6200581a2c1ae9a43607a78 extends Template
         </td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "/Users/hantour/template_dashboard/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
     }
 }

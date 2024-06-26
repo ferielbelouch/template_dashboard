@@ -176,6 +176,19 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
                                             </div>
                                             </div>
                                         </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Roles 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 ";
+        // line 80
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "roles", [], "any", false, false, false, 80), 'row');
+        yield "
+                                            </div>
+                                            </div>
+                                        </li>
                                         <li class=\"list-group-item pt-0 px-0\">
                                             <div class=\"row mb-0\">
                                             <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
@@ -183,8 +196,8 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
                                             </label>
                                             <div class=\"col-md-8 col-sm-12\">
                                                  ";
-        // line 80
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "Address", [], "any", false, false, false, 80), 'row');
+        // line 90
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 90, $this->source); })()), "Address", [], "any", false, false, false, 90), 'row');
         yield "
                                             </div>
                                             </div>
@@ -193,16 +206,16 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
                                             <div class=\"p-3\">
                                                 <div class=\"text-center\">
                                                     <button class=\"btn btn-primary\" target=\"_blank\">";
-        // line 87
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 87, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
+        // line 97
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 97, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
         yield "</button>
                                                 </div>
                                             </div>
                                         </div>
                                          ";
-        // line 92
+        // line 102
         yield "                                    ";
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 92, $this->source); })()), 'form_end');
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 102, $this->source); })()), 'form_end');
         yield "
                                        
                                     </ul>
@@ -239,7 +252,7 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  204 => 92,  197 => 87,  187 => 80,  174 => 70,  161 => 60,  147 => 49,  134 => 39,  121 => 29,  108 => 19,  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  217 => 102,  210 => 97,  200 => 90,  187 => 80,  174 => 70,  161 => 60,  147 => 49,  134 => 39,  121 => 29,  108 => 19,  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -317,6 +330,16 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
                                             </div>
                                             </div>
                                         </li>
+                                         <li class=\"list-group-item pt-0 px-0\">
+                                            <div class=\"row mb-0\">
+                                            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                                                >Roles 
+                                            </label>
+                                            <div class=\"col-md-8 col-sm-12\">
+                                                 {{ form_row(form.roles) }}
+                                            </div>
+                                            </div>
+                                        </li>
                                         <li class=\"list-group-item pt-0 px-0\">
                                             <div class=\"row mb-0\">
                                             <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
@@ -341,6 +364,6 @@ class __TwigTemplate_a14c1b3f005d5cffea8c5ebd38845e65 extends Template
                                 </div>
                             </div>
 {% endblock %}
-", "user/new.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/user/new.html.twig");
+", "user/new.html.twig", "/Users/hantour/template_dashboard/templates/user/new.html.twig");
     }
 }

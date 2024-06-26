@@ -221,6 +221,6 @@ class __TwigTemplate_799130f0c2fe58ee964d1fa612f41ab4 extends Template
     </div>
 </div>
 {% endblock %}
- ", "registration/register.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/registration/register.html.twig");
+ ", "registration/register.html.twig", "/Users/hantour/template_dashboard/templates/registration/register.html.twig");
     }
 }

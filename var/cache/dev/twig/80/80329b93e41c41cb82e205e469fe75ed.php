@@ -1258,6 +1258,6 @@ class __TwigTemplate_45d258c05d643874c02871e6552f7ad1 extends Template
     </div>
 {% endblock %}
 
-", "user/show.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/user/show.html.twig");
+", "user/show.html.twig", "/Users/hantour/template_dashboard/templates/user/show.html.twig");
     }
 }

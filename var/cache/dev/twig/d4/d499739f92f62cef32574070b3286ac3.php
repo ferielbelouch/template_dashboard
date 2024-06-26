@@ -90,6 +90,6 @@ class __TwigTemplate_d2fcdcc0192cb26178508e0898982832 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ activation.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "activation/_delete_form.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/_delete_form.html.twig");
+", "activation/_delete_form.html.twig", "/Users/hantour/template_dashboard/templates/activation/_delete_form.html.twig");
     }
 }

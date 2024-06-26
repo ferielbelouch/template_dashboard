@@ -13,18 +13,21 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
-    public function __construct(private UrlGeneratorInterface $urlGenerator)
+    private $urlGenerator;
+
+    public function __construct(UrlGeneratorInterface $urlGenerator)
     {
+        $this->urlGenerator = $urlGenerator;
     }
+
     #[Route(path: '/', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
+        // Si l'utilisateur est déjà authentifié, on le redirige directement en fonction de son rôle
         if ($this->getUser()) {
-            if (in_array("Role_ADMIN", $this->getUser()->getRoles())) {
+            if (in_array('ROLE_ADMIN', $this->getUser()->getRoles())) {
                 return new RedirectResponse($this->urlGenerator->generate('app_home'));
-            }
-            else {
-                # code...
+            } else {
                 return new RedirectResponse($this->urlGenerator->generate('app_profile'));
             }
         }

@@ -56,20 +56,28 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
     </div>
     <div class=\"navbar-content\">
       <ul class=\"pc-navbar\">
-        <li class=\"pc-item pc-hasmenu\">
+      ";
+        // line 10
+        if (CoreExtension::inFilter("ROLE_ADMIN", CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10), "roles", [], "any", false, false, false, 10))) {
+            // line 11
+            yield "        <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 11
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
-        yield "\" class=\"pc-link\">
+            // line 12
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+            yield "\" class=\"pc-link\">
             <span class=\"pc-micon\">
               <i class=\"ti ti-dashboard\"></i>
             </span>
             <span class=\"pc-mtext\">Dashboard</span>
           </a>
         </li>
+      ";
+        }
+        // line 20
+        yield "      
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 19
+        // line 22
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation");
         yield "\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Operations</span>
@@ -77,21 +85,32 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
         </li>
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"";
-        // line 24
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation");
+        // line 27
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_index");
         yield "\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ti ti-layout-columns\"></i></span><span class=\"pc-mtext\">Activations</span>
           </a>
         </li>
         <li class=\"pc-item\">
           <a href=\"";
-        // line 29
+        // line 32
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
         yield "\" class=\"pc-link\">
             <span class=\"pc-micon\">
               <i class=\"ti ti-user\"></i>
             </span>
             <span class=\"pc-mtext\">User</span>
+          </a>
+        </li>
+        <li class=\"pc-item\">
+          <a href=\"";
+        // line 40
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_index");
+        yield "\" class=\"pc-link\">
+            <span class=\"pc-micon\">
+              <i class=\"ti ti-file\"></i>
+            </span>
+            <span class=\"pc-mtext\">Goodies</span>
           </a>
         </li>
       </ul>
@@ -128,7 +147,7 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  89 => 29,  81 => 24,  73 => 19,  62 => 11,  53 => 5,  49 => 4,  44 => 1,);
+        return array (  108 => 40,  97 => 32,  89 => 27,  81 => 22,  77 => 20,  66 => 12,  63 => 11,  61 => 10,  53 => 5,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -142,6 +161,7 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
     </div>
     <div class=\"navbar-content\">
       <ul class=\"pc-navbar\">
+      {% if \"ROLE_ADMIN\" in app.user.roles %}
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"{{ path('app_home')}}\" class=\"pc-link\">
             <span class=\"pc-micon\">
@@ -150,13 +170,15 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
             <span class=\"pc-mtext\">Dashboard</span>
           </a>
         </li>
+      {% endif %}
+      
         <li class=\"pc-item pc-hasmenu\">
           <a href=\"{{ path('app_operation')}}\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ph-duotone ph-layout\"></i></span><span class=\"pc-mtext\">Operations</span>
           </a>
         </li>
         <li class=\"pc-item pc-hasmenu\">
-          <a href=\"{{ path('app_activation')}}\" class=\"pc-link\"
+          <a href=\"{{ path('app_activation_index')}}\" class=\"pc-link\"
             ><span class=\"pc-micon\"> <i class=\"ti ti-layout-columns\"></i></span><span class=\"pc-mtext\">Activations</span>
           </a>
         </li>
@@ -168,9 +190,17 @@ class __TwigTemplate_f7c59df0765bc182d932f1b364a06b11 extends Template
             <span class=\"pc-mtext\">User</span>
           </a>
         </li>
+        <li class=\"pc-item\">
+          <a href=\"{{path('app_goodies_index')}}\" class=\"pc-link\">
+            <span class=\"pc-micon\">
+              <i class=\"ti ti-file\"></i>
+            </span>
+            <span class=\"pc-mtext\">Goodies</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
-</nav>", "includes/sidebar.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/includes/sidebar.html.twig");
+</nav>", "includes/sidebar.html.twig", "/Users/hantour/template_dashboard/templates/includes/sidebar.html.twig");
     }
 }

@@ -311,6 +311,6 @@ class __TwigTemplate_a67bdcbbac82ad4f6d26ed48cb828577 extends Template
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
+", "form_table_layout.html.twig", "/Users/hantour/template_dashboard/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
     }
 }

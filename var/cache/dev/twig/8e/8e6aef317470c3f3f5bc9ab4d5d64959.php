@@ -133,34 +133,72 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             // line 32
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 32), "html", null, true);
             yield "</td>
-                        <td>";
-            // line 33
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 33)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(json_encode(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 33)), "html", null, true)) : (yield ""));
-            yield "</td>
-                        <td>";
-            // line 34
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 34), "html", null, true);
-            yield "</td>
-                        <td>";
+                        <td>
+                            ";
             // line 35
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 35), "html", null, true);
+            yield "                        ";
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 35));
+            foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
+                // line 36
+                yield "                            ";
+                if (($context["role"] == "ROLE_USER")) {
+                    // line 37
+                    yield "                                Utilisateur
+                            ";
+                } elseif ((                // line 38
+$context["role"] == "ROLE_ANIMATEUR")) {
+                    // line 39
+                    yield "                                Animateur
+                            ";
+                } elseif ((                // line 40
+$context["role"] == "ROLE_SUPERVISEUR")) {
+                    // line 41
+                    yield "                                Superviseur
+                            ";
+                } elseif ((                // line 42
+$context["role"] == "ROLE_CHEF_PROJET")) {
+                    // line 43
+                    yield "                                Chef de projet
+                            ";
+                } elseif ((                // line 44
+$context["role"] == "ROLE_ADMIN")) {
+                    // line 45
+                    yield "                                Administrateur
+                            ";
+                }
+                // line 47
+                yield "                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 48
+            yield "                        </td>
+                        <td>";
+            // line 49
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 49), "html", null, true);
             yield "</td>
                         <td>";
-            // line 36
-            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 36)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 36), "Y-m-d"), "html", null, true)) : (yield ""));
+            // line 50
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 50), "html", null, true);
             yield "</td>
                         <td>";
-            // line 37
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 37), "html", null, true);
+            // line 51
+            ((CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 51)) ? (yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "dateBirth", [], "any", false, false, false, 51), "Y-m-d"), "html", null, true)) : (yield ""));
             yield "</td>
                         <td>";
-            // line 38
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 38), "html", null, true);
+            // line 52
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Phone", [], "any", false, false, false, 52), "html", null, true);
+            yield "</td>
+                        <td>";
+            // line 53
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["user"], "Address", [], "any", false, false, false, 53), "html", null, true);
             yield "</td>
                         <td>
                             <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
-            // line 40
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            // line 55
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 55)]), "html", null, true);
             yield "\"><i class=\"ti ti-eye\"></i></a></button>
                         </td>
                     </tr>
@@ -168,7 +206,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 44
+            // line 59
             yield "                    <tr>
                         <td colspan=\"13\">no records found</td>
                     </tr>
@@ -177,7 +215,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 63
         yield "                </tbody>
             </table>
         </div>
@@ -192,7 +230,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         return; yield '';
     }
 
-    // line 53
+    // line 68
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -202,7 +240,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 54
+        // line 69
         yield "    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
     <script>
         \$(document).ready(function(){
@@ -245,7 +283,7 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
      */
     public function getDebugInfo()
     {
-        return array (  206 => 54,  196 => 53,  181 => 48,  172 => 44,  163 => 40,  158 => 38,  154 => 37,  150 => 36,  146 => 35,  142 => 34,  138 => 33,  134 => 32,  130 => 31,  127 => 30,  122 => 29,  99 => 9,  95 => 8,  91 => 6,  81 => 5,  61 => 3,  38 => 1,);
+        return array (  244 => 69,  234 => 68,  219 => 63,  210 => 59,  201 => 55,  196 => 53,  192 => 52,  188 => 51,  184 => 50,  180 => 49,  177 => 48,  171 => 47,  167 => 45,  165 => 44,  162 => 43,  160 => 42,  157 => 41,  155 => 40,  152 => 39,  150 => 38,  147 => 37,  144 => 36,  139 => 35,  134 => 32,  130 => 31,  127 => 30,  122 => 29,  99 => 9,  95 => 8,  91 => 6,  81 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -282,7 +320,22 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
                     <tr>
                         <td>{{ user.id }}</td>
                         <td>{{ user.email }}</td>
-                        <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                        <td>
+                            {# On boucle sur les rôles #}
+                        {% for role in user.roles %}
+                            {% if role == \"ROLE_USER\" %}
+                                Utilisateur
+                            {% elseif role == \"ROLE_ANIMATEUR\" %}
+                                Animateur
+                            {% elseif role == \"ROLE_SUPERVISEUR\" %}
+                                Superviseur
+                            {% elseif role == \"ROLE_CHEF_PROJET\" %}
+                                Chef de projet
+                            {% elseif role == \"ROLE_ADMIN\" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                        </td>
                         <td>{{ user.firstName }}</td>
                         <td>{{ user.lastName }}</td>
                         <td>{{ user.dateBirth ? user.dateBirth|date('Y-m-d') : '' }}</td>
@@ -314,6 +367,6 @@ class __TwigTemplate_60c8f135b13c494cc1fa6b16c921b11b extends Template
             });
         });
     </script>
-{% endblock %}", "user/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/user/index.html.twig");
+{% endblock %}", "user/index.html.twig", "/Users/hantour/template_dashboard/templates/user/index.html.twig");
     }
 }

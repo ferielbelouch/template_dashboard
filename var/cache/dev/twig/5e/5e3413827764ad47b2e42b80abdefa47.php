@@ -303,6 +303,6 @@ class __TwigTemplate_2db435950a7a895b45ce965fa40783df extends Template
             });
         });
     </script>
-{% endblock %}", "operation/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/operation/index.html.twig");
+{% endblock %}", "operation/index.html.twig", "/Users/hantour/template_dashboard/templates/operation/index.html.twig");
     }
 }

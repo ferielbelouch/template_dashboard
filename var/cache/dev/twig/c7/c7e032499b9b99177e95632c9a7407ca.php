@@ -195,6 +195,6 @@ class __TwigTemplate_a4762aae127c0bcb80328124a8cc0acb extends Template
 
     {{ include('activation/_delete_form.html.twig') }}
 {% endblock %}
-", "activation/show.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/activation/show.html.twig");
+", "activation/show.html.twig", "/Users/hantour/template_dashboard/templates/activation/show.html.twig");
     }
 }

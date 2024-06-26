@@ -198,10 +198,10 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                             <p class=\"mb-0\">
                                             ";
         // line 92
-        if (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92), "dateBirth", [], "any", false, false, false, 92)) {
+        if ($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", [], "any", false, false, false, 92), "dateBirth", [], "any", false, false, false, 92), "y-m-d")) {
             // line 93
             yield "                                                ";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "user", [], "any", false, false, false, 93), "dateBirth", [], "any", false, false, false, 93), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "user", [], "any", false, false, false, 93), "dateBirth", [], "any", false, false, false, 93), "y-m-d"), "html", null, true);
             yield "
                                             ";
         } else {
@@ -884,8 +884,8 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
                                         <div class=\"col-md-6\">
                                             <p class=\"mb-1 text-muted\">Date de naissance</p>
                                             <p class=\"mb-0\">
-                                            {% if app.user.dateBirth %}
-                                                {{ app.user.dateBirth }}
+                                            {% if app.user.dateBirth|date(\"y-m-d\") %}
+                                                {{ app.user.dateBirth|date(\"y-m-d\")}}
                                             {% else %}
                                                 Non renseigné
                                             {% endif %}
@@ -1306,6 +1306,6 @@ class __TwigTemplate_ce4cf6536920927195861209d5a5f96f extends Template
         </div>
     </div>
 {% endblock %}
-", "profile/index.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/profile/index.html.twig");
+", "profile/index.html.twig", "/Users/hantour/template_dashboard/templates/profile/index.html.twig");
     }
 }

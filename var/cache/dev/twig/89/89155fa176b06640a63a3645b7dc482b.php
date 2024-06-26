@@ -1850,6 +1850,6 @@ class __TwigTemplate_d2670a04ed98beb7c5b38f5296c09b92 extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Users/hantour/template_dashboard/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
     }
 }

@@ -282,6 +282,6 @@ class __TwigTemplate_92ac867a8555693f5f912bf70d713ec6 extends Template
     </div>
 {%- endblock -%}
 
-", "@VichUploader/Form/fields.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "/Users/hantour/template_dashboard/vendor/vich/uploader-bundle/templates/Form/fields.html.twig");
     }
 }

@@ -262,6 +262,6 @@ class __TwigTemplate_b3675f0ccfa47911cf57376d289d1e77 extends Template
     </div>
 </div>
 {% endblock %}
-", "security/login.html.twig", "/Users/hantour/Documents/FERIEL/template_dashboard/templates/security/login.html.twig");
+", "security/login.html.twig", "/Users/hantour/template_dashboard/templates/security/login.html.twig");
     }
 }
