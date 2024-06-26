@@ -3,9 +3,17 @@
 {% block title %}New Activation{% endblock %}
 
 {% block body %}
-    <h1>Create new Activation</h1>
+    <h1>Création d'une activation</h1>
 
-    {{ include('activation/_form.html.twig') }}
+    <div class="card">
+                                
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                {{ include('activation/_form.html.twig') }}
+
+            </ul>
+        </div>
+    </div>
 
     <a href="{{ path('app_activation_index') }}">back to list</a>
 {% endblock %}

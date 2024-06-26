@@ -22,7 +22,7 @@ class OperationType extends AbstractType
                     'class' => 'form-control',
                     'placeholder' => 'Nom opération ...'
                 ], 
-                
+                 
             ])
             ->add('chefProjet', TextType::class, [
                 'label' => false,

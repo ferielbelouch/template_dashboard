@@ -87,15 +87,23 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Create new Activation</h1>
+        yield "    <h1>Création d'une activation</h1>
 
-    ";
-        // line 8
+    <div class=\"card\">
+                                
+        <div class=\"card-body\">
+            <ul class=\"list-group list-group-flush\">
+                ";
+        // line 12
         yield Twig\Extension\CoreExtension::include($this->env, $context, "activation/_form.html.twig");
         yield "
 
+            </ul>
+        </div>
+    </div>
+
     <a href=\"";
-        // line 10
+        // line 18
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_index");
         yield "\">back to list</a>
 ";
@@ -129,7 +137,7 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
      */
     public function getDebugInfo()
     {
-        return array (  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  107 => 18,  98 => 12,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -139,9 +147,17 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
 {% block title %}New Activation{% endblock %}
 
 {% block body %}
-    <h1>Create new Activation</h1>
+    <h1>Création d'une activation</h1>
 
-    {{ include('activation/_form.html.twig') }}
+    <div class=\"card\">
+                                
+        <div class=\"card-body\">
+            <ul class=\"list-group list-group-flush\">
+                {{ include('activation/_form.html.twig') }}
+
+            </ul>
+        </div>
+    </div>
 
     <a href=\"{{ path('app_activation_index') }}\">back to list</a>
 {% endblock %}

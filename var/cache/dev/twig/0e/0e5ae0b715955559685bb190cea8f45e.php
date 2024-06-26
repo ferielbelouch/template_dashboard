@@ -43,17 +43,58 @@ class __TwigTemplate_c9a5efd0e1b7be1689c9004db1ef3914 extends Template
         // line 1
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
         yield "
-    ";
-        // line 2
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Objectif <span class=\"text-danger\">*</span>
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+            ";
+        // line 8
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), "objectif", [], "any", false, false, false, 8), 'row');
         yield "
-    <button class=\"btn\">";
-        // line 3
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+            </div>
+        </div>
+    </li>
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Date
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+                ";
+        // line 18
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "date", [], "any", false, false, false, 18), 'row');
+        yield "
+            </div>
+        </div>
+    </li>
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Opération
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+                ";
+        // line 28
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "operation", [], "any", false, false, false, 28), 'row');
+        yield "
+            </div>
+        </div>
+    </li>
+    <div class=\"container\">
+        <div class=\"p-3\">
+            <div class=\"text-center\">
+                <button class=\"btn btn-primary\" target=\"_blank\">";
+        // line 35
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 35, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         yield "</button>
+            </div>
+        </div>
+    </div>
 ";
-        // line 4
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
+        // line 39
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 39, $this->source); })()), 'form_end');
         yield "
 ";
         
@@ -86,14 +127,49 @@ class __TwigTemplate_c9a5efd0e1b7be1689c9004db1ef3914 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  56 => 4,  52 => 3,  48 => 2,  44 => 1,);
+        return array (  97 => 39,  90 => 35,  80 => 28,  67 => 18,  54 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class=\"btn\">{{ button_label|default('Save') }}</button>
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Objectif <span class=\"text-danger\">*</span>
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+            {{ form_row(form.objectif) }}
+            </div>
+        </div>
+    </li>
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Date
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+                {{ form_row(form.date) }}
+            </div>
+        </div>
+    </li>
+    <li class=\"list-group-item pt-0 px-0\">
+        <div class=\"row mb-0\">
+            <label class=\"col-form-label col-md-4 col-sm-12 text-md-end\"
+                >Opération
+            </label>
+            <div class=\"col-md-8 col-sm-12\">
+                {{ form_row(form.operation) }}
+            </div>
+        </div>
+    </li>
+    <div class=\"container\">
+        <div class=\"p-3\">
+            <div class=\"text-center\">
+                <button class=\"btn btn-primary\" target=\"_blank\">{{ button_label|default('Save') }}</button>
+            </div>
+        </div>
+    </div>
 {{ form_end(form) }}
 ", "activation/_form.html.twig", "/Users/hantour/template_dashboard/templates/activation/_form.html.twig");
     }

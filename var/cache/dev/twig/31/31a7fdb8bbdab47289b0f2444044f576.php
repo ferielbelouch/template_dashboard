@@ -27,7 +27,9 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'link' => [$this, 'block_link'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -76,7 +78,31 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         return; yield '';
     }
 
-    // line 5
+    // line 4
+    public function block_link($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "link"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "link"));
+
+        // line 5
+        yield "    <link rel=\"stylesheet\" href=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/plugins/dataTables.bootstrap5.min.css"), "html", null, true);
+        yield "\" >
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        return; yield '';
+    }
+
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -86,10 +112,14 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        yield "    <h1>Goodies index</h1>
-
-    <table class=\"table\">
+        // line 8
+        yield "    <h1>Goodies index</h1> 
+    <a href=\"";
+        // line 9
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_new");
+        yield "\" class=\"btn btn-primary\">Nouveau Goodie</a>
+    <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
+    <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -101,39 +131,39 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         </thead>
         <tbody>
         ";
-        // line 19
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["goodies"]) || array_key_exists("goodies", $context) ? $context["goodies"] : (function () { throw new RuntimeError('Variable "goodies" does not exist.', 19, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["goodies"]) || array_key_exists("goodies", $context) ? $context["goodies"] : (function () { throw new RuntimeError('Variable "goodies" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["goody"]) {
-            // line 20
+            // line 23
             yield "            <tr>
                 <td>";
-            // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 21), "html", null, true);
+            // line 24
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 24), "html", null, true);
             yield "</td>
                 <td>";
-            // line 22
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Nom", [], "any", false, false, false, 22), "html", null, true);
+            // line 25
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Nom", [], "any", false, false, false, 25), "html", null, true);
             yield "</td>
                 <td>";
-            // line 23
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Quantity", [], "any", false, false, false, 23), "html", null, true);
+            // line 26
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Quantity", [], "any", false, false, false, 26), "html", null, true);
             yield "</td>
                 <td>
                     <img width=\"100\" src=\"";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/imgesGoodies/" . CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Image", [], "any", false, false, false, 25))), "html", null, true);
+            // line 28
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/imgesGoodies/" . CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "Image", [], "any", false, false, false, 28))), "html", null, true);
             yield "\">
                 </td>
                 <td>
                     <a href=\"";
-            // line 28
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 31
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             yield "\">show</a>
                     <a href=\"";
-            // line 29
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            // line 32
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["goody"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             yield "\">edit</a>
                 </td>
             </tr>
@@ -141,7 +171,7 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 33
+            // line 36
             yield "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -150,14 +180,43 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['goody'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 40
         yield "        </tbody>
     </table>
 
-    <a href=\"";
-        // line 40
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_new");
-        yield "\">Create new</a>
+    ";
+        // line 43
+        yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        return; yield '';
+    }
+
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 44
+        yield "    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#search\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#dom-jqry tbody tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -189,7 +248,7 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  159 => 40,  154 => 37,  145 => 33,  136 => 29,  132 => 28,  126 => 25,  121 => 23,  117 => 22,  113 => 21,  110 => 20,  105 => 19,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  209 => 44,  189 => 43,  184 => 40,  175 => 36,  166 => 32,  162 => 31,  156 => 28,  151 => 26,  147 => 25,  143 => 24,  140 => 23,  135 => 22,  119 => 9,  116 => 8,  106 => 7,  92 => 5,  82 => 4,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -197,11 +256,14 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Goodies index{% endblock %}
-
+{% block link %}
+    <link rel=\"stylesheet\" href=\"{{ asset('css/plugins/dataTables.bootstrap5.min.css') }}\" >
+{% endblock %}
 {% block body %}
-    <h1>Goodies index</h1>
-
-    <table class=\"table\">
+    <h1>Goodies index</h1> 
+    <a href=\"{{ path('app_goodies_new') }}\" class=\"btn btn-primary\">Nouveau Goodie</a>
+    <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
+    <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -233,7 +295,19 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_goodies_new') }}\">Create new</a>
+    {% block javascripts %}
+    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#search\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#dom-jqry tbody tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}
 {% endblock %}
 ", "goodies/index.html.twig", "/Users/hantour/template_dashboard/templates/goodies/index.html.twig");
     }
