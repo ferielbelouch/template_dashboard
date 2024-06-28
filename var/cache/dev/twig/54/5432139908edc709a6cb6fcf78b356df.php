@@ -87,7 +87,7 @@ class __TwigTemplate_0225e4003260a33757e76f0a887c83cd extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Nouveau employé</h1>
+        yield "    <h1>Nouvelle opération</h1>
 
                             <div class=\"card\">
                                 
@@ -198,7 +198,7 @@ class __TwigTemplate_0225e4003260a33757e76f0a887c83cd extends Template
 
     <a href=\"";
         // line 88
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_operation");
         yield "\">Retourner à la liste</a>
 ";
         
@@ -241,7 +241,7 @@ class __TwigTemplate_0225e4003260a33757e76f0a887c83cd extends Template
 {% block title %}Employés - Creation{% endblock %}
 
 {% block body %}
-    <h1>Nouveau employé</h1>
+    <h1>Nouvelle opération</h1>
 
                             <div class=\"card\">
                                 
@@ -323,7 +323,7 @@ class __TwigTemplate_0225e4003260a33757e76f0a887c83cd extends Template
                                 </div>
                             </div>
 
-    <a href=\"{{ path('app_user_index') }}\">Retourner à la liste</a>
+    <a href=\"{{ path('app_operation') }}\">Retourner à la liste</a>
 {% endblock %}
 ", "operation/new.html.twig", "/Users/hantour/template_dashboard/templates/operation/new.html.twig");
     }

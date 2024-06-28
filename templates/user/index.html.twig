@@ -53,6 +53,7 @@
                         <td>{{ user.Address }}</td>
                         <td>
                             <button class="btn avtar avtar-xs btn-light-success"><a style="text-decoration: none;color:inherit;" href="{{ path('app_user_show', {'id': user.id}) }}"><i class="ti ti-eye"></i></a></button>
+                            <button class="btn avtar avtar-xs btn-light-danger"><a style="text-decoration: none;color:inherit;" href="{{ path('app_user_delete', {'id': user.id}) }}"><i class="ti ti-x"></i></a></button>
                         </td>
                     </tr>
                 {% else %}

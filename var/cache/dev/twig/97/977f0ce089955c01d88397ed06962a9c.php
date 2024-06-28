@@ -66,7 +66,7 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Activation index";
+        yield "Activation ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -87,7 +87,7 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Activation index</h1>
+        yield "    <h1>Liste des activations </h1>
 
     <a href=\"";
         // line 8
@@ -197,10 +197,10 @@ class __TwigTemplate_40c0f2c585152661b170a5d2e91944d8 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Activation index{% endblock %}
+{% block title %}Activation {% endblock %}
 
 {% block body %}
-    <h1>Activation index</h1>
+    <h1>Liste des activations </h1>
 
     <a href=\"{{ path('app_activation_new') }}\" class=\"btn btn-primary\">Nouvelle activation</a>
 

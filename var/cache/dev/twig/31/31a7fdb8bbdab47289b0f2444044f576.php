@@ -68,7 +68,7 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Goodies index";
+        yield "Goodies ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -113,7 +113,7 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        yield "    <h1>Goodies index</h1> 
+        yield "    <h1>Goodies </h1> 
     <a href=\"";
         // line 9
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_goodies_new");
@@ -255,12 +255,12 @@ class __TwigTemplate_c841001913001e9df76ecab2716cdc29 extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Goodies index{% endblock %}
+{% block title %}Goodies {% endblock %}
 {% block link %}
     <link rel=\"stylesheet\" href=\"{{ asset('css/plugins/dataTables.bootstrap5.min.css') }}\" >
 {% endblock %}
 {% block body %}
-    <h1>Goodies index</h1> 
+    <h1>Goodies </h1> 
     <a href=\"{{ path('app_goodies_new') }}\" class=\"btn btn-primary\">Nouveau Goodie</a>
     <input type=\"text\" id=\"search\" placeholder=\"Rechercher dans le tableau...\" class=\"form-control mb-3\">
     <table id=\"dom-jqry\" class=\"table table-striped table-bordered nowrap\">

@@ -200,13 +200,17 @@ $context["role"] == "ROLE_ADMIN")) {
             // line 55
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 55)]), "html", null, true);
             yield "\"><i class=\"ti ti-eye\"></i></a></button>
+                            <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"";
+            // line 56
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 56)]), "html", null, true);
+            yield "\"><i class=\"ti ti-x\"></i></a></button>
                         </td>
                     </tr>
                 ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 59
+            // line 60
             yield "                    <tr>
                         <td colspan=\"13\">no records found</td>
                     </tr>
@@ -215,7 +219,7 @@ $context["role"] == "ROLE_ADMIN")) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 64
         yield "                </tbody>
             </table>
         </div>
@@ -230,7 +234,7 @@ $context["role"] == "ROLE_ADMIN")) {
         return; yield '';
     }
 
-    // line 68
+    // line 69
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -240,7 +244,7 @@ $context["role"] == "ROLE_ADMIN")) {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 69
+        // line 70
         yield "    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
     <script>
         \$(document).ready(function(){
@@ -283,7 +287,7 @@ $context["role"] == "ROLE_ADMIN")) {
      */
     public function getDebugInfo()
     {
-        return array (  244 => 69,  234 => 68,  219 => 63,  210 => 59,  201 => 55,  196 => 53,  192 => 52,  188 => 51,  184 => 50,  180 => 49,  177 => 48,  171 => 47,  167 => 45,  165 => 44,  162 => 43,  160 => 42,  157 => 41,  155 => 40,  152 => 39,  150 => 38,  147 => 37,  144 => 36,  139 => 35,  134 => 32,  130 => 31,  127 => 30,  122 => 29,  99 => 9,  95 => 8,  91 => 6,  81 => 5,  61 => 3,  38 => 1,);
+        return array (  248 => 70,  238 => 69,  223 => 64,  214 => 60,  205 => 56,  201 => 55,  196 => 53,  192 => 52,  188 => 51,  184 => 50,  180 => 49,  177 => 48,  171 => 47,  167 => 45,  165 => 44,  162 => 43,  160 => 42,  157 => 41,  155 => 40,  152 => 39,  150 => 38,  147 => 37,  144 => 36,  139 => 35,  134 => 32,  130 => 31,  127 => 30,  122 => 29,  99 => 9,  95 => 8,  91 => 6,  81 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -343,6 +347,7 @@ $context["role"] == "ROLE_ADMIN")) {
                         <td>{{ user.Address }}</td>
                         <td>
                             <button class=\"btn avtar avtar-xs btn-light-success\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_show', {'id': user.id}) }}\"><i class=\"ti ti-eye\"></i></a></button>
+                            <button class=\"btn avtar avtar-xs btn-light-danger\"><a style=\"text-decoration: none;color:inherit;\" href=\"{{ path('app_user_delete', {'id': user.id}) }}\"><i class=\"ti ti-x\"></i></a></button>
                         </td>
                     </tr>
                 {% else %}

@@ -87,7 +87,7 @@ class __TwigTemplate_c9a5efd0e1b7be1689c9004db1ef3914 extends Template
             <div class=\"text-center\">
                 <button class=\"btn btn-primary\" target=\"_blank\">";
         // line 35
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 35, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 35, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
         yield "</button>
             </div>
         </div>
@@ -166,7 +166,7 @@ class __TwigTemplate_c9a5efd0e1b7be1689c9004db1ef3914 extends Template
     <div class=\"container\">
         <div class=\"p-3\">
             <div class=\"text-center\">
-                <button class=\"btn btn-primary\" target=\"_blank\">{{ button_label|default('Save') }}</button>
+                <button class=\"btn btn-primary\" target=\"_blank\">{{ button_label|default('Enregistrer') }}</button>
             </div>
         </div>
     </div>

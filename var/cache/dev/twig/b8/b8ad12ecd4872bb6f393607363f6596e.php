@@ -105,7 +105,7 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
     <a href=\"";
         // line 18
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_activation_index");
-        yield "\">back to list</a>
+        yield "\">Retourner à la liste </a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -159,7 +159,7 @@ class __TwigTemplate_ae15635ff764b2042e45fc00900b618e extends Template
         </div>
     </div>
 
-    <a href=\"{{ path('app_activation_index') }}\">back to list</a>
+    <a href=\"{{ path('app_activation_index') }}\">Retourner à la liste </a>
 {% endblock %}
 ", "activation/new.html.twig", "/Users/hantour/template_dashboard/templates/activation/new.html.twig");
     }
