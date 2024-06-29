@@ -23,9 +23,6 @@
                             <a class="nav-link list-group-item list-group-item-action active" id="user-set-profile-tab" data-bs-toggle="pill" href="#user-set-profile" role="tab" aria-controls="user-set-profile" aria-selected="true">
                             <span class="f-w-500"><i class="ph-duotone ph-user-circle m-r-10"></i>Informations générales</span>
                             </a>
-                            <a class="nav-link list-group-item list-group-item-action" id="user-set-information-tab" data-bs-toggle="pill" href="#user-set-information" role="tab" aria-controls="user-set-information" aria-selected="false">
-                            <span class="f-w-500"><i class="ph-duotone ph-clipboard-text m-r-10"></i>Documents personnelles</span>
-                            </a>
                             <a class="nav-link list-group-item list-group-item-action" id="user-set-account-tab" data-bs-toggle="pill" href="#user-set-account" role="tab" aria-controls="user-set-account" aria-selected="false">
                             <span class="f-w-500"><i class="ph-duotone ph-notebook m-r-10"></i>Documents contractuels</span>
                             </a>
@@ -196,10 +193,27 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="user-set-account" role="tabpanel" aria-labelledby="user-set-account-tab">
-                          {{ form_start(forms) }}
-                                {{ form_widget(forms) }}
-                                <button class="btn">Upload</button>
-                            {{ form_end(forms) }}
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Launch demo modal</button>
+                            <div id="exampleModalCenter" class="modal fade" tabindex="-1" aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Ajouter un document</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        {{ form_start(forms) }}
+                                            <div class="modal-body">
+                                                {{ form_widget(forms) }}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Importer</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        {{ form_end(forms) }}
+                                    </div>
+                                </div>
+                            </div>
+                          
                               <div class="card">
                                 <div class="card-header">
                                     <h5> Promesse d'embauche </h5>

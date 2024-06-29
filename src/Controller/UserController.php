@@ -104,7 +104,7 @@ class UserController extends AbstractController
              $this->addFlash('success', 'Les modifications ont été enregistrées avec succès.');
 
              // Rediriger vers la page de détails de l'utilisateur
-             return $this->redirectToRoute('app_profile');
+             return $this->redirectToRoute('app_user_show', ['id' => $user->getId()]);
             }
 
             $document = new Document();
@@ -118,7 +118,7 @@ class UserController extends AbstractController
                 $entityManager->flush();
     
                 $this->addFlash('success', 'Document uploaded successfully.');
-                return $this->redirectToRoute('app_profile');
+                return $this->redirectToRoute('app_user_show', ['id' => $user->getId()]);
             }
 
             $embauchedocs = $documentRepository->findBy(['user' => $user, 'category' => 'embauche']);
