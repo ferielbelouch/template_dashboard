@@ -566,7 +566,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.j2pkDeW"/>
+      <argument type="service" id=".service_locator.l6DmGmM"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3493,7 +3493,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.j2pkDeW"/>
+      <argument type="service" id=".service_locator.l6DmGmM"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -8255,6 +8255,14 @@
         <argument key="goody" type="service_closure" id=".errored..service_locator.UmAh2we.App\Entity\Goodies"/>
       </argument>
     </service>
+    <service id=".service_locator.USLgdRb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="activationRepository" type="service_closure" id="App\Repository\ActivationRepository"/>
+        <argument key="operationRepository" type="service_closure" id="App\Repository\OperationRepository"/>
+        <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.zs8pukv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -8332,7 +8340,7 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.R0Sb2kd.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.j2pkDeW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.l6DmGmM" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ActivationController::delete" type="service_closure" id=".service_locator.KahGxHB"/>
@@ -8346,7 +8354,7 @@
         <argument key="App\Controller\GoodiesController::new" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\GoodiesController::show" type="service_closure" id=".service_locator.Li6umet"/>
         <argument key="App\Controller\HomeController::generatePdf" type="service_closure" id=".service_locator.zs8pukv"/>
-        <argument key="App\Controller\HomeController::index" type="service_closure" id=".service_locator.zs8pukv"/>
+        <argument key="App\Controller\HomeController::index" type="service_closure" id=".service_locator.USLgdRb"/>
         <argument key="App\Controller\OperationController::delete" type="service_closure" id=".service_locator.LfRE9Ab"/>
         <argument key="App\Controller\OperationController::edit" type="service_closure" id=".service_locator.LfRE9Ab"/>
         <argument key="App\Controller\OperationController::index" type="service_closure" id=".service_locator.RJb25OM"/>
@@ -8376,7 +8384,7 @@
         <argument key="App\Controller\GoodiesController:new" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\GoodiesController:show" type="service_closure" id=".service_locator.Li6umet"/>
         <argument key="App\Controller\HomeController:generatePdf" type="service_closure" id=".service_locator.zs8pukv"/>
-        <argument key="App\Controller\HomeController:index" type="service_closure" id=".service_locator.zs8pukv"/>
+        <argument key="App\Controller\HomeController:index" type="service_closure" id=".service_locator.USLgdRb"/>
         <argument key="App\Controller\OperationController:delete" type="service_closure" id=".service_locator.LfRE9Ab"/>
         <argument key="App\Controller\OperationController:edit" type="service_closure" id=".service_locator.LfRE9Ab"/>
         <argument key="App\Controller\OperationController:index" type="service_closure" id=".service_locator.RJb25OM"/>
@@ -10678,7 +10686,7 @@
     <service id="Knp\Snappy\Image" alias="knp_snappy.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.j2pkDeW"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.l6DmGmM"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10729,6 +10737,7 @@
     <service id=".service_locator.gcdDeto" alias=".service_locator.jhpFs1k"/>
     <service id=".service_locator.M9v7t77" alias=".service_locator.Li6umet"/>
     <service id=".service_locator.v6Ax9nM" alias=".service_locator.UmAh2we"/>
+    <service id=".service_locator.RYrSMHg" alias=".service_locator.USLgdRb"/>
     <service id=".service_locator.bRGyMgj" alias=".service_locator.zs8pukv"/>
     <service id=".service_locator.41heoYC" alias=".service_locator.RJb25OM"/>
     <service id=".service_locator.IWndvZs" alias=".service_locator.vxMQ6pO"/>

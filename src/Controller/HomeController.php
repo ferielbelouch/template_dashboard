@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Repository\OperationRepository;
 use App\Repository\UserRepository;
+
+use App\Repository\ActivationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -14,19 +16,23 @@ class HomeController extends AbstractController
 {
     #[IsGranted("ROLE_ADMIN")]
     #[Route('/dashboard', name: 'app_home')]
-    public function index(UserRepository $userRepository, OperationRepository $operationRepository): Response
+    public function index(UserRepository $userRepository, OperationRepository $operationRepository,ActivationRepository $activationRepository): Response
     { 
         $FourLastestUser = $userRepository->findFourLastestUser();
     
         $numOperationRealise = $operationRepository->countByStatus('realise');
         $numOperationEnCours = $operationRepository->countByStatus('enCours');
         $numTotalUsers = $userRepository->countTotalUsers();
-    
+
+        $numTotalActivation = $activationRepository->countTotalActivation();
+
         return $this->render('home/index.html.twig', [
             'FourLastestUser' => $FourLastestUser,
             'numOperationRealise' => $numOperationRealise,
             'numOperationEnCours' => $numOperationEnCours,
             'numTotalUsers' => $numTotalUsers,
+
+            'numTotalActivation' => $numTotalActivation,
         ]);
     }
 

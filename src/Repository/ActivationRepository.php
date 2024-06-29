@@ -16,6 +16,14 @@ class ActivationRepository extends ServiceEntityRepository
         parent::__construct($registry, Activation::class);
     }
 
+
+    public function countTotalActivation(): int
+    {
+        return $this->createQueryBuilder('u')
+            ->select('COUNT(u.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
     //    /**
     //     * @return Activation[] Returns an array of Activation objects
     //     */

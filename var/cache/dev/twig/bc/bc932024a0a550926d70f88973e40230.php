@@ -129,9 +129,12 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             <div class=\"card statistics-card-1 overflow-hidden text-center\">
               <div class=\"card-body\">
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                 <h5 class=\"mb-4\">Activations terminées</h5>
+                 <h5 class=\"mb-4\"> Nombre d'employés </h5>
                 <div class=\"mt-3 text-center\">
-                  <h3 class=\" f-w-300 m-b-0\">x </h3>
+                  <h3 class=\" f-w-300 m-b-0\">";
+        // line 40
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numTotalUsers"]) || array_key_exists("numTotalUsers", $context) ? $context["numTotalUsers"] : (function () { throw new RuntimeError('Variable "numTotalUsers" does not exist.', 40, $this->source); })()), "html", null, true);
+        yield "  </h3>
                 </div>
               </div>
             </div>
@@ -140,9 +143,12 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             <div class=\"card statistics-card-1 overflow-hidden  bg-brand-color-3 text-center\">
               <div class=\"card-body text-center\">
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                <h5 class=\"mb-4 text-white\">Activation à venir</h5>
+                <h5 class=\"mb-4 text-white\">Nombre d'activations</h5>
                 <div class=\"mt-3\">
-                  <h3 class=\"text-white f-w-300 m-b-0\">x </h3>
+                  <h3 class=\"text-white f-w-300 m-b-0\">";
+        // line 51
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["numTotalActivation"]) || array_key_exists("numTotalActivation", $context) ? $context["numTotalActivation"] : (function () { throw new RuntimeError('Variable "numTotalActivation" does not exist.', 51, $this->source); })()), "html", null, true);
+        yield " </h3>
                 </div>
               </div>
             </div>
@@ -366,7 +372,7 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  327 => 207,  317 => 203,  313 => 202,  308 => 200,  300 => 195,  295 => 193,  290 => 190,  286 => 189,  152 => 57,  122 => 29,  107 => 17,  99 => 11,  93 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  333 => 207,  323 => 203,  319 => 202,  314 => 200,  306 => 195,  301 => 193,  296 => 190,  292 => 189,  158 => 57,  150 => 51,  136 => 40,  122 => 29,  107 => 17,  99 => 11,  93 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -408,9 +414,9 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             <div class=\"card statistics-card-1 overflow-hidden text-center\">
               <div class=\"card-body\">
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-4.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                 <h5 class=\"mb-4\">Activations terminées</h5>
+                 <h5 class=\"mb-4\"> Nombre d'employés </h5>
                 <div class=\"mt-3 text-center\">
-                  <h3 class=\" f-w-300 m-b-0\">x </h3>
+                  <h3 class=\" f-w-300 m-b-0\">{{ numTotalUsers }}  </h3>
                 </div>
               </div>
             </div>
@@ -419,9 +425,9 @@ class __TwigTemplate_453edaeb263ea3ceb51b365dd6e614e3 extends Template
             <div class=\"card statistics-card-1 overflow-hidden  bg-brand-color-3 text-center\">
               <div class=\"card-body text-center\">
                 <img src=\"https://html.phoenixcoded.net/light-able/bootstrap/assets/images/widget/img-status-6.svg\" alt=\"img\" class=\"img-fluid img-bg\" >
-                <h5 class=\"mb-4 text-white\">Activation à venir</h5>
+                <h5 class=\"mb-4 text-white\">Nombre d'activations</h5>
                 <div class=\"mt-3\">
-                  <h3 class=\"text-white f-w-300 m-b-0\">x </h3>
+                  <h3 class=\"text-white f-w-300 m-b-0\">{{ numTotalActivation}} </h3>
                 </div>
               </div>
             </div>
